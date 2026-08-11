@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1024" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B0D18"/>
+      <stop offset="0.55" stop-color="#171A2B"/>
+      <stop offset="1" stop-color="#10152A"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="90" y1="250" x2="420" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B7CFF"/>
+      <stop offset="1" stop-color="#7367F0"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="255" y1="85" x2="255" y2="415" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#70A4FF"/>
+      <stop offset="1" stop-color="#5B8DEF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="500" fill="url(#background)"/>
+  <circle cx="245" cy="250" r="180" fill="#7367F0" opacity="0.16" filter="url(#glow)"/>
+  <circle cx="925" cy="40" r="180" fill="#5B8DEF" opacity="0.08"/>
+  <g transform="translate(2 -2) rotate(45 255 252)">
+    <g fill="url(#violet)">
+      <rect x="87" y="222" width="58" height="58" rx="15" opacity="0.60"/>
+      <rect x="154" y="222" width="58" height="58" rx="15" opacity="0.82"/>
+      <rect x="298" y="222" width="58" height="58" rx="15" opacity="0.82"/>
+      <rect x="365" y="222" width="58" height="58" rx="15" opacity="0.60"/>
+    </g>
+    <g fill="url(#blue)">
+      <rect x="226" y="83" width="58" height="58" rx="15" opacity="0.60"/>
+      <rect x="226" y="150" width="58" height="58" rx="15" opacity="0.82"/>
+      <rect x="226" y="294" width="58" height="58" rx="15" opacity="0.82"/>
+      <rect x="226" y="361" width="58" height="58" rx="15" opacity="0.60"/>
+    </g>
+    <rect x="218" y="214" width="74" height="74" rx="19" fill="#7367F0" stroke="#F4F5FA" stroke-width="4"/>
+    <rect x="243" y="239" width="24" height="24" rx="6" fill="#F4F5FA"/>
+  </g>
+  <text x="490" y="190" fill="#F4F5FA" font-family="Roboto, Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="-2">LexiNexo</text>
+  <text x="494" y="239" fill="#A8ADBF" font-family="Roboto, Arial, sans-serif" font-size="25">Conecte letras. Descubra palavras.</text>
+  <g font-family="Roboto, Arial, sans-serif" font-size="17" font-weight="600">
+    <rect x="494" y="287" width="134" height="44" rx="22" fill="#7367F0" opacity="0.20" stroke="#7367F0"/>
+    <text x="516" y="315" fill="#F4F5FA">1.000 níveis</text>
+    <rect x="642" y="287" width="166" height="44" rx="22" fill="#5B8DEF" opacity="0.18" stroke="#5B8DEF"/>
+    <text x="663" y="315" fill="#F4F5FA">Dicas opcionais</text>
+    <rect x="822" y="287" width="140" height="44" rx="22" fill="#2E9B63" opacity="0.18" stroke="#2E9B63"/>
+    <text x="844" y="315" fill="#F4F5FA">100% offline</text>
+  </g>
+</svg>

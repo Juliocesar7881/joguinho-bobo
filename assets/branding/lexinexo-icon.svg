@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Ícone do LexiNexo</title>
+  <desc id="desc">Um X formado por blocos arredondados violetas e azuis sobre fundo azul-marinho.</desc>
+  <defs>
+    <linearGradient id="violetBranch" x1="220" y1="512" x2="804" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B7CFF"/>
+      <stop offset="1" stop-color="#7367F0"/>
+    </linearGradient>
+    <linearGradient id="blueBranch" x1="512" y1="220" x2="512" y2="804" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#70A4FF"/>
+      <stop offset="1" stop-color="#5B8DEF"/>
+    </linearGradient>
+    <linearGradient id="nexus" x1="448" y1="448" x2="576" y2="576" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B7CFF"/>
+      <stop offset="1" stop-color="#5B8DEF"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="46%" r="56%">
+      <stop offset="0" stop-color="#24294B"/>
+      <stop offset="0.58" stop-color="#15182A"/>
+      <stop offset="1" stop-color="#0B0D18"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1024" height="1024" fill="#0B0D18"/>
+  <circle cx="512" cy="476" r="430" fill="url(#halo)"/>
+  <circle cx="512" cy="512" r="352" fill="none" stroke="#7367F0" stroke-width="2" opacity="0.14"/>
+  <circle cx="512" cy="512" r="294" fill="none" stroke="#5B8DEF" stroke-width="2" opacity="0.10"/>
+
+  <!-- A plus made from rounded game tiles becomes the LexiNexo X after rotation. -->
+  <g transform="rotate(45 512 512)">
+    <g fill="url(#violetBranch)">
+      <rect x="220" y="462" width="100" height="100" rx="24" opacity="0.62"/>
+      <rect x="336" y="462" width="100" height="100" rx="24" opacity="0.82"/>
+      <rect x="588" y="462" width="100" height="100" rx="24" opacity="0.82"/>
+      <rect x="704" y="462" width="100" height="100" rx="24" opacity="0.62"/>
+    </g>
+    <g fill="url(#blueBranch)">
+      <rect x="462" y="220" width="100" height="100" rx="24" opacity="0.62"/>
+      <rect x="462" y="336" width="100" height="100" rx="24" opacity="0.82"/>
+      <rect x="462" y="588" width="100" height="100" rx="24" opacity="0.82"/>
+      <rect x="462" y="704" width="100" height="100" rx="24" opacity="0.62"/>
+    </g>
+    <rect x="448" y="448" width="128" height="128" rx="30" fill="url(#nexus)" stroke="#F4F5FA" stroke-width="6"/>
+    <rect x="490" y="490" width="44" height="44" rx="11" fill="#F4F5FA"/>
+  </g>
+</svg>

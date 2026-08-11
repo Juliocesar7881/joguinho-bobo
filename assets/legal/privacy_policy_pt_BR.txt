@@ -1,0 +1,18 @@
+Última atualização: 9 de agosto de 2026.
+
+O LexiNexo funciona totalmente offline. O aplicativo não exige conta, não exibe anúncios, não realiza compras e não usa serviços de telemetria.
+
+Dados armazenados no aparelho
+O progresso dos dois modos, o último nível aberto, as tentativas já enviadas e o rascunho atual são armazenados somente no próprio aparelho. Esses dados servem exclusivamente para continuar o jogo de onde você parou.
+
+Coleta e compartilhamento
+O LexiNexo não coleta, envia, vende nem compartilha dados pessoais ou dados de uso. O aplicativo não solicita permissão de internet e não se comunica com servidores.
+
+Como apagar os dados
+Você pode excluir todos os dados locais do LexiNexo nas configurações do Android, usando a opção de limpar armazenamento, ou desinstalando o aplicativo. Como não existe conta nem armazenamento remoto, não há outros dados a excluir.
+
+Público
+O jogo é destinado a pessoas com 13 anos ou mais.
+
+Contato
+Para dúvidas sobre privacidade, use os dados de contato do desenvolvedor exibidos na ficha oficial do LexiNexo na Google Play.

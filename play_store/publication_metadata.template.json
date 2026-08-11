@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "packageName": "com.lexinexo.app",
+  "developerDisplayName": "EXEMPLO: Estúdio LexiNexo",
+  "privacyContactEmail": "privacidade@seu-dominio.example",
+  "privacyPolicyUrl": "https://seu-dominio.example/lexinexo/privacidade",
+  "primaryLocale": "pt-BR",
+  "distributionCountries": [
+    "BR"
+  ],
+  "accountType": "organization",
+  "targetAudience": "13+"
+}

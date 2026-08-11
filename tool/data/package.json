@@ -1,0 +1,21 @@
+{
+  "name": "lexinexo-data-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:catalog": "node build_catalog.mjs",
+    "build:dictionary": "node build_dictionary.mjs",
+    "apply:meanings": "node apply_curated_meanings.mjs",
+    "apply:single-sense-review": "node apply_single_sense_review.mjs",
+    "author:english-hints": "node author_english_hints.mjs",
+    "review:english-hints": "node review_english_hints.mjs",
+    "audit:editorial": "node audit_editorial.mjs",
+    "audit:selection": "node audit_selection.mjs",
+    "review:catalog": "node review_catalog.mjs --confirm-two-pass-agent-review",
+    "manifest": "node update_manifest.mjs",
+    "verify": "node verify_assets.mjs"
+  },
+  "dependencies": {
+    "hunspell-reader": "10.0.1"
+  }
+}

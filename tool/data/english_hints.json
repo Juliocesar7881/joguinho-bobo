@@ -1,0 +1,4023 @@
+{
+  "schemaVersion": 2,
+  "catalogRevision": "lexinexo-1.0.0-scowl-rel-2026.02.25-bilingual-hints",
+  "locale": "en-US",
+  "passes": [
+    {
+      "id": "codex-english-hints-authoring-2026-08-10",
+      "role": "authoring",
+      "agent": "OpenAI Codex with per-record translation assistance",
+      "completedOn": "2026-08-10",
+      "method": "Each existing PT-BR clue was translated separately for the same selected sense; no runtime or build-time template generates clues."
+    },
+    {
+      "id": "codex-english-hints-independent-review-2026-08-10",
+      "role": "procedurallyIndependentReview",
+      "agent": "OpenAI Codex lexical review",
+      "completedOn": "2026-08-10",
+      "method": "A separate pass read all 500 English clues, corrected unnatural wording, and checked sense alignment, grammar, uniqueness, leakage, truncation, and template families."
+    }
+  ],
+  "records": [
+    {
+      "number": 1,
+      "answer": "new",
+      "hintEn": "It was produced recently and has only been around for a short time.",
+      "contentSha256": "39e64a97a8ffcae42c1931887702201d5ffbd04edcb6ce7a420d453191605f10",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 2,
+      "answer": "one",
+      "hintEn": "Represents a single unit, with nothing else beside it.",
+      "contentSha256": "603e3811bf8ae7ba4e71b3dcdb2b10a06524de36a74f0ac3fd8cb66f005811ef",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 3,
+      "answer": "web",
+      "hintEn": "A spider builds this structure with very thin threads.",
+      "contentSha256": "e50a9554338a11cee0b93c6728ac78f13f33317016517d6f958af041ff4eb917",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 4,
+      "answer": "top",
+      "hintEn": "It's the part that stands above all the others.",
+      "contentSha256": "f83f0ca72db3d393fffda4585d1c01be7c9ceda8ec4415ce7c06add754ddca58",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 5,
+      "answer": "buy",
+      "hintEn": "Action of obtaining something in exchange for money.",
+      "contentSha256": "760a2e945534c9d9a8129de25f82aee6fbaf18234fa5a177f7cda95bed02a43a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 6,
+      "answer": "map",
+      "hintEn": "Representation that helps locate places and paths.",
+      "contentSha256": "c9e29719c75f3ccb8b899a325a8858670a511e8fe98d6c7dbe69fef1228afc1f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 7,
+      "answer": "end",
+      "hintEn": "Bring an activity to its final point.",
+      "contentSha256": "a89c6a9d67bf9ab26b2478151c1ac2d502126cde97d327e9e013b825a8bb19ee",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 8,
+      "answer": "law",
+      "hintEn": "Official rule that organizes rights and duties in society.",
+      "contentSha256": "1498bdb7dae71fa4151f6854ee5869ef5e4e201995084d04e0686d2f7316c1b5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 9,
+      "answer": "old",
+      "hintEn": "Has existed for a long time compared with similar things.",
+      "contentSha256": "226ad487a6a4fcb830e2a8ad2970f05b01efda9942de920cc0e4ce24b048f875",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 10,
+      "answer": "man",
+      "hintEn": "Adult male person.",
+      "contentSha256": "a89204207248ae17ce27801da1a372f658d0a4fe3fdd8ba5ac176ee82ec3d059",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 11,
+      "answer": "box",
+      "hintEn": "Rigid container used to store or transport objects.",
+      "contentSha256": "1bcc5acd2c241ec97f31005da6de1eeffd90cdd7ba81cf2c8f60b990558423c1",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 12,
+      "answer": "yes",
+      "hintEn": "Response used to confirm or agree.",
+      "contentSha256": "efdaa33265a224ec891dab5e59a9dacc28637b41c6946ded03b0a8a71c02eeb7",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 13,
+      "answer": "say",
+      "hintEn": "Action of expressing an idea through words.",
+      "contentSha256": "bdc525db655afbffbde85939f727d7d6a9ef37d0eabdf2a64d8e34d51468076c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 14,
+      "answer": "let",
+      "hintEn": "Action of allowing something to happen.",
+      "contentSha256": "879c81809c880ce7050d7bee72d7091f093e8e5d7e776ec1db27b31cfed9e2e8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 15,
+      "answer": "key",
+      "hintEn": "Piece that opens or closes a lock.",
+      "contentSha256": "e08d0f9330a32d86c2ee4191e33f858bebfec07201251e7c4c3c0b33dbe40975",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 16,
+      "answer": "age",
+      "hintEn": "Amount of time lived since birth.",
+      "contentSha256": "0293dad0cdc34157a8ad36a5f8085352d80d3442eb9b2ee5387744a46266486f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 17,
+      "answer": "war",
+      "hintEn": "Prolonged dispute in which groups use armed forces.",
+      "contentSha256": "b02076d817bc248d16df0a838355ef8648461edf0449ac286eafe67199aa0ebf",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 18,
+      "answer": "run",
+      "hintEn": "Move quickly using your legs.",
+      "contentSha256": "7a8443c666afb83b6435b4f97cba7da3b7c36e72bee5f1acbf5b5ca6ea44dc51",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 19,
+      "answer": "put",
+      "hintEn": "Move something into a chosen position.",
+      "contentSha256": "b83aed920e7aa705588ca46c5260200026f29c4c4129c6f2b543b867fb55ab54",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 20,
+      "answer": "log",
+      "hintEn": "Thick piece of tree trunk.",
+      "contentSha256": "d470ec718f888125203f1cbfb13ccef76bdb2f6e70a6a12399b2441be67931c0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 21,
+      "answer": "lot",
+      "hintEn": "A defined plot of land where a building may be constructed.",
+      "contentSha256": "dce707c43e6d543d9cf92ecd5bd78829c3ea14569e02d8e3ede9d62091a17c1c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 22,
+      "answer": "far",
+      "hintEn": "A long trip is required to reach it.",
+      "contentSha256": "62cf14b24bdad8177f646fb5b814cd318bdc4d70f7cbcf849e4e2fd5db5bf57a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 23,
+      "answer": "bit",
+      "hintEn": "A small amount with no exact measurement.",
+      "contentSha256": "70d90e1c7cf621e83f54d9e41a8419bce632fb4e19b1ec6446bb3c63435ca080",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 24,
+      "answer": "bar",
+      "hintEn": "Establishment where drinks are served at the counter.",
+      "contentSha256": "3ff0f5ff6f4467d4632e3a3408ba431ea314775f01d0d8d0b505ca7e05784814",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 25,
+      "answer": "gas",
+      "hintEn": "State of matter that occupies the entire available container.",
+      "contentSha256": "2f74b93f21b1fa9180bc457f91ba47ce934ff6e5547c0419ab64a5ca43fe796a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 26,
+      "answer": "inn",
+      "hintEn": "Small accommodation that welcomes travelers overnight.",
+      "contentSha256": "617ba96fbd59cd66cb1b822aa289b8905ceb1633246897e5dd493ca7cb1f0d8b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 27,
+      "answer": "sea",
+      "hintEn": "Large expanse of salt water smaller than an ocean.",
+      "contentSha256": "3f4a40f61051b127a806feea8eedeb0e53ef6f618dca0a3b0c329ba895a9b609",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 28,
+      "answer": "kit",
+      "hintEn": "Contains the objects needed to complete a particular activity.",
+      "contentSha256": "329996cb9cd6ddf6be1938c03195a6f5c32b62253f2de0568790cfd6b66eddbd",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 29,
+      "answer": "son",
+      "hintEn": "Male descendant of a person.",
+      "contentSha256": "31c0e88d5c960d666e998bd627ce780c3adb85594417aaf95da155ade8c8168b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 30,
+      "answer": "van",
+      "hintEn": "Closed vehicle that carries passengers or small loads.",
+      "contentSha256": "5e6e9fbdba006b51bfe84bafd7d51b66e9d0519c809b840a8d143eaa402730ea",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 31,
+      "answer": "hit",
+      "hintEn": "Strike someone or something with a blow.",
+      "contentSha256": "53dbdd395efaca2fdf1677a20276635263c21f07be1491630b1dbe3417077fcf",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 32,
+      "answer": "fee",
+      "hintEn": "Amount charged for providing a service.",
+      "contentSha256": "c83ccc0aad8a75bd1ae8eb7be1ba83d8c2b328822299d2666299c9c6b8a931e4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 33,
+      "answer": "saw",
+      "hintEn": "Use a toothed blade to cut a material.",
+      "contentSha256": "255a8054efe3ed6019c288e36c2d97e93e26a484e6bb6b62f93b8fe656cae512",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 34,
+      "answer": "ten",
+      "hintEn": "It is represented by the numbers one and zero side by side.",
+      "contentSha256": "e1c3c74cb334ae6783e41568cef0f7c9fc01b01640e4a6f6191661ad8ff596e0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 35,
+      "answer": "die",
+      "hintEn": "Stop living permanently.",
+      "contentSha256": "f5c46d0a51abf420d4408ecbaf586fe4a96f80b51a59e69859be56d3730ca1cf",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 36,
+      "answer": "guy",
+      "hintEn": "Informal way of referring to a male person.",
+      "contentSha256": "4534375067d51d3451aa82d497443b2d04ca962c35173e987b4f64dde8c274ff",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 37,
+      "answer": "fit",
+      "hintEn": "Be appropriately sized for the available space.",
+      "contentSha256": "c426685737b181c7535172894f1cd4f1959c197424984c091986ef0e9d7a0807",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 38,
+      "answer": "bus",
+      "hintEn": "Public vehicle that transports many passengers.",
+      "contentSha256": "7cbecbaf388a7dda037dec176be03b6d7624376b2aab98ce71e3f379e1d9abe6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 39,
+      "answer": "bed",
+      "hintEn": "Furniture with mattress used for sleeping.",
+      "contentSha256": "bdf0f3989e50790dced8ee716e4ca9ca77116dc3e941229aead42f98542ec756",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 40,
+      "answer": "mix",
+      "hintEn": "Put different elements together until you form a combination.",
+      "contentSha256": "2bb5d87f174439fea20d7c2b79a6eeebda573b8616f6de338f42b3a2a0d0c57e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 41,
+      "answer": "ray",
+      "hintEn": "Narrow band of light or other energy.",
+      "contentSha256": "fe634a820066bfdf98a20c5df13d69f3de4487b7d7d1b080ceaba69d0056bbb2",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 42,
+      "answer": "spa",
+      "hintEn": "A place offering massages, baths, and other wellness treatments.",
+      "contentSha256": "b2d78fdf31d9771f30f8f2536c4d4dbcc63ce9f8ae6d849a2767391e5a599b57",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 43,
+      "answer": "row",
+      "hintEn": "Arrangement of people or objects side by side.",
+      "contentSha256": "dea981f0cca568bf3a7b3246ddaa3b4f4d2193d91f2a53b48741475e9efac8d8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 44,
+      "answer": "aim",
+      "hintEn": "Future purpose that directs what someone does.",
+      "contentSha256": "a70f95d20d81b45d7d3951f6f18fc93fb9afa92c4f7cba6cba251bcab1a912d8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 45,
+      "answer": "fly",
+      "hintEn": "Move through the air with wings or in an aircraft.",
+      "contentSha256": "98f5516d1c85a67b716815cf950ebbaff1eb094a36564c93260ebeb6f53d6eb8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 46,
+      "answer": "sky",
+      "hintEn": "Region that we see above the earth's surface.",
+      "contentSha256": "575af36992dd1facbe44f530bee21d939390ccb32dba9812b59d99fe7edcba5f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 47,
+      "answer": "hip",
+      "hintEn": "The side of the body where the leg joins the torso.",
+      "contentSha256": "4a1ed2cb6bcae2199884c1fb867534ac9cd8d3186b6997a5601a81629f0205e5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 48,
+      "answer": "cap",
+      "hintEn": "Soft headwear, usually with a visor at the front.",
+      "contentSha256": "0d6325dc32094fb346e7775adfe9061246a26950422319562a3336ce71489e8c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 49,
+      "answer": "pin",
+      "hintEn": "Secure something to prevent it from moving out of place.",
+      "contentSha256": "a70ce6714ba70b1073bd11ab8cabfed2ba125c81aa922a0044bb489d66233c2f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 50,
+      "answer": "hat",
+      "hintEn": "Headwear with a crown and a brim.",
+      "contentSha256": "7bf649df2ebdcf7ee58075d5e9338df25266317acec560f298f6f4064ed2b8b0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 51,
+      "answer": "have",
+      "hintEn": "Indicates that something is in someone's possession.",
+      "contentSha256": "dc72f2e69cef51f18c9d19b9fb239217807d7480b0a22b035fbff4286fb0f3a8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 52,
+      "answer": "will",
+      "hintEn": "Conscious ability to choose and decide.",
+      "contentSha256": "158d95b7fcbc9986844bb40a7bd61cae078bac5a3b26865cb2b0a7546f849b16",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 53,
+      "answer": "free",
+      "hintEn": "Describes someone able to move without being restrained.",
+      "contentSha256": "f243696a2a82a48975254157634c864867f39d3c7b4ca9a5617057038ae577ae",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 54,
+      "answer": "only",
+      "hintEn": "Marks a person or thing as the sole one mentioned.",
+      "contentSha256": "9bed79f8b0aea2fbb2c20bd46f318f5c7537b8f2481aca14e996a21b0cbc2cd6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 55,
+      "answer": "help",
+      "hintEn": "Provide support for someone to carry out a task.",
+      "contentSha256": "12a1b78d7c1b3ec518ec819fb2993e0bcd7646a18193674c949186b3306fdd5d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 56,
+      "answer": "like",
+      "hintEn": "Feel preference or pleasure toward someone or something.",
+      "contentSha256": "d4b07c8f3856db2fb6e345a4a342a16a97272be49b0c23f4852c62dd516f1264",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 57,
+      "answer": "date",
+      "hintEn": "Indication of the day, month and year of an event.",
+      "contentSha256": "cd946baeb37d25fc39b685e728761378dd2f87f26e5589cac12ceca4c542e43e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 58,
+      "answer": "list",
+      "hintEn": "Organized sequence of names or items.",
+      "contentSha256": "00fe625e31323bf8e144657e2ef73841e4a40e4acd867100062d34b12c69c45c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 59,
+      "answer": "just",
+      "hintEn": "Describes who acts with balance and justice.",
+      "contentSha256": "8ed0abcdac0d9d2023d191ea59be68742a06d99d2320933fa881b9ee0e53383d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 60,
+      "answer": "year",
+      "hintEn": "Period formed by twelve months.",
+      "contentSha256": "8d78365de3002699d86d083b0e24e84a2a9ebf15f0865c7dfe4c6eb99b07ca9b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 61,
+      "answer": "work",
+      "hintEn": "Activity done to produce a result.",
+      "contentSha256": "ca59564d71b3495c3b4fff060805c97b632fb53b6ae4c4390599ffd6e7bc028c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 62,
+      "answer": "most",
+      "hintEn": "Points to the largest part of a group.",
+      "contentSha256": "230cf47d6d78cb4ca902477ac088989d7dc073d6468d10098732108e58c85c0b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 63,
+      "answer": "city",
+      "hintEn": "Urban area with a large concentration of inhabitants.",
+      "contentSha256": "5e72bbfcfffcd1466c0e8d6a996ec54cf9f8246d9ca3dc0b26897b7073c02c22",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 64,
+      "answer": "best",
+      "hintEn": "Describes the option that surpasses every other one in quality.",
+      "contentSha256": "0d75df7c3c6d69e516949212665de1c345e5f32d5351c049c7f09fc3c218d5c4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 65,
+      "answer": "good",
+      "hintEn": "Describes something suitable, positive, or desirable.",
+      "contentSha256": "1962461f41b65c03548b918e2b331af8b4ce16356a3e712fa8107ba781ee6535",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 66,
+      "answer": "high",
+      "hintEn": "Located far above the base or the ground.",
+      "contentSha256": "d84b45ce5e4881bd28013d01ad2761974aa969ed23585f42cb739166d6c74a3a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 67,
+      "answer": "very",
+      "hintEn": "Greatly increases the intensity of a trait.",
+      "contentSha256": "5efe437f11ea265b90e22c12f184cd2959d7ff4392fa58904ec44873f91d0ae1",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 68,
+      "answer": "read",
+      "hintEn": "Interpret written symbols in a text.",
+      "contentSha256": "17bd71e1f0966272cf6da21f9c64eafb5fa2f906bb56fddec5abaf01583232bc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 69,
+      "answer": "bird",
+      "hintEn": "Winged animal that builds nests and has feathers.",
+      "contentSha256": "2dd8663f9a75349e708100f06ea48c1e5d6ef87745e8ca4429c96d5d61e63614",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 70,
+      "answer": "life",
+      "hintEn": "Condition shared by organisms that are born, grow, and change.",
+      "contentSha256": "e28c2fa0cc014687f0297b12671be3ff47f3ccf806cb6f32de62fbd2e964e58f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 71,
+      "answer": "part",
+      "hintEn": "Necessary component to form a whole.",
+      "contentSha256": "b776af60921a95013a0d927c9abe5eebfc17eaa1f953904700ccdb9acd80636a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 72,
+      "answer": "item",
+      "hintEn": "Individual entry found in a list.",
+      "contentSha256": "bde1ce297b951b86e4375662617f79ab16ff5fb30fe6c4f1793bcce3db00a966",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 73,
+      "answer": "line",
+      "hintEn": "A continuous mark that connects points on a surface.",
+      "contentSha256": "fa1d746d9c490fddd337c64f522f1bd213a663104dc9a75a2defbd41b4ecdddc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 74,
+      "answer": "type",
+      "hintEn": "A category whose members share defining traits.",
+      "contentSha256": "70a16e57bd549ce9bc6ec4054ea92be8008526d0eda235915331212eb61c3b76",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 75,
+      "answer": "area",
+      "hintEn": "Region with defined limits for a given use.",
+      "contentSha256": "bb5a575af0e168fe9ce8bddc6f778ddc259ad4e30f69442fa087db876025fc19",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 76,
+      "answer": "long",
+      "hintEn": "It takes up a lot of space between its two ends.",
+      "contentSha256": "ac31819dff650c1de6dbb91c912e519a4f48e62c9c15845d1b5a5d0f90189f15",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 77,
+      "answer": "even",
+      "hintEn": "Describes a number divisible exactly by two.",
+      "contentSha256": "3e3bf4acb1d964f2140b8e23967bc98b09eae161970b4b1e13c275bd7b7c223f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 78,
+      "answer": "sign",
+      "hintEn": "A visible clue that communicates the existence of something.",
+      "contentSha256": "537b346e4872d10ccc15aa36e01d9a5773658c2905577565e0134a35bd06297f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 79,
+      "answer": "case",
+      "hintEn": "Specific situation used as an occurrence or example.",
+      "contentSha256": "f8b05c790d7d5bded9193d5f6148a238e59d1f280788411c0082bae1e31fecc4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 80,
+      "answer": "both",
+      "hintEn": "Refers to two elements considered at the same time.",
+      "contentSha256": "6aa14597591227e3bc869e40efa8aa48d4bebea4c919fd887338d0aa81252e30",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 81,
+      "answer": "care",
+      "hintEn": "Dedicate attention and protection to someone or something.",
+      "contentSha256": "46523c56118a9418896c86ee2369df884cf35ffe7f89893cd78f1383c1e9a026",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 82,
+      "answer": "size",
+      "hintEn": "Measurement of the dimensions of a person or object.",
+      "contentSha256": "584aff577bd11346e907718aa68513b9a5a9df23a1d9a16195eb23b5e4b078e4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 83,
+      "answer": "rate",
+      "hintEn": "Relationship between a quantity and another measurement.",
+      "contentSha256": "3eecc853a86f8c2793f493824e60fd077cff4c5a3156b765a6f19b823536ade3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 84,
+      "answer": "love",
+      "hintEn": "Feel deep affection for someone or something.",
+      "contentSha256": "4884db6b549373622936cb20084cde47f510c12196977a3812d83a015c05e271",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 85,
+      "answer": "call",
+      "hintEn": "Try to speak with someone by telephone.",
+      "contentSha256": "f4ff70f61f612562f63f84587494feefa7f4180c0b813ee92ae0a6b7bdae332e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 86,
+      "answer": "card",
+      "hintEn": "Small plastic piece used to pay for a purchase.",
+      "contentSha256": "f87e59e597339897d40e708f7e23ee4651c7efabf57812d794f2fdb6d16548c5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 87,
+      "answer": "sale",
+      "hintEn": "A product changes hands in exchange for payment.",
+      "contentSha256": "cda9114329fc3924b01fc50b2ee6aa963e2222097d18457882bd7d926ec61f0d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 88,
+      "answer": "room",
+      "hintEn": "The part of a home that normally contains a bed.",
+      "contentSha256": "553e5fa5abcc7b99641301c084c1050937afdbc8cf1e762aab543eb6ebfca93d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 89,
+      "answer": "west",
+      "hintEn": "Direction of the horizon in which the Sun sets.",
+      "contentSha256": "3040931158f17ef052dbf13714eff4ec1cd8463aecb2e529e5e585dceb3540b0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 90,
+      "answer": "left",
+      "hintEn": "Characterizes the side opposite to the right.",
+      "contentSha256": "1e30b5517650cd128150eab7a2279bf4ec4622c2bd67414f8920c4bc645189d8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 91,
+      "answer": "week",
+      "hintEn": "Period formed by seven consecutive days.",
+      "contentSha256": "8b577e9842e4da39e177bbec5a132728cf78c862348b97ce6e66eb4d0da4aecf",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 92,
+      "answer": "live",
+      "hintEn": "Reside habitually in a particular place.",
+      "contentSha256": "e4aaabea8e7b1565a02ff16e8b4edf25e3ffff40e5e0df0441aeb6aa5350cb82",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 93,
+      "answer": "cost",
+      "hintEn": "Amount of money that needs to be paid to purchase something.",
+      "contentSha256": "6da1242202bce668752db54de7773f32c8e106a6a6e13f9c11a010b4cec3fdab",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 94,
+      "answer": "come",
+      "hintEn": "Move toward the speaker or a stated destination.",
+      "contentSha256": "4d2fcfb705b0dfdde4c66eb7e5e426a7e9f45d16a3dfda28319f3c247c37d22b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 95,
+      "answer": "play",
+      "hintEn": "Participate in a match following defined rules.",
+      "contentSha256": "5e7fc1279dbf49be9f21e92be519311616ee42e7cb21d288d60d2640969a6b35",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 96,
+      "answer": "park",
+      "hintEn": "Open space with vegetation intended for leisure.",
+      "contentSha256": "c46e218fb88c6275b73f7e82661f164256517efe1b77983cbab1e87fe922a1d5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 97,
+      "answer": "give",
+      "hintEn": "Hand something voluntarily to another person.",
+      "contentSha256": "dafdf0d8a93fdcc59e731048609daa2a40ac9281a691cff7be0cda43f000ac5f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 98,
+      "answer": "body",
+      "hintEn": "Set of physical parts of a living being.",
+      "contentSha256": "67ba2c8b8bf76c348e751f6f6cb3c9d3069cec09e735446d0e72ff9f55d342fc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 99,
+      "answer": "club",
+      "hintEn": "Group brought together by a common interest or activity.",
+      "contentSha256": "115a97da7225936b2662a867943a03f256e3349d5501cc91e8c3a80a6e2652f9",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 100,
+      "answer": "gift",
+      "hintEn": "Object delivered to someone without requiring payment.",
+      "contentSha256": "5516f98e18f25feee1d57feb2188249dcce0772377f09410201e6f0661c7260b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 101,
+      "answer": "four",
+      "hintEn": "Corresponds to the number of seasons in a year.",
+      "contentSha256": "17155e2d8f4d3dd916104101189b17c8025731cffc8ac0015fe7747c973f3314",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 102,
+      "answer": "easy",
+      "hintEn": "Requires little effort to accomplish.",
+      "contentSha256": "2f255ffd33d87e8ed06f55b9e93feddcd9fb2841eada514b25083ed7a6cb6b87",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 103,
+      "answer": "hand",
+      "hintEn": "Part of the body at the end of the arm.",
+      "contentSha256": "b54bc8733f9b5b4e0aa867eadc5441d8028c429a9cea162ed9d56648f67502e5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 104,
+      "answer": "baby",
+      "hintEn": "Child in the first years of life.",
+      "contentSha256": "7f3179f1a362610ead4f8308def84ab95798a89407fc4e235bcbb2f5661dbc95",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 105,
+      "answer": "film",
+      "hintEn": "Work that tells a story through moving images.",
+      "contentSha256": "8825127913451d9bfa28fc6ce95c8d545a7365f12e6146aee5efaaed51f85764",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 106,
+      "answer": "cell",
+      "hintEn": "Smallest structural and functional unit of a living being.",
+      "contentSha256": "93c642723e608e3b7e942f42c6fe086a9eb42dd645a587ad4fd274113f3f803e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 107,
+      "answer": "away",
+      "hintEn": "Indicates movement farther from the initial location.",
+      "contentSha256": "4895156df1743871c0c92a4ca819f5d5c164654f1cb6ca61751f0e6610c5c680",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 108,
+      "answer": "able",
+      "hintEn": "Has the ability or conditions to accomplish something.",
+      "contentSha256": "af0585076659908015b2aec1fcbd266f698bce6dbf528d5175c2eff7cb4aecb4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 109,
+      "answer": "past",
+      "hintEn": "Period prior to the present moment.",
+      "contentSha256": "bd40783b870f20ff8a4dda5d5524e2ff6e2dc180c342ef3cb105689e34be67f9",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 110,
+      "answer": "land",
+      "hintEn": "Solid part of the earth's surface.",
+      "contentSha256": "d3ad509e7e6e60977ad9ab314f406cae45699fcc8e85b2617491eeeab4fcb752",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 111,
+      "answer": "talk",
+      "hintEn": "Exchange thoughts and information in a conversation.",
+      "contentSha256": "ddc4e8184223f3a1d40e821cfad4e65b67e7296d6dcff57c69090a8f16c8fe63",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 112,
+      "answer": "rock",
+      "hintEn": "Natural and solid mass formed by minerals.",
+      "contentSha256": "5bb30b5e79d9c9dec7507b5abb7201cca3e167b4b2fff2992bf787a418a7f4c2",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 113,
+      "answer": "edit",
+      "hintEn": "Review and prepare content before publication.",
+      "contentSha256": "d971a22a008b940a90d4b4b0380999330d37f0c9c5272e3ae576028e32f727c3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 114,
+      "answer": "fact",
+      "hintEn": "Information that can be proven to be true.",
+      "contentSha256": "022ae31e89ef66e27994c83f923005ae3fdf86915fea81e059d0541735917794",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 115,
+      "answer": "shoe",
+      "hintEn": "Footwear that protects and covers a foot.",
+      "contentSha256": "ff7edd1a0cea32287ba32aa7706471fa85b02645fac098594b2cba423ee806eb",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 116,
+      "answer": "feel",
+      "hintEn": "Experience an emotion internally.",
+      "contentSha256": "c3f681651a504a92570f560a2010f2d79ac0d6bec28eb1890ac48e95e735e33f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 117,
+      "answer": "risk",
+      "hintEn": "Expose something to possible loss or harm.",
+      "contentSha256": "86e2d2d4b7822a832f5bb06733f7c6cbc77d77bc5c0763fdb6ff9368f8d80295",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 118,
+      "answer": "girl",
+      "hintEn": "Young person who has not yet reached adulthood.",
+      "contentSha256": "b1d0a4783f6f9594f4ccb47e66be5ad16a51ce1775e8dbedce0c87b79c7458d6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 119,
+      "answer": "loan",
+      "hintEn": "Money lent for a fixed period and repaid later.",
+      "contentSha256": "5e62d00575e77067ee8bf1f1e6f1a4c1397fef9694acd77ff3aa5003fb2b210b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 120,
+      "answer": "sort",
+      "hintEn": "An everyday category used to group similar things.",
+      "contentSha256": "522546f05599d4b4d42a3759ce29bac0030c3d4bb5652ca3d3d609c4454f47cc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 121,
+      "answer": "step",
+      "hintEn": "Movement of one of the feet while walking.",
+      "contentSha256": "a1a8e4c9f8400007da9d8e7e550e19911519a6384d8ccf9db7785eafd854cb47",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 122,
+      "answer": "lake",
+      "hintEn": "Large body of water surrounded by land.",
+      "contentSha256": "65b68358f0a31e59c878e8a2d468dd0bf1a4bdfde27468964bafa58e22e64c5f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 123,
+      "answer": "chat",
+      "hintEn": "Exchange words in an informal and relaxed way.",
+      "contentSha256": "28d736d93b7f1c806074644d6f069dcd5762206b7920585d951717b6140831b5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 124,
+      "answer": "face",
+      "hintEn": "Front part of the head, where the eyes, nose and mouth are located.",
+      "contentSha256": "38210b1002c3b4e264aa630c655789317c873d6a64fe213a2fe2b952d5a951ff",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 125,
+      "answer": "near",
+      "hintEn": "Located a short distance from the reference point.",
+      "contentSha256": "17bf8ac854a4bd867cacf125204fc6b21cd2dfbec9f4a2bdfbc122751b684521",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 126,
+      "answer": "turn",
+      "hintEn": "Change the direction or orientation of something.",
+      "contentSha256": "e041308421c98f629bf2e5c83a4105ebc84795483768e8a33e7ecf611beecc00",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 127,
+      "answer": "copy",
+      "hintEn": "Reproduction made from an original.",
+      "contentSha256": "4701cf2a34b8827fdb2744e71ca91e1eb6bcc857ed6572a8ff64dcfb9cfd38f7",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 128,
+      "answer": "port",
+      "hintEn": "Coastal place where boats arrive and depart.",
+      "contentSha256": "3472820631486704e0018e9e9ac64e8681342b3e59ffcf5c97b6f07e3babc729",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 129,
+      "answer": "mind",
+      "hintEn": "Human faculty of thinking, remembering and feeling.",
+      "contentSha256": "060534b2eb3d53f2b9429dcb7f66f9c85de5bf9bb6672c676ae49165bd40c183",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 130,
+      "answer": "tour",
+      "hintEn": "A trip through several places or points of interest.",
+      "contentSha256": "8a0652995269f6d982b9efce14e0db7f68481ed3ac1d2e5929f34e0f7eddccea",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 131,
+      "answer": "hope",
+      "hintEn": "Wish for something good to happen in the future.",
+      "contentSha256": "c8e4222d2df5989afca473c403d56bbaa6ffc1a042ef63e9210a05053f001919",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 132,
+      "answer": "role",
+      "hintEn": "Set of functions expected of someone in a situation.",
+      "contentSha256": "28f0c9f283f512da9e2370c4bcaae604f7f58deebe833149320b249575697f7a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 133,
+      "answer": "hour",
+      "hintEn": "Duration unit consisting of sixty minutes.",
+      "contentSha256": "1a48cbab7c17812129af226f49c91d5a3d4c10fdc44d8db3d2502847deb8e6e0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 134,
+      "answer": "move",
+      "hintEn": "Change the position of a person or object.",
+      "contentSha256": "1a39a8985d61152b03f8acb9b2ed6530137641b1951d345cc00745d2c6a1c55f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 135,
+      "answer": "band",
+      "hintEn": "Group of people playing music in public.",
+      "contentSha256": "39b80ef6d188b7b0f8d740528240200d9b2b55732dafb8f663b9662996586e00",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 136,
+      "answer": "mode",
+      "hintEn": "Particular way of doing or organizing something.",
+      "contentSha256": "6f066f660f8ef89c5a37e8f04143c542e89e4a2f912935a91b3d288b7d46a56d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 137,
+      "answer": "male",
+      "hintEn": "Describes the sex associated with sperm production.",
+      "contentSha256": "fed54a14d849a2e7d33815aa5622b448ad67ef62bd15404064bda13ee0eb1c32",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 138,
+      "answer": "late",
+      "hintEn": "Occurs later than expected.",
+      "contentSha256": "6fc074510d20ff98e544048f2c27dc63396deed46a7c1419724e52fc87ce490f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 139,
+      "answer": "idea",
+      "hintEn": "Mental representation that can guide a creation.",
+      "contentSha256": "aba4c4e702b92cca39fba5963a275e267b94159be7822cc219f5a305e1268e3d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 140,
+      "answer": "hill",
+      "hintEn": "Natural elevation of land lower than a mountain.",
+      "contentSha256": "8e0b68d8f27fe2ea3e04d407f4e7c1ffeaed51f269650ac97fedc82d24374e84",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 141,
+      "answer": "safe",
+      "hintEn": "Protected from danger or damage.",
+      "contentSha256": "6524ef28f9c1cc4e54e0aaf4ab6a8c111bc7549e82a755eac385c2174efac46b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 142,
+      "answer": "ship",
+      "hintEn": "Large vessel used to transport people or cargo.",
+      "contentSha256": "491e6baef8662a41def2d12e1be69e58439b5f0f3c176bd799534cacfed0bc8c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 143,
+      "answer": "tree",
+      "hintEn": "Tall plant with woody trunk and branches.",
+      "contentSha256": "dca85b6d4d446fab746d11d21f1095267e8c416924bda909bd0ffe30e1088714",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 144,
+      "answer": "wall",
+      "hintEn": "A vertical structure that separates or encloses spaces.",
+      "contentSha256": "0e21ab2d469e085481ee021f5e656a28ac674a76bf7ff04cf4df4af1e241c3c3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 145,
+      "answer": "vote",
+      "hintEn": "Register a preference during a collective choice.",
+      "contentSha256": "6baaae9baccae69d000782c3c9296f03c5d86469a03ad6dd975b594b819f89ea",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 146,
+      "answer": "door",
+      "hintEn": "Movable structure that opens and closes a passage.",
+      "contentSha256": "92537fc927878b4becd2e83559c37731a5fdc9585263d51964a77b8fa34ca8a1",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 147,
+      "answer": "skin",
+      "hintEn": "Outer layer that protects the body.",
+      "contentSha256": "fb0490c62ed1cd8555c26744adcc009a1e08a053cc3a569723b691d73812ab00",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 148,
+      "answer": "rest",
+      "hintEn": "What remains after a part has been removed.",
+      "contentSha256": "62ac0f809aaefbd01e64fde9dc62af46ef0a2e155ed9103501268167ecb58e5f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 149,
+      "answer": "mini",
+      "hintEn": "A very small, reduced version of something.",
+      "contentSha256": "2912a3cb84c27e47477a36efe0840879970234c8ee5cfa78641a46235b006fbd",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 150,
+      "answer": "pack",
+      "hintEn": "Arrange objects inside packaging for transportation.",
+      "contentSha256": "24d04583eda0f62666f101c3ddec2cd5494bb3eeb047064316340aedc762f45f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 151,
+      "answer": "about",
+      "hintEn": "Indicates the subject discussed in a conversation or text.",
+      "contentSha256": "1e1fe9adeb1a4b6c130e004c3f6b1e32a71684466ee9eb3bc7dc28e90d1336e1",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 152,
+      "answer": "there",
+      "hintEn": "Indicates a place far from the speaker.",
+      "contentSha256": "17124466470c4123ee7059e9c8567a65fb0267fc1ff5ae0f6e221d0a62b822ee",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 153,
+      "answer": "price",
+      "hintEn": "Monetary value associated with the purchase of something.",
+      "contentSha256": "29ce2fc1e5157ef11f5c5656795aa3c6eb9f966ae7e8b3e4898dbf7b937ef14c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 154,
+      "answer": "world",
+      "hintEn": "The Earth together with all its places and inhabitants.",
+      "contentSha256": "c39b19b234589ab05631dfa80b67518a53bc932b4c22bf9c75bc5753e19ee1bd",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 155,
+      "answer": "after",
+      "hintEn": "Marks a time later than another event.",
+      "contentSha256": "d4ac51d5d6383135f4bf3783698ac0c4db23ad453c9c65b15f3bcc440a01b230",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 156,
+      "answer": "order",
+      "hintEn": "Arrange elements into an organized sequence.",
+      "contentSha256": "afaefa086c8ccc00fb0dca94e8f290cecd690aee3a868badafc0c9a088e67d36",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 157,
+      "answer": "under",
+      "hintEn": "Indicates a lower position than something else.",
+      "contentSha256": "1184ac325ada61ba2b35f34dd02ef1611b0c909b4555b0c54374e04f9d9be432",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 158,
+      "answer": "hotel",
+      "hintEn": "Establishment that offers temporary accommodation.",
+      "contentSha256": "4b85bb2c7e82fa1697addac8a48695dcb87faa490f45f08e9450287302d85df0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 159,
+      "answer": "local",
+      "hintEn": "Related to a specific and limited place.",
+      "contentSha256": "e49017a82161261f78c1fd4e7d35b4c0322cb929c7f4598db1045ce3f365af7a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 160,
+      "answer": "black",
+      "hintEn": "Describes the very dark color associated with the absence of light.",
+      "contentSha256": "e64173fcefb16e004c831300482d20437964edca1f30d35d7e67fa37d2477070",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 161,
+      "answer": "index",
+      "hintEn": "An ordered list used to locate information.",
+      "contentSha256": "598d2a6276261da5b31e31cbd11932917afbf2d81a57ffde0cf31c080d32fc1a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 162,
+      "answer": "south",
+      "hintEn": "Main direction opposite to the north.",
+      "contentSha256": "e1c4553ac49db0b1d764aa80ca0d28b077dc2a22f4cf61014340318c33325101",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 163,
+      "answer": "photo",
+      "hintEn": "Image recorded by a camera.",
+      "contentSha256": "a05c0fcc2e2c15329051cb189a7a63829eac6556561237c3fe40b3687cde7a15",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 164,
+      "answer": "while",
+      "hintEn": "Brief period of unspecified duration.",
+      "contentSha256": "6309a9af677a28a6bf42b37980431a59103688673ae55bbadbb257e13ed3679e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 165,
+      "answer": "total",
+      "hintEn": "Includes the entire set without leaving any part out.",
+      "contentSha256": "a5799d0c1bcc7a3ef377bf348e288a7aa59de3f0809257d20a5fd166a046f44b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 166,
+      "answer": "north",
+      "hintEn": "On maps, it usually appears at the top.",
+      "contentSha256": "94817cf175306a5a0f171ef0bdf930d91567e2fc407d4d8f5a924e9d3bc81c4e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 167,
+      "answer": "guide",
+      "hintEn": "Lead a person along the path to their destination.",
+      "contentSha256": "fb425447b9f1565a3d0c1c2c6813b656f712f71804c08cfe966ee04c8d732aa7",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 168,
+      "answer": "white",
+      "hintEn": "Describes the pale color associated with snow and bright light.",
+      "contentSha256": "bdeeb87bd987d705d835277a2f7713da6c724d20a3011268f33697125fc30ad0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 169,
+      "answer": "level",
+      "hintEn": "A stage's position within a difficulty scale.",
+      "contentSha256": "91d174d2ac695c8979ee12dd02f8f57344f0b5813973def89b3a8b602826330a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 170,
+      "answer": "title",
+      "hintEn": "Name used to identify a work.",
+      "contentSha256": "8456132b8b97fc1456397d133fd3906a5c91edde4fa8164889d1b1dd4cf5221b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 171,
+      "answer": "still",
+      "hintEn": "Remains without moving.",
+      "contentSha256": "462c01d9b1e97abe88881bac42f5e7f14a233fa9d2935920666925ad588f178d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 172,
+      "answer": "every",
+      "hintEn": "Covers all members of a group, without exception.",
+      "contentSha256": "c6e31668f195930dd6ce5f41f77453b62e62c503727696660eda78bacfa449a6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 173,
+      "answer": "reply",
+      "hintEn": "Respond directly to a message that was received.",
+      "contentSha256": "128154efae9d072e9c7be4a03577b856297951d9ecf26563f59443af2024baac",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 174,
+      "answer": "press",
+      "hintEn": "Apply continuous force against a surface.",
+      "contentSha256": "046b1aec568217e9653d243cf8c8c6b36930ed35ce067241dfd1040e073d523b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 175,
+      "answer": "print",
+      "hintEn": "Transfer text or image to paper.",
+      "contentSha256": "3267ce128b5db9c66b9afa7ff175f8b29fd326765efe288aafa4b1d18352dffd",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 176,
+      "answer": "point",
+      "hintEn": "Exact place identified in a given space.",
+      "contentSha256": "63978f126bb38369adc1399679833de95169621a814bed7635977e9ef3c7ebdc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 177,
+      "answer": "start",
+      "hintEn": "Initiate an action or event.",
+      "contentSha256": "77f95e69de369faf772ec85a93d025434bb13581738938dd6ea12a01989958e7",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 178,
+      "answer": "human",
+      "hintEn": "Related to people considered as a species.",
+      "contentSha256": "88665d7bdacd73e07389053ad5559e07753a3414d0d99b66331ddc0f70807cf0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 179,
+      "answer": "study",
+      "hintEn": "Activity dedicated to a subject to acquire knowledge.",
+      "contentSha256": "1cb6b424d50fe6d11fbe416dd09685b8921964967af2b26feb84ed87f818074a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 180,
+      "answer": "topic",
+      "hintEn": "Central subject of a conversation or text.",
+      "contentSha256": "b7d57f8876515872fc6c8ee8a63468ec2aae504f9a47d6247ad5ead86a5fa246",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 181,
+      "answer": "legal",
+      "hintEn": "It complies with current laws.",
+      "contentSha256": "f9059414b5cc7570c0ea39d9777972f8900bc2c5c02a988159f2769fc3ae0361",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 182,
+      "answer": "quote",
+      "hintEn": "Repeat someone else's exact words.",
+      "contentSha256": "ccd86c809e03388682ad5f4b2767e327b6d95c6a5d055b6bd5c12a15b5173594",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 183,
+      "answer": "young",
+      "hintEn": "At an early stage of life or development.",
+      "contentSha256": "6630e6eb1c279c377ae5b17f5dd164ddf1264437b45d5cb78f0133ac23b1d308",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 184,
+      "answer": "paper",
+      "hintEn": "Thin material used for writing, printing, or wrapping.",
+      "contentSha256": "1c8fe16bfdabc2d8fa57cfc471acb14082d3a221dc8f0b5c7da297d196f59e6d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 185,
+      "answer": "issue",
+      "hintEn": "A matter that needs discussion or resolution.",
+      "contentSha256": "de28ad33838bbbaaa1cc2bd246eea9a9bfb441ff9e443c40419344dfecf5863f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 186,
+      "answer": "court",
+      "hintEn": "Body or place where legal proceedings are judged.",
+      "contentSha256": "46fbf669f8570eefca5167d1a4b32cd47a94aeec912fe6162f65b1e7ede5e90d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 187,
+      "answer": "light",
+      "hintEn": "Visible energy that allows us to see objects.",
+      "contentSha256": "a2737ffb8b60c8a7a6334426a2b8ff131d59df49bca529f9bfb5f63d781a097e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 188,
+      "answer": "offer",
+      "hintEn": "Present something for possible acceptance.",
+      "contentSha256": "7af28ecbebc9eda64b56b743c0515cdebd28e3692fdfe886f32295c7aad8a5db",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 189,
+      "answer": "might",
+      "hintEn": "Expresses that an event is possible but uncertain.",
+      "contentSha256": "e237f24265ccdbee01b66a462e51d7b8ae41faab4b5a4898bf4daf29220b56c5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 190,
+      "answer": "major",
+      "hintEn": "It has greater importance than the other elements.",
+      "contentSha256": "31ffb5f41a7aba915dcfa13cb387159ad0d78058188f863e56ba21eb016c9038",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 191,
+      "answer": "child",
+      "hintEn": "Person who is still in childhood.",
+      "contentSha256": "34924a4fea25e38e4c5286dc34300e6190159514182f6d3cd9f6130ce54d70a6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 192,
+      "answer": "share",
+      "hintEn": "A fraction of ownership in a company.",
+      "contentSha256": "556a76eec7b53e3e1707e3ef90486073c9687e86b2c75b330fc98f0b6e297e4c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 193,
+      "answer": "color",
+      "hintEn": "Visual appearance produced by the way light is perceived.",
+      "contentSha256": "2d7170aa8c9d54afe5fcc24ce24dc738b27718c941821c99de024238fc875c75",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 194,
+      "answer": "least",
+      "hintEn": "Indicates the smallest quantity or intensity among the options.",
+      "contentSha256": "fb38421a61238489ec20a73abddd361d4ce61d9d87739d7fdf346f2960c76570",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 195,
+      "answer": "green",
+      "hintEn": "Color associated with leaves and located between yellow and blue.",
+      "contentSha256": "8980341f4468cc62393c5115f691ae94b3e52dee7f5c08290bfa1b5900fc91fd",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 196,
+      "answer": "drive",
+      "hintEn": "Control the direction and movement of a vehicle.",
+      "contentSha256": "64bebfb0a5f3c8a69f20189d69588f5b305f06b82fb3bfad22ac8bd0c99b4995",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 197,
+      "answer": "daily",
+      "hintEn": "It happens or is used every day.",
+      "contentSha256": "4899f1de44f950820535486e0ee24306f0e9feb51c405ef1664f7231454e1d17",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 198,
+      "answer": "front",
+      "hintEn": "Side facing the main direction or the observer.",
+      "contentSha256": "4a21e9b8e1857203d7160833a80b5be62a5d6ac5b331f249885609f5c19c1e7d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 199,
+      "answer": "sound",
+      "hintEn": "Create a particular impression on a listener.",
+      "contentSha256": "7336710ac410145bc413c7dc4a2d3642ee64414e995dd816a1384c55854f5901",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 200,
+      "answer": "adult",
+      "hintEn": "Person who has already reached the legal age of majority.",
+      "contentSha256": "e7e8c94a277cd318955f521352905ce0d1445304e6c81ec80807b0e9e50e3d2f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 201,
+      "answer": "third",
+      "hintEn": "In a dispute, it comes right after the second place.",
+      "contentSha256": "724ae32ba3b0570778eb341a84fb8d2a9f909fd9348ff5119d4182cbf9396225",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 202,
+      "answer": "watch",
+      "hintEn": "Keep your eyes focused on something for a while.",
+      "contentSha256": "f8d55914b83a133e3322a1578b1d25302fdec730017ac8d9b803817e31afb6b5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 203,
+      "answer": "error",
+      "hintEn": "Indicates that something deviated from the expected result.",
+      "contentSha256": "8d4121627c691711565046a799a1db6ba3ee33b76e3ecff3d6632ec1030f90d3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 204,
+      "answer": "quick",
+      "hintEn": "Carried out in a short time and without delay.",
+      "contentSha256": "4f0845a9ed8c261ae3b78580a81d3b5b5f075bc7239e103f158e803cc0d7009c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 205,
+      "answer": "cloud",
+      "hintEn": "Visible mass of droplets suspended in the sky.",
+      "contentSha256": "40382b0120a47e6291488e4a8318a08bb0811068486df4a3efc281deb558e895",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 206,
+      "answer": "death",
+      "hintEn": "Permanent end of a being's vital functions.",
+      "contentSha256": "6657c036058e699545b0852bc1aa9ece7ba0244a142901faf155ed1751633585",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 207,
+      "answer": "stuff",
+      "hintEn": "An informal collective term for unspecified objects.",
+      "contentSha256": "74f6c532a33cf525b95a77683ea2137c2c72d808c72cd5b0d93bb886d265692d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 208,
+      "answer": "force",
+      "hintEn": "Compel a person to act against their own will.",
+      "contentSha256": "18e83004f2edb0dacc44a1f37a6b7828b74ec3b6fa7ba3a594da405de497060e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 209,
+      "answer": "album",
+      "hintEn": "Set of songs brought together in the same release.",
+      "contentSha256": "59e00bd31e2ea4e4eeaa8bdc0f459021639cb3ba68c8ee02751e54b91c99937e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 210,
+      "answer": "cross",
+      "hintEn": "Pass from one side to the other.",
+      "contentSha256": "27ebf6dfeba413bd64f485e5ebf8c6d5579fd09acdaa4097f6fab506e977a268",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 211,
+      "answer": "union",
+      "hintEn": "Bringing together parts that were previously separate.",
+      "contentSha256": "3b0583d397c247d3a64f06de95b6bf36b94fe4a9dcf46805d65c51ecf4f2c6ee",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 212,
+      "answer": "woman",
+      "hintEn": "Adult female person.",
+      "contentSha256": "6e7b5e9f4ed5ead3d55873c17cac72deaf472787558b069cd870e351f60c7cbf",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 213,
+      "answer": "score",
+      "hintEn": "Sum of points achieved during a match.",
+      "contentSha256": "81704c98bdcbdaad9ce746d8f7466254ef7b5574d7e2b5d9bd57c226f3a53dac",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 214,
+      "answer": "super",
+      "hintEn": "Used informally to intensify praise for something excellent.",
+      "contentSha256": "0352f794794c7b2f47aa7f19b484d0158ba2a1c7578ba469f60201e389b4aa1a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 215,
+      "answer": "focus",
+      "hintEn": "Point that receives the greatest concentration of attention.",
+      "contentSha256": "c14815471413aa78ae05f974ef8c9c997740328bb6628db45809060e018328e2",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 216,
+      "answer": "brown",
+      "hintEn": "Color similar to wood, coffee or earth.",
+      "contentSha256": "e04c60c883fa8034206f0880aac2d58d2823f074e26b865b9c99a44e13f50578",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 217,
+      "answer": "happy",
+      "hintEn": "Feel or show joy and satisfaction.",
+      "contentSha256": "8cb7f16bcf9e68853942a85810e4eac9c00277e8af7d2ef1fb76436fd356cce0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 218,
+      "answer": "prior",
+      "hintEn": "Already happened before the time being discussed.",
+      "contentSha256": "86c1c1e7b107f82786ddc7aab3b991332b30169684d6f9061ef2f20555cee5be",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 219,
+      "answer": "ready",
+      "hintEn": "It is prepared to act or be used.",
+      "contentSha256": "4ee933bced8f798b218edc3bee630dcf41f51d779ed1204960d8ccd7f1453328",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 220,
+      "answer": "blood",
+      "hintEn": "It is pumped by the heart to circulate throughout the body.",
+      "contentSha256": "6a8c234dfb5846249c4c5e69f35e6bdfda2fdc348e28bb52fbdbbc2062719e5f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 221,
+      "answer": "basis",
+      "hintEn": "Foundation that supports an idea or structure.",
+      "contentSha256": "14fc694e429f3046d245680040ac81e566b8ea3bb8764cc01efc60e7fd3b3238",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 222,
+      "answer": "extra",
+      "hintEn": "Something added beyond what is necessary or expected.",
+      "contentSha256": "dbc9e458eaa6025be8867decc678ab4aea097f46b924a849f5b93654e34e8594",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 223,
+      "answer": "owner",
+      "hintEn": "Person to whom an asset or business belongs.",
+      "contentSha256": "7334a7e7512b81ee2a1eed58d6c18e924b10215d10e055e7b0c011fbdd57900e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 224,
+      "answer": "agent",
+      "hintEn": "Person who represents the interests of another.",
+      "contentSha256": "1e9f3cae78c05ef84fb2653d2cbdaa12574ea7b8b6d561d1238fc37b701944d8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 225,
+      "answer": "grand",
+      "hintEn": "Describes something majestic and impressive in appearance.",
+      "contentSha256": "4fc99d5fa3621a9f5ed2a05b5116eb723b74d3cadff0ef40b2304b413c5d7224",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 226,
+      "answer": "metal",
+      "hintEn": "A strong, shiny material that conducts heat and electricity well.",
+      "contentSha256": "ef6815ad8d364f27a145dd9ff22ff74ae4ce3be845a779fdaa804136845ec4f3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 227,
+      "answer": "trust",
+      "hintEn": "Feeling safe when depending on someone else.",
+      "contentSha256": "7c18377a6566c6e3cab21f749603d38da3221bf1a34b01f57e69bebc012037a7",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 228,
+      "answer": "panel",
+      "hintEn": "Surface that brings together the controls of a machine.",
+      "contentSha256": "c7c746ff33daeee09470cd58cebca0e4292d2d2b8167c7e45b827692327f6e0d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 229,
+      "answer": "match",
+      "hintEn": "Correspond with something else in appearance and characteristics.",
+      "contentSha256": "29afa755015df89f1b6ac1f46f18ae397d40da1e41b61df9396b28bbdffef685",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 230,
+      "answer": "sense",
+      "hintEn": "A bodily capacity for perceiving stimuli.",
+      "contentSha256": "f799b5a3868fee86ac99b09f68e1f957a5c064eae4dc8498817dfe1ee8dff0e1",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 231,
+      "answer": "youth",
+      "hintEn": "Stage of life between childhood and adulthood.",
+      "contentSha256": "eeb209598ca349de4177bb05cddff3df31e033f4c549dc4534afb3227508f66f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 232,
+      "answer": "dance",
+      "hintEn": "Move your body following a musical rhythm.",
+      "contentSha256": "83d4b8eaf82de07e053e81cfb5c4561789f15a7b0cc63dac3ac55cc274e19a5f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 233,
+      "answer": "enjoy",
+      "hintEn": "Feel pleasure and satisfaction during an experience.",
+      "contentSha256": "43ab902e53f65cb3f720bc6caa5815b0c84f99c27b91d49cf2630314c5d23ada",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 234,
+      "answer": "civil",
+      "hintEn": "It relates to citizens and not the armed forces.",
+      "contentSha256": "da79451654efa0d50239c645052080c2599471b400b605921b8fba4be084a543",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 235,
+      "answer": "wrong",
+      "hintEn": "It does not correspond to the correct information.",
+      "contentSha256": "d8e67b96533f3110031fabf9e4bdca1a58ca0e72ea3ed84982f22978f34c5ebc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 236,
+      "answer": "peace",
+      "hintEn": "A situation of tranquility without war or conflict.",
+      "contentSha256": "f9700eedac5caf9cc7e2bfc37e8313edf00e22e6d4bff492ba10a707c0f73612",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 237,
+      "answer": "grant",
+      "hintEn": "Formally give what was requested.",
+      "contentSha256": "2409cd8a242f39b4511798a3fd3147db311babdca7409f5ad97a646af7ec5041",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 238,
+      "answer": "scale",
+      "hintEn": "System of graduated marks used in a measurement.",
+      "contentSha256": "2f3b757cc544b17ffd3ffa8c1d736c0044c7b808cb6d4aa2b3b124510a492b0a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 239,
+      "answer": "frame",
+      "hintEn": "Structure placed around an image to make it stand out.",
+      "contentSha256": "20d350c81ffba327c929cbfaab4dbc44986686788cf3c71d8333c4b0f212070b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 240,
+      "answer": "clean",
+      "hintEn": "It is free of dirt or impurities.",
+      "contentSha256": "52eac3791e2f8cc081fa3a0008cdcec685abf837859d4c1af246f3d495a0f70a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 241,
+      "answer": "piece",
+      "hintEn": "A fragment created when an object is divided.",
+      "contentSha256": "e0150b9ee6a8207c82cbc8915175ed988b6b7c0ca2c2cc375e5d1101aa08830f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 242,
+      "answer": "seven",
+      "hintEn": "A complete week has this number of days.",
+      "contentSha256": "fbbf7369b0eef92e11387e57d695b805b16df3bd0e479b706bf042b4e525e3a1",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 243,
+      "answer": "buyer",
+      "hintEn": "Person who purchases products against payment.",
+      "contentSha256": "c43a092789b84a9d892e322a004184ccdda4a6f2dfb310aa7fdff694f94b95be",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 244,
+      "answer": "waste",
+      "hintEn": "Use a resource unnecessarily or without benefit.",
+      "contentSha256": "57ae89cb51e2ca06c8e311bb461e3d036e04c69e85d87a17813f225b4dbd9244",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 245,
+      "answer": "motor",
+      "hintEn": "Machine that transforms energy into movement.",
+      "contentSha256": "3427235d2ccf3d016a10a0026cb45e7f2a820930b9f9a0ae54bee09ba1286691",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 246,
+      "answer": "crime",
+      "hintEn": "Act prohibited and punished by legislation.",
+      "contentSha256": "4aeda55916cd8f4b97c33f6ff73e36f8f5d3ef3685d24a0c5158237d7bc8397b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 247,
+      "answer": "claim",
+      "hintEn": "State something as true, though it may still need proof.",
+      "contentSha256": "b657c623a65d716dc210e4d6bac1b9c0398c649bf2ef367ee39e65828bd1564e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 248,
+      "answer": "alone",
+      "hintEn": "Without anyone else's company.",
+      "contentSha256": "2d9b8d4b4dcd9e223204ba6920099a1288ac3c1cd6bb2aea6bb00d2952f9e7b8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 249,
+      "answer": "joint",
+      "hintEn": "Owned by two parties at the same time.",
+      "contentSha256": "9dc4f082d57a02ec4c3bf9af1a26012b5b4339de7dbed63fa86002aa5d71b42b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 250,
+      "answer": "upper",
+      "hintEn": "It is above another element used as a reference.",
+      "contentSha256": "43589fb96144600e04555f7731d9fce2caa467bd3b4215ea7d858c88e5240162",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 251,
+      "answer": "limit",
+      "hintEn": "Final point that cannot be exceeded.",
+      "contentSha256": "8e31f28b794640bf76a593a668fca29634aee2c06c28a56e9d772aeb471efeaa",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 252,
+      "answer": "urban",
+      "hintEn": "Related to cities and their inhabited areas.",
+      "contentSha256": "415c93f36fad50308909fac3cd1ec946aee95a767de546dec87f7f2efa7142df",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 253,
+      "answer": "heavy",
+      "hintEn": "Has great weight or requires considerable effort.",
+      "contentSha256": "1bf33f841c8956690cd6f9ff876e28e845ed3b1c57695f81f5ecf9fb14e7f765",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 254,
+      "answer": "touch",
+      "hintEn": "Make light physical contact with a person or object.",
+      "contentSha256": "cead83313f761c22f006a372982dd76be41bb935a32aa6a47c460d15f2d9f6c1",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 255,
+      "answer": "magic",
+      "hintEn": "Imaginary practice of producing supernatural effects.",
+      "contentSha256": "d2a8c911adb1dfda61f483f409446c00c596ec7e71611b59bb0ca466b62556a0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 256,
+      "answer": "smart",
+      "hintEn": "Describes someone who solves problems intelligently and quickly.",
+      "contentSha256": "198af9daf07a4df6be8183ce7958adb1a2e1b0828555803df7c43a7534e6d611",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 257,
+      "answer": "birth",
+      "hintEn": "It marks the arrival of a new being into the world.",
+      "contentSha256": "d3e9c77020b24d801443df309a5f1d0685e00b0fc48a0dea78bbfa77847674cc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 258,
+      "answer": "abuse",
+      "hintEn": "Exercise power cruelly and harmfully against someone.",
+      "contentSha256": "18cae64ca24034c2ec7b29d55c39dfe1402fee0b9b156fed56fb6b92f8537c15",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 259,
+      "answer": "chain",
+      "hintEn": "Series of links or elements connected to each other.",
+      "contentSha256": "36368aa0d861d48b3c17d464b713a18fb4ef1d865b40acaf9b5c912d70e6d835",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 260,
+      "answer": "sorry",
+      "hintEn": "Expresses remorse for a past action.",
+      "contentSha256": "2f7f4b3c7372319e98023b6072db81fb67847ef42c7abce66654e15f843d239d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 261,
+      "answer": "draft",
+      "hintEn": "Initial version that will still be revised.",
+      "contentSha256": "da933619bbfaebc5bd30610aa72c20ecc967c670daf90f6782bd4ead940d4364",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 262,
+      "answer": "equal",
+      "hintEn": "Has exactly the same quantity as another element.",
+      "contentSha256": "b51f9e4ff39b4a16ce51f125e750081b084a6d1c0e42b6eeeb7fed1a43d09919",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 263,
+      "answer": "fruit",
+      "hintEn": "Edible plant structure that usually contains seeds.",
+      "contentSha256": "b0fa91849c4d8a3e90d91b02d246bf44c4bd5e201e6cf06bfc3ec3dbf5bc32ef",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 264,
+      "answer": "brain",
+      "hintEn": "Organ responsible for thought, memory and control of the body.",
+      "contentSha256": "f47955014b602e852847771ff4941d8c373f91e37bd2ef69cc6f4102083ab89b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 265,
+      "answer": "false",
+      "hintEn": "Conveys information that is not true.",
+      "contentSha256": "b0ae781e8a0a231b4060f95176a9e0b52c42fc5e606206ec56d624d60fe5d20b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 266,
+      "answer": "hello",
+      "hintEn": "Greeting used when meeting or calling someone.",
+      "contentSha256": "992f8088569b33f2860a3771298bb5d3bd3dcd9b59ee3f104e90e19f6aea48ae",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 267,
+      "answer": "eight",
+      "hintEn": "A spider usually has this many legs.",
+      "contentSha256": "c22acfa0cb17a353ccd5b9e898d148275f83378182f5d49f88407041545145f1",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 268,
+      "answer": "queen",
+      "hintEn": "A female monarch who occupies a throne and rules a country.",
+      "contentSha256": "86d9b556f0c87aff00de8101b8e4c7b3930d70349394d0b3dfa9935e1930c083",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 269,
+      "answer": "truck",
+      "hintEn": "Large vehicle intended for transporting cargo.",
+      "contentSha256": "6d632cdba878cd476df9ba7e7a1b5f5d1d95e5e7400cb8c362030e8dc8285de5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 270,
+      "answer": "depth",
+      "hintEn": "Measure of the distance between the surface and the bottom.",
+      "contentSha256": "90b952ae090358599033cbae70686617810e9bfc3109bd850a0de7f9c18006bb",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 271,
+      "answer": "route",
+      "hintEn": "Path established between an origin and a destination.",
+      "contentSha256": "d9017aba98794c8a0c8b0405f2331a143f109b47cdf9e4284521cc2e52da293c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 272,
+      "answer": "query",
+      "hintEn": "Send a request for information to a system.",
+      "contentSha256": "7220c80ae1c72fdf1d4b5f3706ad072079affa95e50fc9d7941cb224e43506b4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 273,
+      "answer": "judge",
+      "hintEn": "Weigh facts before reaching a decision.",
+      "contentSha256": "fffe78418e8fba9f6bd950492ff3429483df7d251a41bb7aa10fad67fb57f805",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 274,
+      "answer": "minor",
+      "hintEn": "Has secondary importance in a situation.",
+      "contentSha256": "58f3253408c4e8e056c1dbd4c228c31fb5edb23a7fc0de4888f4eb7214c1ad56",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 275,
+      "answer": "cycle",
+      "hintEn": "A sequence of events that repeats.",
+      "contentSha256": "55169b658298116ed8bd6b40eaffe311cd72f99913df7855de958369b14cfb9b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 276,
+      "answer": "health",
+      "hintEn": "Condition of physical and mental well-being.",
+      "contentSha256": "d7a24cd0133aacf585081544206671693f06ab99007f003a0020547ede0c2fcf",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 277,
+      "answer": "policy",
+      "hintEn": "Set of principles that guide decisions and actions.",
+      "contentSha256": "422bc2f4cbaba563a52980eb0efe371f8d61f1118952d1905db9c74a2cf6cb5e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 278,
+      "answer": "please",
+      "hintEn": "Cause another person to feel satisfied.",
+      "contentSha256": "5cb885d1d2303cf0916ac02a0e7694ad99e69978b52af0c56ee4ef1436006df1",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 279,
+      "answer": "school",
+      "hintEn": "Institution dedicated to teaching and learning.",
+      "contentSha256": "5bbf699953fbb053920b920bf8fc9c37abfe546dd43ba030f1635233e92f5962",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 280,
+      "answer": "center",
+      "hintEn": "Located in the middle of an area, away from its edges.",
+      "contentSha256": "86f06a88523908b3f43f80b84a2e05be22c92d4c759f8993ec280fdc0074b24c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 281,
+      "answer": "member",
+      "hintEn": "Person or element that is part of a group.",
+      "contentSha256": "0719b1b95828c3914b65f882333defd47f8fdfee192e75cf4b3291b927b98d6f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 282,
+      "answer": "design",
+      "hintEn": "Plan an object's form and function before creating it.",
+      "contentSha256": "ae88ec9c399ed3aecac429d2f07995a01e0fb7a9d9df343f735056b66e2e9a18",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 283,
+      "answer": "county",
+      "hintEn": "Administrative division used in some countries.",
+      "contentSha256": "60d0bc82d4b100f0d6fe7005e38185257613e0721c9a2d3ab3384de8b842d52e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 284,
+      "answer": "change",
+      "hintEn": "Make something different.",
+      "contentSha256": "556de13c79c08692a54716267886b112ca4b71b977c77a442c78c2dda9dbe3f5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 285,
+      "answer": "source",
+      "hintEn": "Place where something has its origin.",
+      "contentSha256": "3719773d3fe65ae649fab38f29dfd0dd5788c9ecd295c32cb162542592fcd27e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 286,
+      "answer": "course",
+      "hintEn": "Organized sequence of classes on a subject.",
+      "contentSha256": "323ba867b81f1e0d8709af5aed93c6ed0881cad2ac60eafab44b80c787647d5a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 287,
+      "answer": "estate",
+      "hintEn": "Set of a person's assets and properties.",
+      "contentSha256": "6262c14e13b06676d1961663939cd5a5b20f9ffbc6aa5fce646570062aac82cf",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 288,
+      "answer": "market",
+      "hintEn": "Environment in which products and services are traded.",
+      "contentSha256": "8300be4d1d653607c896406691afdc61fdd6a71c3e7364957b5eebedbba091b7",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 289,
+      "answer": "second",
+      "hintEn": "In a queue, there is only one person in front of you.",
+      "contentSha256": "79968f44ecde4b92b6696ded22a8880d84700b78314daf4cf8c1a12e0a2a0071",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 290,
+      "answer": "street",
+      "hintEn": "Urban road surrounded by buildings.",
+      "contentSha256": "5d0e0d774f57272d549d540d29a2928e6a880705288ceea635b06786ba72121f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 291,
+      "answer": "mobile",
+      "hintEn": "Able to be transported or moved from place to place.",
+      "contentSha256": "0f1526e9091d20fd144a8a5b343de00e31eaa132786ad3d777b5857528022a91",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 292,
+      "answer": "memory",
+      "hintEn": "Ability to save and retrieve information.",
+      "contentSha256": "9408a53626146aaf55ea37a2d35f3b5dbe95d0cc17a620e67ff4593c621e7b08",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 293,
+      "answer": "travel",
+      "hintEn": "Move from one place to another.",
+      "contentSha256": "7d0236162b59d3e35f0cfb44f0e614473f00cacc22792b5b8aa4f543a0d966b3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 294,
+      "answer": "single",
+      "hintEn": "It involves only one person, thing or unit.",
+      "contentSha256": "f2ba810787adb33796ba4777791fb804cf317766c07c83cccc1f1417f5cd0d8a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 295,
+      "answer": "browse",
+      "hintEn": "Explore pages freely, without a specific destination.",
+      "contentSha256": "2fdd537f3cd0115823edd65cfbf5850d12b83ab06228ca1c4bc1ebc4018b9d52",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 296,
+      "answer": "result",
+      "hintEn": "Effect that appears after an action.",
+      "contentSha256": "4c72b5078e9c135f761756a0e2dde62cd6fecb3acffba2ce89a5154cb5070d0d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 297,
+      "answer": "become",
+      "hintEn": "Enter a new state or condition.",
+      "contentSha256": "f912252538221f90f29cb8daf0266ab0827b7b78d22e0620be0c8fae18d4f8e9",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 298,
+      "answer": "energy",
+      "hintEn": "Ability to produce movement, heat or transformation.",
+      "contentSha256": "5b52eba042d5e6fed29a3f4420bebe30c8ca4d6a1736cd4dbb1b1fb4c153bce5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 299,
+      "answer": "format",
+      "hintEn": "Organization, form or arrangement of content.",
+      "contentSha256": "c92f9f84d98cd310e239e59ea3ce22a6f59a6f566fb482cbb3f498d31c03f0b7",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 300,
+      "answer": "common",
+      "hintEn": "It happens often and is not rare.",
+      "contentSha256": "519ea187283a7dbc77d78debb3597a9d7da764e4372d05498ab9e105384c89c8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 301,
+      "answer": "window",
+      "hintEn": "Glass opening that allows light and air to enter.",
+      "contentSha256": "86d14faff5d40a84c70b5beb3d653686407fad13c1555a89ae70cf6235417fc6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 302,
+      "answer": "island",
+      "hintEn": "Portion of land completely surrounded by water.",
+      "contentSha256": "d4ad51780a59b03948be72750ef37f6022b8d5a0b47847ab7b52058ef4fcf0fd",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 303,
+      "answer": "direct",
+      "hintEn": "Reaches its destination without an intermediary.",
+      "contentSha256": "ce4f143195d64f46b3c8eb95ffab69cf215aa6567567e5a674c98ca9b0b56af8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 304,
+      "answer": "global",
+      "hintEn": "Covers countries and regions around the world.",
+      "contentSha256": "b0ce25b56bfe0fcbc7bec889816cc03fae7280a28a51faded1bd3c64509c59eb",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 305,
+      "answer": "submit",
+      "hintEn": "Send something for review, decision, or approval.",
+      "contentSha256": "b49ea19afdb1b22d852a504ab51f1e4bc453029f2ac8c19c13908dc9858df7b4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 306,
+      "answer": "weight",
+      "hintEn": "Measure of the force exerted by gravity on a body.",
+      "contentSha256": "a751784316c0e9b0948c03c66bbc73f701d6de0d0c4b8debc8839575c195d98f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 307,
+      "answer": "domain",
+      "hintEn": "Delimited field within human knowledge.",
+      "contentSha256": "0fe2b9f5da17b080678dec01d27da935210cd22677c1a11545f42cee8712ac66",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 308,
+      "answer": "simple",
+      "hintEn": "Contains few elements and is easy to understand.",
+      "contentSha256": "8fac797ddbaeed38d83b971a337e9b204f2f646f724148402ebbece71039514a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 309,
+      "answer": "church",
+      "hintEn": "Building where Christians hold religious ceremonies.",
+      "contentSha256": "42ab219618a1248aa6f1a160bfabc79550f79546bb0fb5c25652fd97bbbe8c75",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 310,
+      "answer": "active",
+      "hintEn": "Currently operating or taking part in an activity.",
+      "contentSha256": "163756d561cf74593c736ed99a95852ea586c102ae23a0c511cbe0b0be4472ea",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 311,
+      "answer": "enough",
+      "hintEn": "Signals that no more is needed.",
+      "contentSha256": "e7d3d2c871ac2ce936bedcfa201da6dbf37bd6139f0357948263530134ce4f1a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 312,
+      "answer": "yellow",
+      "hintEn": "Color associated with the Sun and located between green and orange.",
+      "contentSha256": "1497d1364ef802b3de218739cba96964db6c1187048a6ea3eb285f31e90e8565",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 313,
+      "answer": "growth",
+      "hintEn": "Process by which something becomes larger over time.",
+      "contentSha256": "9f4d21e46b58b90a06cce276b83863c0abb282d111117c859c2bd6955b7b9829",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 314,
+      "answer": "income",
+      "hintEn": "Money received regularly for work or investment.",
+      "contentSha256": "90367fee528cf03f8d0b40af9199a6a3601c218424fa51b4ae555761516a8c88",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 315,
+      "answer": "double",
+      "hintEn": "A quantity that is twice another amount.",
+      "contentSha256": "30e2bc4b3e1b9d7a9477c10a87d7ba9ee8cd40997669db5b5ba53cdd8ceabfac",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 316,
+      "answer": "season",
+      "hintEn": "Annual period recognized by a characteristic climate.",
+      "contentSha256": "05c07374d861b6adcefcd8acf925e95914ffbee4bf2de18c60c900d994a7b6cc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 317,
+      "answer": "silver",
+      "hintEn": "It features something made of a clear, shiny precious metal.",
+      "contentSha256": "dfd525f3cdabdee02b4094f93e8f1a082f4ff8095a052c098c022d8cd2c8092b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 318,
+      "answer": "mature",
+      "hintEn": "Reach the full stage of growth.",
+      "contentSha256": "61e3f345be0c962e1a8fdd44fbe1ecf7b2a130f7a82a8e9a6edfe1169bf5c8bc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 319,
+      "answer": "advice",
+      "hintEn": "Guidance offered to help with a decision.",
+      "contentSha256": "37264d9c2c46885b400366f46200a994ede7b39aff529691962aee001792e731",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 320,
+      "answer": "rental",
+      "hintEn": "Temporary use of someone else's property, usually for payment.",
+      "contentSha256": "e31f10d0033f59125dc94f792d2b24ae983e1904792e485be2d5265bbcf2b81c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 321,
+      "answer": "length",
+      "hintEn": "Measurement of the extension between two ends.",
+      "contentSha256": "5f00f161d9668bcfcc01789bb0ef7c8b66ee65941a0f00ae1e0e7da15b1172df",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 322,
+      "answer": "follow",
+      "hintEn": "Travel behind someone who is showing the way.",
+      "contentSha256": "8c6512841ac90d3c1aa300de1ad054e765e656faa4016e551b8d59ffae205353",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 323,
+      "answer": "choice",
+      "hintEn": "Act of selecting an available alternative.",
+      "contentSha256": "27b1dc1fa369b34f27b90411c1c16d0b642ea3627fd75b264f5bb0a28bd61e0b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 324,
+      "answer": "letter",
+      "hintEn": "Written message intended for another person.",
+      "contentSha256": "e4c605fefa8c4ad237335757057d7daa9cfb56b7aa8fb985c9d6b28156040560",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 325,
+      "answer": "button",
+      "hintEn": "Piece pressed with your finger to activate a mechanism.",
+      "contentSha256": "9289282f5290c1f45c9d601cee7a69a3d59d480392eadad2c6deb288b09d65ea",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 326,
+      "answer": "custom",
+      "hintEn": "Traditional practice repeated by a group.",
+      "contentSha256": "b71f05738a71e7ae298f525af4e66369b0ad8b137c3eea7984ae992ef5b11ad5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 327,
+      "answer": "female",
+      "hintEn": "Describes the sex associated with egg production.",
+      "contentSha256": "7a44644ce7fead783030b8e6fdb6d443495ac4e9dc6ce5f74927caa35878ecee",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 328,
+      "answer": "unique",
+      "hintEn": "Unlike any other element.",
+      "contentSha256": "19f46faa23ae33f3cb3df44eaec77118f234023d342871dffd9935ecd8de175b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 329,
+      "answer": "animal",
+      "hintEn": "Living being that feeds on other organisms and can move.",
+      "contentSha256": "ad7aa7a173d4eee98ccdb849ad23f1297ad9cb6aef8c1f5161889bae5599632f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 330,
+      "answer": "option",
+      "hintEn": "A possibility available to choose from.",
+      "contentSha256": "845ee43bc71107d2399592b713d7365a7ace09cd30de93591f21a399cc6d66e0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 331,
+      "answer": "valley",
+      "hintEn": "Low area between hills, often crossed by a river.",
+      "contentSha256": "9550c54067d8d1fdbf5bafa62c1862755b022b83a88fcf680c0d0d8b8da18599",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 332,
+      "answer": "strong",
+      "hintEn": "Describes someone with great physical power.",
+      "contentSha256": "f78e23ff58c9f1ca57b0d74154afae0c32394dba23ff41e3d0bfa8907f3795bc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 333,
+      "answer": "ensure",
+      "hintEn": "Take steps to make a desired outcome certain.",
+      "contentSha256": "9929cfdf2330eed34986ebb53710abb343127ea91074baa67e0bddb439f639ab",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 334,
+      "answer": "retail",
+      "hintEn": "The sale of products directly to the final consumer.",
+      "contentSha256": "a0be6e312c8c1849a00aa1bdeba20a40ec547591fa369cf0ef33d172a3f777dc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 335,
+      "answer": "mother",
+      "hintEn": "Woman who has or raises a child.",
+      "contentSha256": "fdf80ce3a66c733ce4c3c3e6e10781c245bc2adb09a47d6631cbcfa82e58b5fc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 336,
+      "answer": "senior",
+      "hintEn": "Experienced person who occupies a high professional category.",
+      "contentSha256": "caab538b66fb2621100b1dbdb86c292db3329b50b060f5d72a6d9e95555b8e6e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 337,
+      "answer": "normal",
+      "hintEn": "Conforms to what is usual or expected.",
+      "contentSha256": "2356fae9f9b1bfa685abd2a87deedc1f35aa823af3bf2762386e1cf5526cf43e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 338,
+      "answer": "likely",
+      "hintEn": "Has a high chance of happening.",
+      "contentSha256": "28abd9c4baaf99b434005195cb3e3dd7fd39f7b9bdddc18d6ca175e6d98e8d8a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 339,
+      "answer": "cheese",
+      "hintEn": "Solid food produced from milk.",
+      "contentSha256": "9bfe572a0a68c52813ec7575632851915233215a5a78d126a1feeae3cd95c5b4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 340,
+      "answer": "target",
+      "hintEn": "Marked point that someone tries to reach.",
+      "contentSha256": "205bf37f3211d9e6859c76d759493c5fa24ce36122597975485b80874d8de2b0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 341,
+      "answer": "pretty",
+      "hintEn": "Pleasant and delicate in appearance.",
+      "contentSha256": "41e201f6ea2e7ba90bf524bf9e88c38e1085ddee5ac218d509845750d2a851b8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 342,
+      "answer": "medium",
+      "hintEn": "A form such as text, sound, or image used in communication.",
+      "contentSha256": "6b13af31401f8bcf782690e52795d73d0bc68aea7e2cf78db4c59178ce6d7579",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 343,
+      "answer": "reader",
+      "hintEn": "Person who interprets written texts.",
+      "contentSha256": "61df194034be6d851c073426f6e313371c9dc6c703943238c7cf278b33e18c77",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 344,
+      "answer": "theory",
+      "hintEn": "Set of ideas that explains facts or phenomena.",
+      "contentSha256": "2b758e4f5aed99911a13643d1eb5963bdab4d7cf22910ffe52d971c2a0eb85cf",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 345,
+      "answer": "visual",
+      "hintEn": "Related to sight or to what can be seen.",
+      "contentSha256": "deb5c6de996e375c1cfa3b6928d2520f4ccade2c844c0b7fc290ce6eded9d2ae",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 346,
+      "answer": "sector",
+      "hintEn": "Specific division within economic activity.",
+      "contentSha256": "8ea517cb1fc7a0cb736ad348b9570c1993ce9bbab3eee626a6f73ab20248cc3d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 347,
+      "answer": "driver",
+      "hintEn": "Person who controls and drives a vehicle.",
+      "contentSha256": "cb90fdb7602b999151771dff27973fa42592b75e4955793b6095611adb1f5eca",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 348,
+      "answer": "museum",
+      "hintEn": "Institution that preserves and displays objects of cultural value.",
+      "contentSha256": "e45299d9f3867a4c90300eb64ec77472d3ca2a6517b659cd4aafb52ffd4f054e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 349,
+      "answer": "parent",
+      "hintEn": "Care for a child and take responsibility for their upbringing.",
+      "contentSha256": "fd212d888f3a68897d1beb058b0f0f6ef6954fd59c91fea53fa2457edb1c9e1f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 350,
+      "answer": "detail",
+      "hintEn": "Small specific part of a larger set.",
+      "contentSha256": "8ca09d3f86f63338075127e7841642a798424c677f1671a1a8571292a51a73f7",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 351,
+      "answer": "basket",
+      "hintEn": "Light, open container, often made of fibers.",
+      "contentSha256": "c8da15a4f7a619b353b4a213673d43225b3f1b9edca30248a2f6290500976af6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 352,
+      "answer": "demand",
+      "hintEn": "Make a firm request that must be fulfilled.",
+      "contentSha256": "1ed87095e867cbbaaf6017446c3ff0036a1121457acacb9c171b3822ae4804df",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 353,
+      "answer": "nation",
+      "hintEn": "Political community linked to a territory and government.",
+      "contentSha256": "ec26b8f8479d658aaa49cc0f3e1ab2d381182f57b400f5e4d2a6fe23c007eca1",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 354,
+      "answer": "random",
+      "hintEn": "Produces results without a predictable sequence.",
+      "contentSha256": "6bb3515013cffc9fa8df0ed46171d90d2318f84f352c9a00b3c0acccad29f4ac",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 355,
+      "answer": "forest",
+      "hintEn": "Large area covered mainly by trees.",
+      "contentSha256": "43a6831b9916a58284de2e4981712ff7f9d69b71f4f975c9544dfa7f240d6a29",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 356,
+      "answer": "chance",
+      "hintEn": "Possibility of something happening.",
+      "contentSha256": "bb38b57b55bf4a15b09137c741a9312d97d1651d6456415813fae68607169939",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 357,
+      "answer": "listen",
+      "hintEn": "Use your hearing intentionally.",
+      "contentSha256": "9998f49308eecfba59e9e17c66719717cd4ef5a1b81615db87e155951a9bb9fb",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 358,
+      "answer": "appear",
+      "hintEn": "Become visible to those who observe.",
+      "contentSha256": "3469c993f2912beac4ca0f2173c175df391e9a01625f2b2b98e9dbd18c3dec7f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 359,
+      "answer": "coffee",
+      "hintEn": "An aromatic drink prepared from roasted beans.",
+      "contentSha256": "bbb51644aeb68b5da83a813325c2544c17aa52c2204e68088b922b2a4dfd7fb4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 360,
+      "answer": "league",
+      "hintEn": "Association of teams that organize competitions.",
+      "contentSha256": "ca348332c3c76037f41a2c522bc7fe801064d12ab516b6c68856941a82bc3c81",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 361,
+      "answer": "effort",
+      "hintEn": "Use of physical or mental energy to achieve something.",
+      "contentSha256": "e672698a0bc3f008a2361fc464279b41c32d34de6dddcaf28c289c71ba8cda0f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 362,
+      "answer": "reduce",
+      "hintEn": "Decrease size, quantity or intensity.",
+      "contentSha256": "a8c9d828c832b91d98c774bdfa24cb098201604ce4950f6e20f1decd881e6f41",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 363,
+      "answer": "leader",
+      "hintEn": "A person who guides a group toward a shared goal.",
+      "contentSha256": "2f402bc2465d15605de05fa838e3506a76018226961b867177990617f4373632",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 364,
+      "answer": "pocket",
+      "hintEn": "Part of clothing used to carry small objects.",
+      "contentSha256": "64dece0d225b51c22a2d32cb2a40db9eb40044f2124b62addd78ef969150b1bf",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 365,
+      "answer": "stream",
+      "hintEn": "Small natural course of running water.",
+      "contentSha256": "b747a83fa5f587421faedfaf5658a8c0e612fa4796e9cfcb4377b57c141dc96b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 366,
+      "answer": "orange",
+      "hintEn": "A citrus fruit with brightly colored skin and a sweet or tart taste.",
+      "contentSha256": "687ed886a1725d399b649ef2b6c921df784be680e48f42a22c3765e0e4473f53",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 367,
+      "answer": "guitar",
+      "hintEn": "String instrument played with the fingers or plectrum.",
+      "contentSha256": "2a08ad4a4d50bf9d3d70d7688cbf11e46cb64e3b5d03dfe6d85f1796cbebeb5a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 368,
+      "answer": "branch",
+      "hintEn": "It usually holds leaves, flowers or fruits away from the trunk.",
+      "contentSha256": "fc3153bdbe5cb5010c8b40b1353df0cf602df5c9629b0f70ab756bf4fe995ce2",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 369,
+      "answer": "corner",
+      "hintEn": "Meeting point between two walls, lines or streets.",
+      "contentSha256": "35219944aa9b3a4b440b327cac543b44a31a5306b36876534bb992198b740485",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 370,
+      "answer": "column",
+      "hintEn": "Vertical structure that supports a building.",
+      "contentSha256": "c023f9c1c2a25f7e7f43398b802fd455cef5b0b39a1545b981dc61231a3d10ef",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 371,
+      "answer": "mental",
+      "hintEn": "Related to thoughts, the mind, and emotions.",
+      "contentSha256": "496fb7da3486a2942d20076a272b2cb673fdbb179e65fd2823e4d6619eae9d3d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 372,
+      "answer": "attack",
+      "hintEn": "Use force or violence against a target.",
+      "contentSha256": "2b5cdd79239ecf06adc0644406cb70404291b7766b47dafe8c593d8f622c7d74",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 373,
+      "answer": "dollar",
+      "hintEn": "Monetary unit used in the United States and other countries.",
+      "contentSha256": "e003c250176ab1e0b82a93fcb44e9a10746b7205c476c6ef9f5aa72bda0d3bb4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 374,
+      "answer": "native",
+      "hintEn": "Originates in the place with which it is associated.",
+      "contentSha256": "c00a2bd59ad7fc0de3ac0959de292ebb12ebb859a416508a6e8bc9b02bbd6899",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 375,
+      "answer": "expect",
+      "hintEn": "Believing that something will probably happen.",
+      "contentSha256": "bb3454e77b33e7bc231caad8a8fa002cc9bfc5499bc452baee5e9c404e5b5ff3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 376,
+      "answer": "senate",
+      "hintEn": "Legislative body formed by senators.",
+      "contentSha256": "205aae13316905c01877e2e9034ed4fe4b8168d3a7a60eda9ddcebb58dd843e7",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 377,
+      "answer": "signal",
+      "hintEn": "Gesture, sound or mark that conveys a message.",
+      "contentSha256": "72dd13d143153144cbbf9d81a0d822df2b945b4fad5336a0e37f9a7761875794",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 378,
+      "answer": "script",
+      "hintEn": "A production guide for actors and crew members.",
+      "contentSha256": "607c232297707c45613ad8523190fb35d215fa15cf12d140a0c682ae93031df3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 379,
+      "answer": "puzzle",
+      "hintEn": "Game solved through reasoning and combination.",
+      "contentSha256": "847fe44f9dde896e5b9aa68e8a588d111df69cf6fa83666093ba016336148e51",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 380,
+      "answer": "equity",
+      "hintEn": "Principle of justice that considers different needs.",
+      "contentSha256": "4f6306f97b1a4e89fffca8204e19ad130c7b640b8e14b1f2bca402a2ef0be6ae",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 381,
+      "answer": "height",
+      "hintEn": "Vertical measurement from the base to the highest point.",
+      "contentSha256": "d217a951a1694de25dbfe1b3b84c2fd0a1cc0b439a2bcc9d5032c13b5941035e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 382,
+      "answer": "secret",
+      "hintEn": "Kept outside public knowledge.",
+      "contentSha256": "f94b94c3cbf46a5c5b5b194c3a81f5ee702d901108882ac6edb9db9afad613fc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 383,
+      "answer": "gratis",
+      "hintEn": "Offered without charge or payment.",
+      "contentSha256": "0c88a92b895c860e3e154b2bcb4a087b99a1e4c31b24a866cece609ffff25416",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 384,
+      "answer": "hunter",
+      "hintEn": "Someone who tracks prey in order to capture it.",
+      "contentSha256": "88f03d37ff7660c3dcd43eb4a0a46b7b1447f23fefea16f58eddcbe8ede6fbf3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 385,
+      "answer": "gender",
+      "hintEn": "Social aspect of personal identity, distinct from biological sex.",
+      "contentSha256": "54d01b0b8eb308e72ba0a5e709410578a0fc012da7c939c238fa82dd25964de6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 386,
+      "answer": "ticket",
+      "hintEn": "Document presented to enter an event.",
+      "contentSha256": "6f64a1746b6bbee9d350d5f17b9d7b096a11e72fab465e42d6f36ae9b90142de",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 387,
+      "answer": "import",
+      "hintEn": "Bringing foreign merchandise to the domestic market.",
+      "contentSha256": "567e884862e7321d3b5a838e0b3094a3d1f053a4b15d062941e6042e26d86cd7",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 388,
+      "answer": "proper",
+      "hintEn": "Conforms to appropriate or expected behavior.",
+      "contentSha256": "cb2c65ba9a2a130c0f7f9a7a5d52ba4dae690ced1b129c9c27407091022956ab",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 389,
+      "answer": "cruise",
+      "hintEn": "Tourist trip by ship with scheduled stops.",
+      "contentSha256": "6895dfc404eaf64cdcfe48301592e0da1af4de39a1b0ef293ff12e91868a2e90",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 390,
+      "answer": "nearby",
+      "hintEn": "Indicates location in the immediate vicinity.",
+      "contentSha256": "e184913a713e50c03c2b886229be1d2861f33b002b8d743232aaa83b0cabcc4f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 391,
+      "answer": "miller",
+      "hintEn": "A person who works in a mill and turns grain into flour.",
+      "contentSha256": "87c4b8237388661a3189917847c0f660e68b7c55031f7d856d80f21ab48e9d38",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 392,
+      "answer": "hidden",
+      "hintEn": "It has been placed out of sight or is difficult to find.",
+      "contentSha256": "eac619c2c25e0d0bd6f2d24a18c3ed539a2789275f101acc470f12e2a3fa0bee",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 393,
+      "answer": "planet",
+      "hintEn": "Celestial body that revolves around a star.",
+      "contentSha256": "082db25405c6805891db6263d4b65476d687ba222030b0477ebeb1b393b97a62",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 394,
+      "answer": "permit",
+      "hintEn": "Give authorization for something to be done.",
+      "contentSha256": "75e6b3e3c26114719e9306051169785794323c94e079f1d2a20e1271b3e2668f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 395,
+      "answer": "dinner",
+      "hintEn": "Main meal consumed at the end of the day.",
+      "contentSha256": "0868f14c0d17c0bd7353503e407409bf48c93d38265b3b93f0627bea4154b895",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 396,
+      "answer": "fourth",
+      "hintEn": "It appears immediately after the third position.",
+      "contentSha256": "b46fcee4b90426beb1e83f028db9dbf3a999ce1c665f1b6fd3850707558d2ec4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 397,
+      "answer": "poetry",
+      "hintEn": "Literary art that explores rhythm, images and language.",
+      "contentSha256": "82dfe389efbd57abb16be1131c2a9a0a3cf0222720469d7511b1a5c8cfc2dec6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 398,
+      "answer": "sister",
+      "hintEn": "A female sibling who shares at least one parent.",
+      "contentSha256": "c8531b3d8a07bab060eba5b71d3f150c4df55fa6e686fbfe11939316e169209d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 399,
+      "answer": "export",
+      "hintEn": "Send national merchandise to the market in another country.",
+      "contentSha256": "20762ff4a1ffea8309242039e940b08547e3ee8e53e485645bd0b64a6447e169",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 400,
+      "answer": "spread",
+      "hintEn": "Distribute something over a larger area.",
+      "contentSha256": "84885f4fadd6d5daa23b8ff8adb1f9d37ec3b9294c3595675c66f46316e2cc21",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 401,
+      "answer": "contact",
+      "hintEn": "Communication established between people.",
+      "contentSha256": "4b5b0831102e0935a577bc1a7105f9acff14745753b63cc35791972fea6cc7cc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 402,
+      "answer": "privacy",
+      "hintEn": "Protection of personal life from access by other people.",
+      "contentSha256": "63e2687b7bb7ae6e49103b27af1f70e935d201e5f3f7908feb215ada0f37f172",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 403,
+      "answer": "general",
+      "hintEn": "Covers the whole set rather than one particular case.",
+      "contentSha256": "0a8fed69710666ebc1715f1009e327319ee2e4360d36e552730866eb824b4a7c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 404,
+      "answer": "special",
+      "hintEn": "Possesses a characteristic that distinguishes it from others.",
+      "contentSha256": "8d01dfcda82573c03c3e27420e0163199d9e732c0674cdf6ed496232e3d3d8c4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 405,
+      "answer": "version",
+      "hintEn": "Identifies an updated product variant at a certain point in time.",
+      "contentSha256": "509e579c81441724806c71d5863d6a942499872cdcb24ced6d73dabd27f2b92e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 406,
+      "answer": "network",
+      "hintEn": "A connected system whose members exchange information.",
+      "contentSha256": "2929c43603ebb6679d1eacd6b27e0f71d634446fb1b5d577c122b32d793c4f23",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 407,
+      "answer": "control",
+      "hintEn": "Regulation that keeps a system within desired limits.",
+      "contentSha256": "eea2dd7e7ab3f7c200301ee05ec6993c0f7791c23d06e9e278bdf8745aef5502",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 408,
+      "answer": "digital",
+      "hintEn": "Related to data processed by electronic devices.",
+      "contentSha256": "515ffc04934acefbf8f5654b614242cb5b93f257a1127ea0a8ea28dcdce61de6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 409,
+      "answer": "another",
+      "hintEn": "Indicates an additional element different from the first.",
+      "contentSha256": "455d2e1322c8a6dc32a117b1bb99a4775af2657ce9888bab62e2e75b5ae4e7b6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 410,
+      "answer": "content",
+      "hintEn": "Information contained in a publication.",
+      "contentSha256": "52878c25a4f43fb6bd56d39c9d0f28002dd327f9e441a4109572f36c135ea841",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 411,
+      "answer": "compare",
+      "hintEn": "Examine elements to find similarities and differences.",
+      "contentSha256": "7179149b6140c82c04fe43f101d32e1094a118b53d2cdef49c1704f6b9b22cf5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 412,
+      "answer": "college",
+      "hintEn": "Institution that offers higher education.",
+      "contentSha256": "fe7336b46e307ac0b523e8047a31a63691d4f044d3eb90245cd184e44bb01220",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 413,
+      "answer": "process",
+      "hintEn": "Sequence of steps that produces a result.",
+      "contentSha256": "b6b8d288c5e84a2143aad1bb88783680e5f0b3428997c92ffedbec3a28b6ff9c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 414,
+      "answer": "gallery",
+      "hintEn": "Space where works are displayed to the public.",
+      "contentSha256": "ad52cf0bdedb9dc44f1de1f54be73f4b29eb063bd8f331a89bf126b11bd1d32e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 415,
+      "answer": "medical",
+      "hintEn": "Related to health care and the treatment of diseases.",
+      "contentSha256": "d23b06d8868d3f35f39cb76cf22534bc937c999b87cc731f6d2026a90146e1b3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 416,
+      "answer": "payment",
+      "hintEn": "Money given to settle a purchase or debt.",
+      "contentSha256": "2b9a5265a6230e995da93ca29e232658b4a5ca4cdd90b26af7e49b92960aa509",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 417,
+      "answer": "problem",
+      "hintEn": "Situation that requires a response to be resolved.",
+      "contentSha256": "2467044e3923d0cab88b809332139067f9b183c771d7473aedfa7663dcc869c5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 418,
+      "answer": "release",
+      "hintEn": "Make something available after it was restricted.",
+      "contentSha256": "d95cd35f5c971ac0012ddc7b4dcee2b8500223dbe9e371837105d41c753ff68b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 419,
+      "answer": "picture",
+      "hintEn": "A visual representation created by a camera, drawing, or painting.",
+      "contentSha256": "e66ea4dd55601eaf943dce44f21260805d943ad0fba570898fdf36e9ea75260c",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 420,
+      "answer": "million",
+      "hintEn": "Quantity equivalent to a thousand times a thousand.",
+      "contentSha256": "e032d7ad8a5c3ac579abb15bf69acd630bb4828effe3818b6a4dbff56be839bf",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 421,
+      "answer": "journal",
+      "hintEn": "A specialized periodical published at regular intervals.",
+      "contentSha256": "ca50b883c0aaf17952f93db8ed481ddf84c6bdde435acf540a2741246a21d575",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 422,
+      "answer": "central",
+      "hintEn": "Located away from the edges of an area.",
+      "contentSha256": "ebfac34d4223cc69dd8272356199c2e90d214b99678ae972470ee79b138e1d9b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 423,
+      "answer": "archive",
+      "hintEn": "Organized set of documents saved for consultation.",
+      "contentSha256": "16e3580bf77d33b7c1f6c3a96256893c6b034a9908e5613735743faa539c122a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 424,
+      "answer": "edition",
+      "hintEn": "A particular form of a book prepared for a specific print run.",
+      "contentSha256": "f56c6e78f2590313a9524b6b9d4f12e6ca285b7c5e4cd959b40b1ac77cbec5d5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 425,
+      "answer": "several",
+      "hintEn": "Refers to a moderate and unspecified number of elements.",
+      "contentSha256": "d67f7e999ac34b0ee15180b46ac3548e4851cc2e413c97f3ebda071f85acb495",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 426,
+      "answer": "natural",
+      "hintEn": "It arises from nature or occurs without artificial intervention.",
+      "contentSha256": "4b3190eb673f0df04fe71bd4ab256ef01a9afba4d4ff7edd4a6a22467d634af4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 427,
+      "answer": "average",
+      "hintEn": "It characterizes the value obtained when dividing a sum by the number of elements.",
+      "contentSha256": "bf46f89b1ffa9adf890631bb6f5a09c9a9db7415262b71dcb12cc7f574a68c63",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 428,
+      "answer": "journey",
+      "hintEn": "A relatively long trip from one place to another.",
+      "contentSha256": "ead25ad198efd1c588cbcdde793c2425f326552b30af3a2aeec82cbd7a1596a3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 429,
+      "answer": "finance",
+      "hintEn": "Provide resources to carry out a purchase or project.",
+      "contentSha256": "d76bb43be3cc05ab3296a15c5cc137e1c9556bfc2434160c4901be552c63ff42",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 430,
+      "answer": "various",
+      "hintEn": "Covers a variety of types within the same set.",
+      "contentSha256": "ee94bb5ce44bcf4e267fbb29c16cf69281b10474a94ed6a273876a2d0a9bba2b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 431,
+      "answer": "chapter",
+      "hintEn": "Numbered or named division of a written work.",
+      "contentSha256": "c8a092bb946bb0a81c9d3709f08fd89b2a01f3fd2ff4d31d62f594887cab2c48",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 432,
+      "answer": "license",
+      "hintEn": "Official authorization to use or perform something.",
+      "contentSha256": "6bd6f8a01586388e0870b11245bd5f42f16d9755976bff7b891edc356939d4bd",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 433,
+      "answer": "kingdom",
+      "hintEn": "Country whose head of state is a monarch.",
+      "contentSha256": "48dff7e4fbcc3a6248dc34f4bf54983a8d9e9320d9e1edae9f931bb7abe2822e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 434,
+      "answer": "summary",
+      "hintEn": "Brief presentation of the main points of a subject.",
+      "contentSha256": "2dfd503c6bb3f88a3675b1d90e8869453628659e612073dacfc3538275d32709",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 435,
+      "answer": "overall",
+      "hintEn": "Considers the whole set rather than just one part.",
+      "contentSha256": "6fc5b930fd8c1c3882b6e712ef3142695a1b13353bbe3b86f9328391a4132722",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 436,
+      "answer": "printer",
+      "hintEn": "Equipment that transfers texts and images to paper.",
+      "contentSha256": "bbfb2d98ff33dbb8700b3ee89f7f9a4172513257a3af4b519afc1bf8ca7a1512",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 437,
+      "answer": "certain",
+      "hintEn": "Known to be true without doubt.",
+      "contentSha256": "dfcbaa4b3b56deca2242258f9be92b29b4f86b935597acbe28600c1439b4c1da",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 438,
+      "answer": "machine",
+      "hintEn": "Device with parts that performs a task using energy.",
+      "contentSha256": "233e36e2538faee0342060c061b72eec0a7f78973d363afe2af4fe9fdf9bb76d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 439,
+      "answer": "culture",
+      "hintEn": "Customs, values, and forms of expression shared by a group.",
+      "contentSha256": "7970c231bb09a631826a53b6a5049453c709e79d072f56ceccad9b9d8e312a39",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 440,
+      "answer": "foreign",
+      "hintEn": "Originating in or related to another country.",
+      "contentSha256": "4f2a1636bab02860b54ea88c4446db752ed6a03c7059f8197899f232f7532172",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 441,
+      "answer": "channel",
+      "hintEn": "A route used to distribute a message.",
+      "contentSha256": "953db06a8ea895312323c0585cb33f767693f2a79dceb7644cd355de29927ac4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 442,
+      "answer": "feature",
+      "hintEn": "A noticeable quality that distinguishes something from others.",
+      "contentSha256": "97598665db93895ff1bec23ef1d0beb110a596fafdfebf8d3f7181d097f2d3e5",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 443,
+      "answer": "station",
+      "hintEn": "A place where train passengers board and leave trains.",
+      "contentSha256": "39d5de2bf1679c6f478ff14d8e9c58ce88ac88b0a1424d8e109ddd1b46700de6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 444,
+      "answer": "kitchen",
+      "hintEn": "Equipped environment for preparing food.",
+      "contentSha256": "f3db2e0e36ecc0fab35433e09981ba9440c1f9b7eacb07e3427786541a79803f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 445,
+      "answer": "perfect",
+      "hintEn": "Contains no error, failure, or missing part.",
+      "contentSha256": "4d2e936acf53da0e7d1611809fc8d766bde7c23b682da96aea27362d71693244",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 446,
+      "answer": "command",
+      "hintEn": "Order given for an action to be carried out.",
+      "contentSha256": "85c5227a509fdba9792915ffb5cd2e0cf14b2c6e694b01df6b60b81b8c1b9814",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 447,
+      "answer": "success",
+      "hintEn": "The favorable outcome of an effort.",
+      "contentSha256": "9ed538121969ce4c2008bad89c072d4d116debd00da3ec0fed609c2d238c110e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 448,
+      "answer": "forward",
+      "hintEn": "Points in the direction ahead.",
+      "contentSha256": "24420dc93e8e909abea4f44b9aee8a1c5490a4da5165c466f8dff2f889dfae78",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 449,
+      "answer": "traffic",
+      "hintEn": "Movement of vehicles and people along a road.",
+      "contentSha256": "f5b46c37ef6171ec3d46078f256bf5c3e0efe24f85e18684b95d3408e8dc81ec",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 450,
+      "answer": "opinion",
+      "hintEn": "Personal judgment on a matter.",
+      "contentSha256": "3481f0de609717fc2012dc461954fed35d912f5df13f9f25dfdf5ab6fba1cfca",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 451,
+      "answer": "session",
+      "hintEn": "Block of time reserved to carry out an activity.",
+      "contentSha256": "f062cedb0f124e601bd15c05a15c433775ed01516a7a6fa02c53781d241b7d0f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 452,
+      "answer": "pacific",
+      "hintEn": "Seeks peace and avoids conflict.",
+      "contentSha256": "1e370e407be0ce08350345b5a206751a2398657fae0d65d0b2f76a95c7cb2773",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 453,
+      "answer": "default",
+      "hintEn": "Option applied when no different choice is made.",
+      "contentSha256": "68021c365b9c0791a382e03c0759ee8608f8156850999de816adc9252209d5c4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 454,
+      "answer": "outdoor",
+      "hintEn": "Takes place outside buildings or enclosed spaces.",
+      "contentSha256": "1772b58070ff3968e2b6344a07997574bcd2daf61fb3c3efab9529d44280ea44",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 455,
+      "answer": "partner",
+      "hintEn": "A person who shares an activity with someone else.",
+      "contentSha256": "fb91412fac811d074c868a8efec485562c74492dc5c985ec35c3c121ab86a069",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 456,
+      "answer": "mission",
+      "hintEn": "An important task assigned to a person or group.",
+      "contentSha256": "6c87d29da345291640ef8f5a0517ba1ed5091107694bf520dc9e34ef54ca2c34",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 457,
+      "answer": "battery",
+      "hintEn": "Device that stores energy to power appliances.",
+      "contentSha256": "a7b821b7d07b31f878c8f5307994daeadf7bb60a0f42fe08415df6817025d74d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 458,
+      "answer": "surface",
+      "hintEn": "External layer that delimits something.",
+      "contentSha256": "21b7049979097e671408610d7ca28645d0db4b4da2ed77a2a2c6979f9161db70",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 459,
+      "answer": "variety",
+      "hintEn": "Set formed by elements of different types.",
+      "contentSha256": "4ec4f7aa66a4c1b14c0b727cd0f8b277482c9684d59cefab49597c3b37178410",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 460,
+      "answer": "respect",
+      "hintEn": "Consideration for someone's rights and feelings.",
+      "contentSha256": "b9d8f2537fff2b9241292feb86de00896cb445e9090cd7973f3e6ca12eb9527e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 461,
+      "answer": "business",
+      "hintEn": "Activity organized to offer products or services.",
+      "contentSha256": "55afaa1fd44e4d948e066fac922f7ce16ee361418d181fdf633700d494386388",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 462,
+      "answer": "national",
+      "hintEn": "Related to a country and its inhabitants.",
+      "contentSha256": "b7f13f44cf9cb81ab1ee9422f2abb166b030761388e2ae140310376dda76fabc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 463,
+      "answer": "security",
+      "hintEn": "Condition of protection against risks and dangers.",
+      "contentSha256": "d1aef3eb4449b280994015487307c2215ab7275e582658f3105d332f64e0b95a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 464,
+      "answer": "personal",
+      "hintEn": "Relates to an individual rather than the public or a group.",
+      "contentSha256": "76b8ce3442b5c72845c32dd13a8e9772b3d3c7baa67fba606e907f9a1c68620d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 465,
+      "answer": "previous",
+      "hintEn": "Describes something that happened before the current item.",
+      "contentSha256": "77593775795fe8737b4ad47f5403fc841cf6618cf6685f29eed2e982ab80c3e8",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 466,
+      "answer": "customer",
+      "hintEn": "Person who purchases a product or hires a service.",
+      "contentSha256": "d97b9e880e3166a020b332653e491c3277e6335107f4175edbbc445f01d5b8a4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 467,
+      "answer": "industry",
+      "hintEn": "Sector that produces goods or provides services on a large scale.",
+      "contentSha256": "993ff175be2cd5d793d28262756d05ace1fadac127fd4699d27219895199439f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 468,
+      "answer": "complete",
+      "hintEn": "It has all the necessary parts.",
+      "contentSha256": "2db9dcbff689071b2056d378fed7a052f504ff0f43588fbb28eb42482f3b7b42",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 469,
+      "answer": "language",
+      "hintEn": "A system of sounds and symbols used for communication.",
+      "contentSha256": "113b125bfbe2d50d5cd7105c8853785e1c971f391036001b0c040b378fb28e3b",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 470,
+      "answer": "analysis",
+      "hintEn": "Breaks a topic into components so it can be understood.",
+      "contentSha256": "cbf55546171d4c6e92ada6890f2263c86147071345e23007c3608dafc614adcc",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 471,
+      "answer": "interest",
+      "hintEn": "Curiosity that directs attention to something.",
+      "contentSha256": "848824405fe25a3cd48174c8b988fc2bf1bcf67263e28efc62ad0950ddcc86c4",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 472,
+      "answer": "original",
+      "hintEn": "It was created first and is not a reproduction.",
+      "contentSha256": "765e1e78fcaf64e4695a0fec881c4f1b1c399af6c87db282790cf7b90b41a8b3",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 473,
+      "answer": "official",
+      "hintEn": "Confirmed as valid by a competent authority.",
+      "contentSha256": "a8fc1a1c35c4785426753af18817cdf7677ba6764dfdd95b2e37a8e11e79f98a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 474,
+      "answer": "calendar",
+      "hintEn": "System that organizes days, months and years.",
+      "contentSha256": "1f57fb3cdc48a1308c65e250ca7d342c7cf2ed5163fb586eb4f271cfaef7e72a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 475,
+      "answer": "document",
+      "hintEn": "Written or digital record that gathers information.",
+      "contentSha256": "8d6a3701ff9078ddf70056b95ea8ed27a3766bb89d77e9bbc38a919f570d6e3d",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 476,
+      "answer": "function",
+      "hintEn": "The purpose for which a particular thing is used.",
+      "contentSha256": "23aa2a110f40b4a7926e85520579e8e6bc773cf201cb0d9b768df0839c16c4aa",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 477,
+      "answer": "magazine",
+      "hintEn": "Periodic publication with articles, stories and images.",
+      "contentSha256": "6be56102dbfffc16fd4bb5bc6480adc25c42cef708da73868c01a96d775a893f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 478,
+      "answer": "response",
+      "hintEn": "Effect observed after something causes a reaction.",
+      "contentSha256": "0a3ec6a00dc2bd4f3b09b1ff4bbccd028d78bd6bcb8ef42de8f981753072f812",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 479,
+      "answer": "discount",
+      "hintEn": "Reduce the amount charged for something.",
+      "contentSha256": "946f28df180bdaf1f51af9f35a66b76a76f0c1c52cf0e5bc0f87c10bfc62d717",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 480,
+      "answer": "increase",
+      "hintEn": "Make larger in quantity, size or intensity.",
+      "contentSha256": "99fbed729ba762a859d2892505031e33002b06f9db9825666bd49be029bcef00",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 481,
+      "answer": "regional",
+      "hintEn": "Related to a specific geographic area.",
+      "contentSha256": "a4384bee4a562e6902b840b357d5a71fe66c09438d0e2751c1f7301d6da00828",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 482,
+      "answer": "continue",
+      "hintEn": "Keep an action going without stopping.",
+      "contentSha256": "6243196d9801b8ec42dad396b6d842cefb9b99eba5077ae0a552657aa6f3f1c6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 483,
+      "answer": "solution",
+      "hintEn": "Method that eliminates an existing difficulty.",
+      "contentSha256": "7df57e44c33a4aee2c25ea5b38902828e3878e970fa1d856390940082c38df73",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 484,
+      "answer": "military",
+      "hintEn": "Related to armed forces and national defense.",
+      "contentSha256": "b868e58bea2c32257e01d1e514d2f9a4ebf8c2b254ef4cf77d12fe57b9516d29",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 485,
+      "answer": "division",
+      "hintEn": "Act or result of separating something into parts.",
+      "contentSha256": "a010f862c431c6f9457b408cbe17cd57cec0b04cd132d4ed2ad16ba4e66dca07",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 486,
+      "answer": "contract",
+      "hintEn": "Agreement between parties that establishes obligations.",
+      "contentSha256": "4c7b7d839db7659df6e2e85f18d468ffd5fa35f1007dd22c8f6ea85a7e9d85ea",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 487,
+      "answer": "friendly",
+      "hintEn": "Kind and welcoming toward other people.",
+      "contentSha256": "a42b020f2d0915ce32671b2e67aba7654a68f168fe7c249c101b371790a575ca",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 488,
+      "answer": "approach",
+      "hintEn": "Move gradually closer to a person.",
+      "contentSha256": "6411ef802c83d216846613e4c36d8dce4ed6e94a6261eb167ac4216dc44640eb",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 489,
+      "answer": "medicine",
+      "hintEn": "Area that prevents, diagnoses and treats diseases.",
+      "contentSha256": "3d6e520213574a4d0bf1479e5d032903330d9b7aee1ca12fe6827b4c44f75ae0",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 490,
+      "answer": "favorite",
+      "hintEn": "The person or thing preferred above all available options.",
+      "contentSha256": "a57e9a41ea784c92e0a91dadb686a9003f0e0751397904ae6ac0437ff7bd96c6",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 491,
+      "answer": "hospital",
+      "hintEn": "Institution where patients receive healthcare.",
+      "contentSha256": "898203f76c159ddd7f9d5fa5a489082a860f13be29a8b8e3b73bdb72fa3bfa62",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 492,
+      "answer": "distance",
+      "hintEn": "Space existing between two points.",
+      "contentSha256": "ebdffd99651541262366b80abc48ca2d6d33d46eb76d01d604d33f912e0e6b8a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 493,
+      "answer": "football",
+      "hintEn": "Uses an oval ball that can be carried or thrown with your hands.",
+      "contentSha256": "823aaecef5ddf41c934103b8722262bfa4729d2dbd84ab5f5a7c588c3dbbbf0f",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 494,
+      "answer": "republic",
+      "hintEn": "Political system whose head of state does not inherit the position as monarch.",
+      "contentSha256": "f2584e630850f9dfcff55495aa622808a3fd87a8d3faa2d540562364ff472bff",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 495,
+      "answer": "mountain",
+      "hintEn": "Great natural elevation of the land.",
+      "contentSha256": "fa7048fb70d4a8fd422c4d7337dbaedb9f8187741709d0e463cd454b78a5dd18",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 496,
+      "answer": "northern",
+      "hintEn": "It belongs to the upper half of a conventional map.",
+      "contentSha256": "bfad49a824c55b968da96d3e200847291060529afc03b7c8fb21e5d68388e4ab",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 497,
+      "answer": "southern",
+      "hintEn": "Describes something originating from the areas lower on the map.",
+      "contentSha256": "829fe3864df7afbc472c480102a3dc2e3a7c69030d9ebd1112e42ab674bbfc71",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 498,
+      "answer": "external",
+      "hintEn": "It is located beyond the interior.",
+      "contentSha256": "283ad0e3d33250f06e1c05e2b5def3875b618c0cd42e244d2b536a790686960e",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 499,
+      "answer": "electric",
+      "hintEn": "It depends on electricity to function.",
+      "contentSha256": "89ac32c5222be8406a3a307130bfac72b20ee55110d4148053e5e70948c44d7a",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    },
+    {
+      "number": 500,
+      "answer": "progress",
+      "hintEn": "Gradual advancement towards a better condition.",
+      "contentSha256": "96c9a8ae4a9135a4a34e2db416d8da4a65837adece9f4aa54f92238b4512ae17",
+      "authorApproved": true,
+      "independentReviewApproved": true
+    }
+  ]
+}

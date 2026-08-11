@@ -1,0 +1,24 @@
+* text=auto
+
+# Keep source files deterministic across Windows and CI runners.
+*.dart text eol=lf
+*.java text eol=lf
+*.kt text eol=lf
+*.kts text eol=lf
+*.xml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.mjs text eol=lf
+*.svg text eol=lf
+gradlew text eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary assets and build tooling must never undergo newline conversion.
+*.jar binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.wav binary

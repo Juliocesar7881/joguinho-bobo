@@ -1,0 +1,8079 @@
+{
+  "schemaVersion": 1,
+  "catalogRevision": "lexinexo-1.0.0-scowl-rel-2026.02.25-bilingual-hints",
+  "source": {
+    "name": "SCOWL/ESDB",
+    "release": "rel-2026.02.25",
+    "commit": "7e99edab8e32f9f9ea2b15f249ca8d4d67237410",
+    "enUsExpandedFilteredCount": 41545,
+    "mergedExpandedFilteredCount": 42039
+  },
+  "review": {
+    "performedOn": "2026-08-09",
+    "agent": "OpenAI Codex",
+    "humanReview": false,
+    "method": "Every selected answer was checked against the pinned en_US expansion and reviewed as a standalone lemma. Suffix lookalikes were inspected explicitly; no artificial plural or conjugated answer was retained."
+  },
+  "counts": {
+    "records": 1000,
+    "uniqueAnswers": 1000,
+    "presentInScowlEnUs": 1000,
+    "presentInMergedAcceptedWords": 1000,
+    "lengthDistribution": {
+      "3": 100,
+      "4": 200,
+      "5": 250,
+      "6": 250,
+      "7": 120,
+      "8": 80
+    }
+  },
+  "morphologyAudit": {
+    "sEndingsReviewedAsNonPluralLemmas": [
+      "yes",
+      "gas",
+      "bus",
+      "press",
+      "cross",
+      "focus",
+      "basis",
+      "gratis",
+      "process",
+      "various",
+      "success",
+      "business",
+      "previous",
+      "analysis",
+      "progress",
+      "less",
+      "plus",
+      "loss",
+      "thus",
+      "class",
+      "glass",
+      "virus",
+      "access",
+      "status",
+      "campus",
+      "famous",
+      "tennis",
+      "stress",
+      "census",
+      "address",
+      "express",
+      "fitness"
+    ],
+    "edEndingsReviewedAsNonConjugatedLemmas": [
+      "bed"
+    ],
+    "ingEndingsReviewedAsNonConjugatedLemmas": [],
+    "lexicalizedFormsRetained": {
+      "best": "Common standalone superlative adjective.",
+      "least": "Common standalone determiner/adjective.",
+      "most": "Common standalone determiner.",
+      "hidden": "Common lexicalized adjective."
+    }
+  },
+  "records": [
+    {
+      "mode": "withHints",
+      "number": 1,
+      "answer": "new",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 2,
+      "answer": "one",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 3,
+      "answer": "web",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 4,
+      "answer": "top",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 5,
+      "answer": "buy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 6,
+      "answer": "map",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 7,
+      "answer": "end",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 8,
+      "answer": "law",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 9,
+      "answer": "old",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 10,
+      "answer": "man",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 11,
+      "answer": "box",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 12,
+      "answer": "yes",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 13,
+      "answer": "say",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 14,
+      "answer": "let",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 15,
+      "answer": "key",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 16,
+      "answer": "age",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 17,
+      "answer": "war",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 18,
+      "answer": "run",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 19,
+      "answer": "put",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 20,
+      "answer": "log",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 21,
+      "answer": "lot",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 22,
+      "answer": "far",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 23,
+      "answer": "bit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 24,
+      "answer": "bar",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 25,
+      "answer": "gas",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 26,
+      "answer": "inn",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 27,
+      "answer": "sea",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 28,
+      "answer": "kit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 29,
+      "answer": "son",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 30,
+      "answer": "van",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 31,
+      "answer": "hit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 32,
+      "answer": "fee",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 33,
+      "answer": "saw",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 34,
+      "answer": "ten",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 35,
+      "answer": "die",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 36,
+      "answer": "guy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 37,
+      "answer": "fit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 38,
+      "answer": "bus",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 39,
+      "answer": "bed",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 40,
+      "answer": "mix",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 41,
+      "answer": "ray",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 42,
+      "answer": "spa",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 43,
+      "answer": "row",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 44,
+      "answer": "aim",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 45,
+      "answer": "fly",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 46,
+      "answer": "sky",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 47,
+      "answer": "hip",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 48,
+      "answer": "cap",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 49,
+      "answer": "pin",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 50,
+      "answer": "hat",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 51,
+      "answer": "have",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 52,
+      "answer": "will",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 53,
+      "answer": "free",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 54,
+      "answer": "only",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 55,
+      "answer": "help",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 56,
+      "answer": "like",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 57,
+      "answer": "date",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 58,
+      "answer": "list",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 59,
+      "answer": "just",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 60,
+      "answer": "year",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 61,
+      "answer": "work",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 62,
+      "answer": "most",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 63,
+      "answer": "city",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 64,
+      "answer": "best",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 65,
+      "answer": "good",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 66,
+      "answer": "high",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 67,
+      "answer": "very",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 68,
+      "answer": "read",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 69,
+      "answer": "bird",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 70,
+      "answer": "life",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 71,
+      "answer": "part",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 72,
+      "answer": "item",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 73,
+      "answer": "line",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 74,
+      "answer": "type",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 75,
+      "answer": "area",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 76,
+      "answer": "long",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 77,
+      "answer": "even",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 78,
+      "answer": "sign",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 79,
+      "answer": "case",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 80,
+      "answer": "both",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 81,
+      "answer": "care",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 82,
+      "answer": "size",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 83,
+      "answer": "rate",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 84,
+      "answer": "love",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 85,
+      "answer": "call",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 86,
+      "answer": "card",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 87,
+      "answer": "sale",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 88,
+      "answer": "room",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 89,
+      "answer": "west",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 90,
+      "answer": "left",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 91,
+      "answer": "week",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 92,
+      "answer": "live",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 93,
+      "answer": "cost",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 94,
+      "answer": "come",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 95,
+      "answer": "play",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 96,
+      "answer": "park",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 97,
+      "answer": "give",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 98,
+      "answer": "body",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 99,
+      "answer": "club",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 100,
+      "answer": "gift",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 101,
+      "answer": "four",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 102,
+      "answer": "easy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 103,
+      "answer": "hand",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 104,
+      "answer": "baby",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 105,
+      "answer": "film",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 106,
+      "answer": "cell",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 107,
+      "answer": "away",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 108,
+      "answer": "able",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 109,
+      "answer": "past",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 110,
+      "answer": "land",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 111,
+      "answer": "talk",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 112,
+      "answer": "rock",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 113,
+      "answer": "edit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 114,
+      "answer": "fact",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 115,
+      "answer": "shoe",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 116,
+      "answer": "feel",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 117,
+      "answer": "risk",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 118,
+      "answer": "girl",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 119,
+      "answer": "loan",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 120,
+      "answer": "sort",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 121,
+      "answer": "step",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 122,
+      "answer": "lake",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 123,
+      "answer": "chat",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 124,
+      "answer": "face",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 125,
+      "answer": "near",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 126,
+      "answer": "turn",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 127,
+      "answer": "copy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 128,
+      "answer": "port",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 129,
+      "answer": "mind",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 130,
+      "answer": "tour",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 131,
+      "answer": "hope",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 132,
+      "answer": "role",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 133,
+      "answer": "hour",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 134,
+      "answer": "move",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 135,
+      "answer": "band",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 136,
+      "answer": "mode",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 137,
+      "answer": "male",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 138,
+      "answer": "late",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 139,
+      "answer": "idea",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 140,
+      "answer": "hill",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 141,
+      "answer": "safe",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 142,
+      "answer": "ship",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 143,
+      "answer": "tree",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 144,
+      "answer": "wall",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 145,
+      "answer": "vote",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 146,
+      "answer": "door",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 147,
+      "answer": "skin",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 148,
+      "answer": "rest",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 149,
+      "answer": "mini",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 150,
+      "answer": "pack",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 151,
+      "answer": "about",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 152,
+      "answer": "there",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 153,
+      "answer": "price",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 154,
+      "answer": "world",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 155,
+      "answer": "after",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 156,
+      "answer": "order",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 157,
+      "answer": "under",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 158,
+      "answer": "hotel",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 159,
+      "answer": "local",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 160,
+      "answer": "black",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 161,
+      "answer": "index",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 162,
+      "answer": "south",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 163,
+      "answer": "photo",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 164,
+      "answer": "while",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 165,
+      "answer": "total",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 166,
+      "answer": "north",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 167,
+      "answer": "guide",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 168,
+      "answer": "white",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 169,
+      "answer": "level",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 170,
+      "answer": "title",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 171,
+      "answer": "still",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 172,
+      "answer": "every",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 173,
+      "answer": "reply",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 174,
+      "answer": "press",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 175,
+      "answer": "print",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 176,
+      "answer": "point",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 177,
+      "answer": "start",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 178,
+      "answer": "human",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 179,
+      "answer": "study",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 180,
+      "answer": "topic",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 181,
+      "answer": "legal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 182,
+      "answer": "quote",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 183,
+      "answer": "young",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 184,
+      "answer": "paper",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 185,
+      "answer": "issue",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 186,
+      "answer": "court",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 187,
+      "answer": "light",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 188,
+      "answer": "offer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 189,
+      "answer": "might",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 190,
+      "answer": "major",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 191,
+      "answer": "child",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 192,
+      "answer": "share",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 193,
+      "answer": "color",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 194,
+      "answer": "least",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 195,
+      "answer": "green",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 196,
+      "answer": "drive",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 197,
+      "answer": "daily",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 198,
+      "answer": "front",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 199,
+      "answer": "sound",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 200,
+      "answer": "adult",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 201,
+      "answer": "third",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 202,
+      "answer": "watch",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 203,
+      "answer": "error",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 204,
+      "answer": "quick",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 205,
+      "answer": "cloud",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 206,
+      "answer": "death",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 207,
+      "answer": "stuff",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 208,
+      "answer": "force",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 209,
+      "answer": "album",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 210,
+      "answer": "cross",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 211,
+      "answer": "union",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 212,
+      "answer": "woman",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 213,
+      "answer": "score",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 214,
+      "answer": "super",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 215,
+      "answer": "focus",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 216,
+      "answer": "brown",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 217,
+      "answer": "happy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 218,
+      "answer": "prior",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 219,
+      "answer": "ready",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 220,
+      "answer": "blood",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 221,
+      "answer": "basis",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 222,
+      "answer": "extra",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 223,
+      "answer": "owner",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 224,
+      "answer": "agent",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 225,
+      "answer": "grand",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 226,
+      "answer": "metal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 227,
+      "answer": "trust",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 228,
+      "answer": "panel",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 229,
+      "answer": "match",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 230,
+      "answer": "sense",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 231,
+      "answer": "youth",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 232,
+      "answer": "dance",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 233,
+      "answer": "enjoy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 234,
+      "answer": "civil",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 235,
+      "answer": "wrong",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 236,
+      "answer": "peace",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 237,
+      "answer": "grant",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 238,
+      "answer": "scale",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 239,
+      "answer": "frame",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 240,
+      "answer": "clean",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 241,
+      "answer": "piece",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 242,
+      "answer": "seven",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 243,
+      "answer": "buyer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 244,
+      "answer": "waste",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 245,
+      "answer": "motor",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 246,
+      "answer": "crime",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 247,
+      "answer": "claim",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 248,
+      "answer": "alone",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 249,
+      "answer": "joint",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 250,
+      "answer": "upper",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 251,
+      "answer": "limit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 252,
+      "answer": "urban",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 253,
+      "answer": "heavy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 254,
+      "answer": "touch",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 255,
+      "answer": "magic",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 256,
+      "answer": "smart",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 257,
+      "answer": "birth",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 258,
+      "answer": "abuse",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 259,
+      "answer": "chain",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 260,
+      "answer": "sorry",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 261,
+      "answer": "draft",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 262,
+      "answer": "equal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 263,
+      "answer": "fruit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 264,
+      "answer": "brain",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 265,
+      "answer": "false",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 266,
+      "answer": "hello",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 267,
+      "answer": "eight",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 268,
+      "answer": "queen",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 269,
+      "answer": "truck",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 270,
+      "answer": "depth",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 271,
+      "answer": "route",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 272,
+      "answer": "query",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 273,
+      "answer": "judge",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 274,
+      "answer": "minor",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 275,
+      "answer": "cycle",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 276,
+      "answer": "health",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 277,
+      "answer": "policy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 278,
+      "answer": "please",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 279,
+      "answer": "school",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 280,
+      "answer": "center",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 281,
+      "answer": "member",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 282,
+      "answer": "design",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 283,
+      "answer": "county",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 284,
+      "answer": "change",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 285,
+      "answer": "source",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 286,
+      "answer": "course",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 287,
+      "answer": "estate",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 288,
+      "answer": "market",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 289,
+      "answer": "second",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 290,
+      "answer": "street",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 291,
+      "answer": "mobile",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 292,
+      "answer": "memory",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 293,
+      "answer": "travel",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 294,
+      "answer": "single",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 295,
+      "answer": "browse",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 296,
+      "answer": "result",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 297,
+      "answer": "become",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 298,
+      "answer": "energy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 299,
+      "answer": "format",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 300,
+      "answer": "common",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 301,
+      "answer": "window",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 302,
+      "answer": "island",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 303,
+      "answer": "direct",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 304,
+      "answer": "global",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 305,
+      "answer": "submit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 306,
+      "answer": "weight",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 307,
+      "answer": "domain",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 308,
+      "answer": "simple",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 309,
+      "answer": "church",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 310,
+      "answer": "active",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 311,
+      "answer": "enough",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 312,
+      "answer": "yellow",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 313,
+      "answer": "growth",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 314,
+      "answer": "income",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 315,
+      "answer": "double",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 316,
+      "answer": "season",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 317,
+      "answer": "silver",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 318,
+      "answer": "mature",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 319,
+      "answer": "advice",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 320,
+      "answer": "rental",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 321,
+      "answer": "length",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 322,
+      "answer": "follow",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 323,
+      "answer": "choice",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 324,
+      "answer": "letter",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 325,
+      "answer": "button",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 326,
+      "answer": "custom",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 327,
+      "answer": "female",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 328,
+      "answer": "unique",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 329,
+      "answer": "animal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 330,
+      "answer": "option",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 331,
+      "answer": "valley",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 332,
+      "answer": "strong",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 333,
+      "answer": "ensure",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 334,
+      "answer": "retail",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 335,
+      "answer": "mother",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 336,
+      "answer": "senior",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 337,
+      "answer": "normal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 338,
+      "answer": "likely",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 339,
+      "answer": "cheese",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 340,
+      "answer": "target",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 341,
+      "answer": "pretty",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 342,
+      "answer": "medium",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 343,
+      "answer": "reader",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 344,
+      "answer": "theory",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 345,
+      "answer": "visual",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 346,
+      "answer": "sector",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 347,
+      "answer": "driver",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 348,
+      "answer": "museum",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 349,
+      "answer": "parent",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 350,
+      "answer": "detail",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 351,
+      "answer": "basket",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 352,
+      "answer": "demand",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 353,
+      "answer": "nation",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 354,
+      "answer": "random",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 355,
+      "answer": "forest",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 356,
+      "answer": "chance",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 357,
+      "answer": "listen",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 358,
+      "answer": "appear",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 359,
+      "answer": "coffee",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 360,
+      "answer": "league",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 361,
+      "answer": "effort",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 362,
+      "answer": "reduce",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 363,
+      "answer": "leader",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 364,
+      "answer": "pocket",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 365,
+      "answer": "stream",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 366,
+      "answer": "orange",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 367,
+      "answer": "guitar",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 368,
+      "answer": "branch",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 369,
+      "answer": "corner",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 370,
+      "answer": "column",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 371,
+      "answer": "mental",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 372,
+      "answer": "attack",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 373,
+      "answer": "dollar",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 374,
+      "answer": "native",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 375,
+      "answer": "expect",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 376,
+      "answer": "senate",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 377,
+      "answer": "signal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 378,
+      "answer": "script",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 379,
+      "answer": "puzzle",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 380,
+      "answer": "equity",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 381,
+      "answer": "height",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 382,
+      "answer": "secret",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 383,
+      "answer": "gratis",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 384,
+      "answer": "hunter",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 385,
+      "answer": "gender",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 386,
+      "answer": "ticket",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 387,
+      "answer": "import",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 388,
+      "answer": "proper",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 389,
+      "answer": "cruise",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 390,
+      "answer": "nearby",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 391,
+      "answer": "miller",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 392,
+      "answer": "hidden",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 393,
+      "answer": "planet",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 394,
+      "answer": "permit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 395,
+      "answer": "dinner",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 396,
+      "answer": "fourth",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 397,
+      "answer": "poetry",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 398,
+      "answer": "sister",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 399,
+      "answer": "export",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 400,
+      "answer": "spread",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 401,
+      "answer": "contact",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 402,
+      "answer": "privacy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 403,
+      "answer": "general",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 404,
+      "answer": "special",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 405,
+      "answer": "version",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 406,
+      "answer": "network",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 407,
+      "answer": "control",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 408,
+      "answer": "digital",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 409,
+      "answer": "another",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 410,
+      "answer": "content",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 411,
+      "answer": "compare",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 412,
+      "answer": "college",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 413,
+      "answer": "process",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 414,
+      "answer": "gallery",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 415,
+      "answer": "medical",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 416,
+      "answer": "payment",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 417,
+      "answer": "problem",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 418,
+      "answer": "release",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 419,
+      "answer": "picture",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 420,
+      "answer": "million",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 421,
+      "answer": "journal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 422,
+      "answer": "central",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 423,
+      "answer": "archive",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 424,
+      "answer": "edition",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 425,
+      "answer": "several",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 426,
+      "answer": "natural",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 427,
+      "answer": "average",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 428,
+      "answer": "journey",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 429,
+      "answer": "finance",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 430,
+      "answer": "various",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 431,
+      "answer": "chapter",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 432,
+      "answer": "license",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 433,
+      "answer": "kingdom",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 434,
+      "answer": "summary",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 435,
+      "answer": "overall",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 436,
+      "answer": "printer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 437,
+      "answer": "certain",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 438,
+      "answer": "machine",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 439,
+      "answer": "culture",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 440,
+      "answer": "foreign",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 441,
+      "answer": "channel",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 442,
+      "answer": "feature",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 443,
+      "answer": "station",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 444,
+      "answer": "kitchen",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 445,
+      "answer": "perfect",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 446,
+      "answer": "command",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 447,
+      "answer": "success",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 448,
+      "answer": "forward",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 449,
+      "answer": "traffic",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 450,
+      "answer": "opinion",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 451,
+      "answer": "session",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 452,
+      "answer": "pacific",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 453,
+      "answer": "default",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 454,
+      "answer": "outdoor",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 455,
+      "answer": "partner",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 456,
+      "answer": "mission",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 457,
+      "answer": "battery",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 458,
+      "answer": "surface",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 459,
+      "answer": "variety",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 460,
+      "answer": "respect",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 461,
+      "answer": "business",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 462,
+      "answer": "national",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 463,
+      "answer": "security",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 464,
+      "answer": "personal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 465,
+      "answer": "previous",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 466,
+      "answer": "customer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 467,
+      "answer": "industry",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 468,
+      "answer": "complete",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 469,
+      "answer": "language",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 470,
+      "answer": "analysis",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 471,
+      "answer": "interest",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 472,
+      "answer": "original",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 473,
+      "answer": "official",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 474,
+      "answer": "calendar",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 475,
+      "answer": "document",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 476,
+      "answer": "function",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 477,
+      "answer": "magazine",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 478,
+      "answer": "response",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 479,
+      "answer": "discount",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 480,
+      "answer": "increase",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 481,
+      "answer": "regional",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 482,
+      "answer": "continue",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 483,
+      "answer": "solution",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 484,
+      "answer": "military",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 485,
+      "answer": "division",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 486,
+      "answer": "contract",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 487,
+      "answer": "friendly",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 488,
+      "answer": "approach",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 489,
+      "answer": "medicine",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 490,
+      "answer": "favorite",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 491,
+      "answer": "hospital",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 492,
+      "answer": "distance",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 493,
+      "answer": "football",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 494,
+      "answer": "republic",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 495,
+      "answer": "mountain",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 496,
+      "answer": "northern",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 497,
+      "answer": "southern",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 498,
+      "answer": "external",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 499,
+      "answer": "electric",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withHints",
+      "number": 500,
+      "answer": "progress",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 1,
+      "answer": "can",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 2,
+      "answer": "use",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 3,
+      "answer": "get",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 4,
+      "answer": "day",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 5,
+      "answer": "add",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 6,
+      "answer": "car",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 7,
+      "answer": "big",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 8,
+      "answer": "art",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 9,
+      "answer": "low",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 10,
+      "answer": "job",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 11,
+      "answer": "air",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 12,
+      "answer": "hot",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 13,
+      "answer": "tax",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 14,
+      "answer": "act",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 15,
+      "answer": "few",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 16,
+      "answer": "pay",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 17,
+      "answer": "sun",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 18,
+      "answer": "net",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 19,
+      "answer": "try",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 20,
+      "answer": "fun",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 21,
+      "answer": "ask",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 22,
+      "answer": "oil",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 23,
+      "answer": "bay",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 24,
+      "answer": "dog",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 25,
+      "answer": "zip",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 26,
+      "answer": "win",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 27,
+      "answer": "cut",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 28,
+      "answer": "boy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 29,
+      "answer": "bin",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 30,
+      "answer": "pop",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 31,
+      "answer": "eye",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 32,
+      "answer": "fat",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 33,
+      "answer": "fan",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 34,
+      "answer": "cat",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 35,
+      "answer": "pet",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 36,
+      "answer": "cup",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 37,
+      "answer": "ice",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 38,
+      "answer": "bag",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 39,
+      "answer": "tag",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 40,
+      "answer": "fix",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 41,
+      "answer": "dry",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 42,
+      "answer": "mom",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 43,
+      "answer": "eat",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 44,
+      "answer": "ski",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 45,
+      "answer": "tea",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 46,
+      "answer": "toy",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 47,
+      "answer": "dot",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 48,
+      "answer": "ink",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 49,
+      "answer": "raw",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 50,
+      "answer": "wet",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 51,
+      "answer": "more",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 52,
+      "answer": "home",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 53,
+      "answer": "time",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 54,
+      "answer": "here",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 55,
+      "answer": "some",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 56,
+      "answer": "find",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 57,
+      "answer": "back",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 58,
+      "answer": "name",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 59,
+      "answer": "over",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 60,
+      "answer": "next",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 61,
+      "answer": "last",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 62,
+      "answer": "make",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 63,
+      "answer": "such",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 64,
+      "answer": "then",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 65,
+      "answer": "well",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 66,
+      "answer": "each",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 67,
+      "answer": "book",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 68,
+      "answer": "many",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 69,
+      "answer": "full",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 70,
+      "answer": "know",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 71,
+      "answer": "real",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 72,
+      "answer": "must",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 73,
+      "answer": "send",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 74,
+      "answer": "take",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 75,
+      "answer": "want",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 76,
+      "answer": "show",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 77,
+      "answer": "much",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 78,
+      "answer": "open",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 79,
+      "answer": "same",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 80,
+      "answer": "game",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 81,
+      "answer": "down",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 82,
+      "answer": "shop",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 83,
+      "answer": "form",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 84,
+      "answer": "main",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 85,
+      "answer": "save",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 86,
+      "answer": "food",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 87,
+      "answer": "teen",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 88,
+      "answer": "join",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 89,
+      "answer": "look",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 90,
+      "answer": "team",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 91,
+      "answer": "note",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 92,
+      "answer": "plan",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 93,
+      "answer": "test",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 94,
+      "answer": "cart",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 95,
+      "answer": "less",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 96,
+      "answer": "side",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 97,
+      "answer": "sell",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 98,
+      "answer": "east",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 99,
+      "answer": "road",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 100,
+      "answer": "hard",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 101,
+      "answer": "blue",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 102,
+      "answer": "star",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 103,
+      "answer": "keep",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 104,
+      "answer": "term",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 105,
+      "answer": "head",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 106,
+      "answer": "self",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 107,
+      "answer": "sure",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 108,
+      "answer": "gold",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 109,
+      "answer": "five",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 110,
+      "answer": "word",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 111,
+      "answer": "true",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 112,
+      "answer": "plus",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 113,
+      "answer": "fast",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 114,
+      "answer": "unit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 115,
+      "answer": "meet",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 116,
+      "answer": "bank",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 117,
+      "answer": "town",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 118,
+      "answer": "golf",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 119,
+      "answer": "wide",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 120,
+      "answer": "half",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 121,
+      "answer": "none",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 122,
+      "answer": "fire",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 123,
+      "answer": "loss",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 124,
+      "answer": "base",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 125,
+      "answer": "stay",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 126,
+      "answer": "mean",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 127,
+      "answer": "cash",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 128,
+      "answer": "stop",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 129,
+      "answer": "rain",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 130,
+      "answer": "menu",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 131,
+      "answer": "wish",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 132,
+      "answer": "fine",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 133,
+      "answer": "huge",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 134,
+      "answer": "nice",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 135,
+      "answer": "lead",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 136,
+      "answer": "fund",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 137,
+      "answer": "song",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 138,
+      "answer": "fall",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 139,
+      "answer": "tool",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 140,
+      "answer": "deal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 141,
+      "answer": "hall",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 142,
+      "answer": "hair",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 143,
+      "answer": "thus",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 144,
+      "answer": "wine",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 145,
+      "answer": "rule",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 146,
+      "answer": "cool",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 147,
+      "answer": "deep",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 148,
+      "answer": "pool",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 149,
+      "answer": "fish",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 150,
+      "answer": "salt",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 151,
+      "answer": "other",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 152,
+      "answer": "first",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 153,
+      "answer": "state",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 154,
+      "answer": "music",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 155,
+      "answer": "video",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 156,
+      "answer": "group",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 157,
+      "answer": "great",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 158,
+      "answer": "right",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 159,
+      "answer": "phone",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 160,
+      "answer": "check",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 161,
+      "answer": "today",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 162,
+      "answer": "house",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 163,
+      "answer": "power",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 164,
+      "answer": "three",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 165,
+      "answer": "think",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 166,
+      "answer": "water",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 167,
+      "answer": "board",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 168,
+      "answer": "small",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 169,
+      "answer": "image",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 170,
+      "answer": "class",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 171,
+      "answer": "money",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 172,
+      "answer": "visit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 173,
+      "answer": "value",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 174,
+      "answer": "learn",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 175,
+      "answer": "stock",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 176,
+      "answer": "table",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 177,
+      "answer": "model",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 178,
+      "answer": "march",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 179,
+      "answer": "staff",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 180,
+      "answer": "party",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 181,
+      "answer": "above",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 182,
+      "answer": "story",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 183,
+      "answer": "field",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 184,
+      "answer": "night",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 185,
+      "answer": "range",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 186,
+      "answer": "audio",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 187,
+      "answer": "write",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 188,
+      "answer": "event",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 189,
+      "answer": "month",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 190,
+      "answer": "space",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 191,
+      "answer": "enter",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 192,
+      "answer": "radio",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 193,
+      "answer": "track",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 194,
+      "answer": "trade",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 195,
+      "answer": "close",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 196,
+      "answer": "short",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 197,
+      "answer": "beach",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 198,
+      "answer": "early",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 199,
+      "answer": "final",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 200,
+      "answer": "cheap",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 201,
+      "answer": "cover",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 202,
+      "answer": "heart",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 203,
+      "answer": "clear",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 204,
+      "answer": "whole",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 205,
+      "answer": "basic",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 206,
+      "answer": "brand",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 207,
+      "answer": "entry",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 208,
+      "answer": "river",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 209,
+      "answer": "build",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 210,
+      "answer": "lower",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 211,
+      "answer": "leave",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 212,
+      "answer": "cable",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 213,
+      "answer": "flash",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 214,
+      "answer": "cause",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 215,
+      "answer": "voice",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 216,
+      "answer": "glass",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 217,
+      "answer": "thank",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 218,
+      "answer": "sport",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 219,
+      "answer": "round",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 220,
+      "answer": "earth",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 221,
+      "answer": "award",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 222,
+      "answer": "horse",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 223,
+      "answer": "input",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 224,
+      "answer": "valid",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 225,
+      "answer": "trial",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 226,
+      "answer": "guest",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 227,
+      "answer": "grade",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 228,
+      "answer": "floor",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 229,
+      "answer": "plant",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 230,
+      "answer": "stage",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 231,
+      "answer": "break",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 232,
+      "answer": "apple",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 233,
+      "answer": "block",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 234,
+      "answer": "steel",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 235,
+      "answer": "worth",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 236,
+      "answer": "coast",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 237,
+      "answer": "agree",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 238,
+      "answer": "stand",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 239,
+      "answer": "royal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 240,
+      "answer": "suite",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 241,
+      "answer": "sheet",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 242,
+      "answer": "knife",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 243,
+      "answer": "label",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 244,
+      "answer": "chair",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 245,
+      "answer": "shirt",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 246,
+      "answer": "count",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 247,
+      "answer": "patch",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 248,
+      "answer": "saint",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 249,
+      "answer": "fresh",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 250,
+      "answer": "prime",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 251,
+      "answer": "creek",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 252,
+      "answer": "labor",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 253,
+      "answer": "solid",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 254,
+      "answer": "serve",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 255,
+      "answer": "mount",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 256,
+      "answer": "avoid",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 257,
+      "answer": "virus",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 258,
+      "answer": "faith",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 259,
+      "answer": "reach",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 260,
+      "answer": "truth",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 261,
+      "answer": "chart",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 262,
+      "answer": "funny",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 263,
+      "answer": "mouse",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 264,
+      "answer": "dream",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 265,
+      "answer": "carry",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 266,
+      "answer": "brief",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 267,
+      "answer": "alert",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 268,
+      "answer": "sweet",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 269,
+      "answer": "ocean",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 270,
+      "answer": "train",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 271,
+      "answer": "speak",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 272,
+      "answer": "rural",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 273,
+      "answer": "fight",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 274,
+      "answer": "bread",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 275,
+      "answer": "sleep",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 276,
+      "answer": "system",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 277,
+      "answer": "number",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 278,
+      "answer": "public",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 279,
+      "answer": "review",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 280,
+      "answer": "report",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 281,
+      "answer": "office",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 282,
+      "answer": "family",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 283,
+      "answer": "access",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 284,
+      "answer": "return",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 285,
+      "answer": "author",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 286,
+      "answer": "credit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 287,
+      "answer": "select",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 288,
+      "answer": "action",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 289,
+      "answer": "friend",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 290,
+      "answer": "person",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 291,
+      "answer": "recent",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 292,
+      "answer": "social",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 293,
+      "answer": "create",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 294,
+      "answer": "status",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 295,
+      "answer": "seller",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 296,
+      "answer": "future",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 297,
+      "answer": "garden",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 298,
+      "answer": "notice",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 299,
+      "answer": "safety",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 300,
+      "answer": "period",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 301,
+      "answer": "region",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 302,
+      "answer": "record",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 303,
+      "answer": "update",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 304,
+      "answer": "player",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 305,
+      "answer": "amount",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 306,
+      "answer": "camera",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 307,
+      "answer": "beauty",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 308,
+      "answer": "annual",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 309,
+      "answer": "method",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 310,
+      "answer": "figure",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 311,
+      "answer": "bottle",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 312,
+      "answer": "nature",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 313,
+      "answer": "agency",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 314,
+      "answer": "engine",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 315,
+      "answer": "screen",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 316,
+      "answer": "volume",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 317,
+      "answer": "inside",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 318,
+      "answer": "supply",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 319,
+      "answer": "career",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 320,
+      "answer": "object",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 321,
+      "answer": "client",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 322,
+      "answer": "sample",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 323,
+      "answer": "artist",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 324,
+      "answer": "summer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 325,
+      "answer": "matter",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 326,
+      "answer": "editor",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 327,
+      "answer": "reason",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 328,
+      "answer": "survey",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 329,
+      "answer": "secure",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 330,
+      "answer": "master",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 331,
+      "answer": "impact",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 332,
+      "answer": "ground",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 333,
+      "answer": "budget",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 334,
+      "answer": "useful",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 335,
+      "answer": "modern",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 336,
+      "answer": "charge",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 337,
+      "answer": "output",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 338,
+      "answer": "filter",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 339,
+      "answer": "behind",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 340,
+      "answer": "except",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 341,
+      "answer": "winter",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 342,
+      "answer": "studio",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 343,
+      "answer": "remote",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 344,
+      "answer": "remove",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 345,
+      "answer": "manual",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 346,
+      "answer": "father",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 347,
+      "answer": "campus",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 348,
+      "answer": "former",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 349,
+      "answer": "bottom",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 350,
+      "answer": "switch",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 351,
+      "answer": "weekly",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 352,
+      "answer": "square",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 353,
+      "answer": "resort",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 354,
+      "answer": "motion",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 355,
+      "answer": "couple",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 356,
+      "answer": "vision",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 357,
+      "answer": "accept",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 358,
+      "answer": "actual",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 359,
+      "answer": "poster",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 360,
+      "answer": "minute",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 361,
+      "answer": "doctor",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 362,
+      "answer": "enable",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 363,
+      "answer": "flight",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 364,
+      "answer": "factor",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 365,
+      "answer": "expert",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 366,
+      "answer": "marine",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 367,
+      "answer": "spirit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 368,
+      "answer": "manage",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 369,
+      "answer": "define",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 370,
+      "answer": "avenue",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 371,
+      "answer": "moment",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 372,
+      "answer": "damage",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 373,
+      "answer": "bridge",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 374,
+      "answer": "profit",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 375,
+      "answer": "golden",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 376,
+      "answer": "delete",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 377,
+      "answer": "flower",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 378,
+      "answer": "handle",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 379,
+      "answer": "battle",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 380,
+      "answer": "speech",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 381,
+      "answer": "obtain",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 382,
+      "answer": "lawyer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 383,
+      "answer": "finish",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 384,
+      "answer": "famous",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 385,
+      "answer": "junior",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 386,
+      "answer": "soccer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 387,
+      "answer": "scheme",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 388,
+      "answer": "appeal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 389,
+      "answer": "dealer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 390,
+      "answer": "happen",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 391,
+      "answer": "luxury",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 392,
+      "answer": "relief",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 393,
+      "answer": "recipe",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 394,
+      "answer": "tennis",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 395,
+      "answer": "stress",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 396,
+      "answer": "census",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 397,
+      "answer": "forget",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 398,
+      "answer": "extent",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 399,
+      "answer": "backup",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 400,
+      "answer": "expand",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 401,
+      "answer": "through",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 402,
+      "answer": "company",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 403,
+      "answer": "address",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 404,
+      "answer": "project",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 405,
+      "answer": "section",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 406,
+      "answer": "current",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 407,
+      "answer": "history",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 408,
+      "answer": "profile",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 409,
+      "answer": "quality",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 410,
+      "answer": "private",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 411,
+      "answer": "include",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 412,
+      "answer": "article",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 413,
+      "answer": "science",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 414,
+      "answer": "library",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 415,
+      "answer": "comment",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 416,
+      "answer": "student",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 417,
+      "answer": "example",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 418,
+      "answer": "request",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 419,
+      "answer": "similar",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 420,
+      "answer": "popular",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 421,
+      "answer": "welcome",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 422,
+      "answer": "council",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 423,
+      "answer": "society",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 424,
+      "answer": "further",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 425,
+      "answer": "display",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 426,
+      "answer": "weather",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 427,
+      "answer": "present",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 428,
+      "answer": "federal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 429,
+      "answer": "percent",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 430,
+      "answer": "receive",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 431,
+      "answer": "manager",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 432,
+      "answer": "holiday",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 433,
+      "answer": "storage",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 434,
+      "answer": "western",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 435,
+      "answer": "package",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 436,
+      "answer": "believe",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 437,
+      "answer": "jewelry",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 438,
+      "answer": "capital",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 439,
+      "answer": "airport",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 440,
+      "answer": "outside",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 441,
+      "answer": "primary",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 442,
+      "answer": "regular",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 443,
+      "answer": "improve",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 444,
+      "answer": "disease",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 445,
+      "answer": "classic",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 446,
+      "answer": "express",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 447,
+      "answer": "maximum",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 448,
+      "answer": "catalog",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 449,
+      "answer": "fitness",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 450,
+      "answer": "develop",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 451,
+      "answer": "century",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 452,
+      "answer": "vehicle",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 453,
+      "answer": "require",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 454,
+      "answer": "protein",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 455,
+      "answer": "faculty",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 456,
+      "answer": "ability",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 457,
+      "answer": "virtual",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 458,
+      "answer": "minimum",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 459,
+      "answer": "officer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 460,
+      "answer": "unknown",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 461,
+      "answer": "research",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 462,
+      "answer": "internet",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 463,
+      "answer": "computer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 464,
+      "answer": "location",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 465,
+      "answer": "property",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 466,
+      "answer": "register",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 467,
+      "answer": "feedback",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 468,
+      "answer": "standard",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 469,
+      "answer": "question",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 470,
+      "answer": "possible",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 471,
+      "answer": "delivery",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 472,
+      "answer": "specific",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 473,
+      "answer": "district",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 474,
+      "answer": "resource",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 475,
+      "answer": "together",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 476,
+      "answer": "economic",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 477,
+      "answer": "position",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 478,
+      "answer": "practice",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 479,
+      "answer": "remember",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 480,
+      "answer": "activity",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 481,
+      "answer": "exchange",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 482,
+      "answer": "mortgage",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 483,
+      "answer": "addition",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 484,
+      "answer": "decision",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 485,
+      "answer": "consumer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 486,
+      "answer": "multiple",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 487,
+      "answer": "schedule",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 488,
+      "answer": "physical",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 489,
+      "answer": "evidence",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 490,
+      "answer": "transfer",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 491,
+      "answer": "overview",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 492,
+      "answer": "positive",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 493,
+      "answer": "abstract",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 494,
+      "answer": "academic",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 495,
+      "answer": "consider",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 496,
+      "answer": "internal",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 497,
+      "answer": "pressure",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 498,
+      "answer": "capacity",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 499,
+      "answer": "creative",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    },
+    {
+      "mode": "withoutHints",
+      "number": 500,
+      "answer": "critical",
+      "scowlEnUs": true,
+      "mergedAccepted": true,
+      "lemmaApproved": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Primeira versão do LexiNexo.
+
+• 1.000 desafios de palavras em inglês.
+• Categorias de 3 a 8 letras, com progressos independentes.
+• Modos com dicas bilíngues ou sem dicas.
+• Teclado adaptativo de três linhas.
+• Traduções, som opcional e animação de acerto.
+• Funcionamento totalmente offline, sem anúncios ou contas.
