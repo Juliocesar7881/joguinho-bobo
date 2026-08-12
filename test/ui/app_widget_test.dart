@@ -21,7 +21,7 @@ void main() {
     await tester.pumpWidget(LexiNexoApp(store: store));
     await tester.pumpAndSettle();
 
-    expect(find.text('LexiNexo'), findsOneWidget);
+    expect(find.text('PalavraX'), findsOneWidget);
     expect(find.text('Com dicas'), findsOneWidget);
     expect(find.text('Sem dicas'), findsOneWidget);
     expect(find.text('12/500'), findsOneWidget);
@@ -30,7 +30,7 @@ void main() {
 
     await tester.tap(find.byKey(const Key('home_about_button')));
     await tester.pumpAndSettle();
-    expect(find.text('Sobre o LexiNexo'), findsOneWidget);
+    expect(find.text('Sobre o PalavraX'), findsOneWidget);
     expect(find.text('Versão 1.0.0'), findsOneWidget);
   });
 

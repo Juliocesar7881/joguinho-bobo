@@ -30,6 +30,7 @@ $readelf = Join-Path $env:ANDROID_HOME 'ndk\28.2.13676358\toolchains\llvm\prebui
 $expectedCertificateSha256 = '5954661688063D35EF3392B7502F4622D1ED6F0A74FD638E466888CBC4787996'
 $expectedAabSignatureBase = 'LEXINEXO'
 $expectedInternalPermission = 'com.lexinexo.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+$expectedApplicationLabel = 'PalavraX'
 $androidNamespace = 'http://schemas.android.com/apk/res/android'
 $expectedAbis = @('armeabi-v7a', 'arm64-v8a', 'x86_64')
 $expectedElfMachines = @{
@@ -181,6 +182,7 @@ Assert-Condition ((Get-AndroidAttribute $bundleUsesSdk 'targetSdkVersion') -eq '
 
 $bundleApplication = $bundleManifest.SelectSingleNode('./application')
 Assert-Condition ($null -ne $bundleApplication) 'AAB manifest does not declare application.'
+Assert-Condition ((Get-AndroidAttribute $bundleApplication 'label') -eq $expectedApplicationLabel) 'AAB application label is not PalavraX.'
 $allowBackup = Get-AndroidAttribute $bundleApplication 'allowBackup'
 Assert-Condition ($allowBackup -eq 'false' -or $allowBackup -eq '0') 'AAB application does not explicitly set allowBackup=false.'
 Assert-FalseOrAbsentAndroidAttribute $bundleApplication 'debuggable' 'AAB application is debuggable.'
@@ -226,6 +228,7 @@ Assert-Condition ($badging -match "package: name='com\.lexinexo\.app' versionCod
 Assert-Condition ($badging -match "sdkVersion:'24'") 'minSdk is not 24.'
 Assert-Condition ($badging -match "targetSdkVersion:'36'") 'targetSdk is not 36.'
 Assert-Condition ($badging -match "compileSdkVersion='36'") 'APK compileSdk is not 36.'
+Assert-Condition ($badging -match "(?m)^application-label:'PalavraX'") 'APK application label is not PalavraX.'
 Assert-Condition ($badging -notmatch '(?m)^application-debuggable') 'APK is debuggable.'
 
 $apkManifestTree = (Invoke-Checked $aapt @('dump', 'xmltree', $apk, 'AndroidManifest.xml')) -join "`n"
@@ -413,7 +416,7 @@ $apkItem = Get-Item -LiteralPath $apk
 $aabHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $aab).Hash
 $apkHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $apk).Hash
 
-Write-Output 'LexiNexo release artifacts verified.'
+Write-Output 'PalavraX release artifacts verified.'
 Write-Output "AAB bytes: $($aabItem.Length)"
 Write-Output "AAB SHA-256: $aabHash"
 Write-Output "APK bytes: $($apkItem.Length)"

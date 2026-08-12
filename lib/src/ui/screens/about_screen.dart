@@ -11,7 +11,7 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Sobre o LexiNexo')),
+      appBar: AppBar(title: const Text('Sobre o PalavraX')),
       body: SafeArea(
         top: false,
         child: Center(
@@ -75,7 +75,7 @@ class _AboutHeader extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'LexiNexo',
+                    'PalavraX',
                     style: TextStyle(fontSize: 23, fontWeight: FontWeight.w800),
                   ),
                   SizedBox(height: 4),

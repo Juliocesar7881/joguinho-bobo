@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Ícone monocromático do PalavraX</title>
+  <desc id="desc">X sólido de cinco blocos com a letra A vazada ao centro.</desc>
+  <defs>
+    <mask id="mark">
+      <rect width="1024" height="1024" fill="#000000"/>
+      <rect x="92" y="92" width="252" height="252" rx="72" fill="#FFFFFF"/>
+      <rect x="680" y="92" width="252" height="252" rx="72" fill="#FFFFFF"/>
+      <rect x="92" y="680" width="252" height="252" rx="72" fill="#FFFFFF"/>
+      <rect x="680" y="680" width="252" height="252" rx="72" fill="#FFFFFF"/>
+      <rect x="368" y="368" width="288" height="288" rx="84" fill="#FFFFFF"/>
+      <path d="M432 592L512 424L592 592M464 534H560" fill="none" stroke="#000000" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <rect width="1024" height="1024" fill="#FFFFFF" mask="url(#mark)"/>
+</svg>

@@ -36,6 +36,8 @@ flutter_launcher_icons:
   image_path: assets/branding/lexinexo-icon.png
   adaptive_icon_background: "#0B0D18"
   adaptive_icon_foreground: assets/branding/lexinexo-adaptive-foreground.png
+  adaptive_icon_foreground_inset: 16
+  adaptive_icon_monochrome: assets/branding/lexinexo-adaptive-monochrome.png
   min_sdk_android: 24
 
 flutter_native_splash:
@@ -45,6 +47,7 @@ flutter_native_splash:
   ios: false
   web: false
   android_gravity: center
+  android_screen_orientation: portrait
   android_12:
     color: "#0B0D18"
     image: assets/branding/lexinexo-splash.png

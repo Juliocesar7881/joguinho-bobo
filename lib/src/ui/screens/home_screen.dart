@@ -87,7 +87,7 @@ class _BrandHeader extends StatelessWidget {
           ),
           const SizedBox(height: 18),
           Text(
-            'LexiNexo',
+            'PalavraX',
             style: Theme.of(context).textTheme.displaySmall?.copyWith(
               fontWeight: FontWeight.w800,
               letterSpacing: -.8,
@@ -95,7 +95,7 @@ class _BrandHeader extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           const Text(
-            'Encontre a palavra.',
+            'Descubra palavras. Aprenda inglês.',
             style: TextStyle(color: AppColors.muted, fontSize: 16),
           ),
         ],

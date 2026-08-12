@@ -144,7 +144,7 @@ function Update-AssetInventory {
     $tabletScreenshotNames | ForEach-Object { "screenshots/tablet/$_" }
   )
   $lines = [System.Collections.Generic.List[string]]::new()
-  $lines.Add('LexiNexo 1.0.0 - Play Store asset inventory')
+  $lines.Add('PalavraX 1.0.0 - Play Store asset inventory')
   $lines.Add('Format: SHA-256  bytes  relative path')
   $lines.Add('')
   foreach ($relativePath in $relativePaths) {

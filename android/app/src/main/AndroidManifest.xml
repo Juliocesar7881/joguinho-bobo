@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
         android:allowBackup="false"
-        android:label="LexiNexo"
+        android:label="PalavraX"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

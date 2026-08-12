@@ -1,8 +1,8 @@
-# Política de Privacidade do LexiNexo
+# Política de Privacidade do PalavraX
 
 Última atualização: 10 de agosto de 2026.
 
-O LexiNexo, publicado por {{developerDisplayName}}, funciona totalmente offline. O aplicativo não exige conta, não exibe anúncios, não realiza compras e não usa serviços de telemetria.
+O PalavraX, publicado por {{developerDisplayName}}, funciona totalmente offline. O aplicativo não exige conta, não exibe anúncios, não realiza compras e não usa serviços de telemetria.
 
 ## Dados armazenados no aparelho
 
@@ -10,9 +10,9 @@ O progresso de cada categoria de 3 a 8 letras nos dois modos, o último tamanho 
 
 ## Coleta e compartilhamento
 
-O LexiNexo não coleta, envia, vende nem compartilha dados pessoais ou dados de uso. O aplicativo não solicita permissão de internet e não se comunica com servidores.
+O PalavraX não coleta, envia, vende nem compartilha dados pessoais ou dados de uso. O aplicativo não solicita permissão de internet e não se comunica com servidores.
 
-O som de acerto é um arquivo incluído no aplicativo e reproduzido localmente. O LexiNexo não usa o microfone, não grava áudio e não acessa arquivos de mídia do usuário.
+O som de acerto é um arquivo incluído no aplicativo e reproduzido localmente. O PalavraX não usa o microfone, não grava áudio e não acessa arquivos de mídia do usuário.
 
 ## Exclusão
 

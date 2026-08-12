@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500" role="img" aria-labelledby="title desc">
+  <title id="title">PalavraX: Aprenda Inglês</title>
+  <desc id="desc">Marca PalavraX com símbolo em X e benefícios do jogo de inglês offline.</desc>
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1024" y2="500" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#0B0D18"/>
-      <stop offset="0.55" stop-color="#171A2B"/>
-      <stop offset="1" stop-color="#10152A"/>
+      <stop offset="0.58" stop-color="#171A2B"/>
+      <stop offset="1" stop-color="#101936"/>
     </linearGradient>
-    <linearGradient id="violet" x1="90" y1="250" x2="420" y2="250" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#8B7CFF"/>
+    <linearGradient id="violet" x1="60" y1="60" x2="430" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9A8CFF"/>
       <stop offset="1" stop-color="#7367F0"/>
     </linearGradient>
-    <linearGradient id="blue" x1="255" y1="85" x2="255" y2="415" gradientUnits="userSpaceOnUse">
+    <linearGradient id="blue" x1="430" y1="60" x2="60" y2="430" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#70A4FF"/>
       <stop offset="1" stop-color="#5B8DEF"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="28"/>
+    <linearGradient id="green" x1="190" y1="188" x2="310" y2="312" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#46B77D"/>
+      <stop offset="1" stop-color="#2E9B63"/>
+    </linearGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="24"/>
     </filter>
   </defs>
   <rect width="1024" height="500" fill="url(#background)"/>
-  <circle cx="245" cy="250" r="180" fill="#7367F0" opacity="0.16" filter="url(#glow)"/>
-  <circle cx="925" cy="40" r="180" fill="#5B8DEF" opacity="0.08"/>
-  <g transform="translate(2 -2) rotate(45 255 252)">
-    <g fill="url(#violet)">
-      <rect x="87" y="222" width="58" height="58" rx="15" opacity="0.60"/>
-      <rect x="154" y="222" width="58" height="58" rx="15" opacity="0.82"/>
-      <rect x="298" y="222" width="58" height="58" rx="15" opacity="0.82"/>
-      <rect x="365" y="222" width="58" height="58" rx="15" opacity="0.60"/>
-    </g>
-    <g fill="url(#blue)">
-      <rect x="226" y="83" width="58" height="58" rx="15" opacity="0.60"/>
-      <rect x="226" y="150" width="58" height="58" rx="15" opacity="0.82"/>
-      <rect x="226" y="294" width="58" height="58" rx="15" opacity="0.82"/>
-      <rect x="226" y="361" width="58" height="58" rx="15" opacity="0.60"/>
-    </g>
-    <rect x="218" y="214" width="74" height="74" rx="19" fill="#7367F0" stroke="#F4F5FA" stroke-width="4"/>
-    <rect x="243" y="239" width="24" height="24" rx="6" fill="#F4F5FA"/>
-  </g>
-  <text x="490" y="190" fill="#F4F5FA" font-family="Roboto, Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="-2">LexiNexo</text>
-  <text x="494" y="239" fill="#A8ADBF" font-family="Roboto, Arial, sans-serif" font-size="25">Conecte letras. Descubra palavras.</text>
+  <circle cx="242" cy="250" r="190" fill="#7367F0" opacity="0.18" filter="url(#glow)"/>
+  <circle cx="940" cy="24" r="180" fill="#5B8DEF" opacity="0.08"/>
+
+  <rect x="68" y="68" width="104" height="104" rx="30" fill="url(#violet)"/>
+  <rect x="328" y="68" width="104" height="104" rx="30" fill="url(#blue)"/>
+  <rect x="68" y="328" width="104" height="104" rx="30" fill="url(#blue)"/>
+  <rect x="328" y="328" width="104" height="104" rx="30" fill="url(#violet)"/>
+  <rect x="186" y="186" width="128" height="128" rx="38" fill="url(#green)" stroke="#D5F5E4" stroke-width="4"/>
+  <path d="M214 288L250 210L286 288M226 262H274" fill="none" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="490" y="178" fill="#F4F5FA" font-family="Roboto, Arial, sans-serif" font-size="70" font-weight="800" letter-spacing="-2">PalavraX</text>
+  <text x="494" y="228" fill="#A8ADBF" font-family="Roboto, Arial, sans-serif" font-size="27">Descubra palavras. Aprenda inglês.</text>
   <g font-family="Roboto, Arial, sans-serif" font-size="17" font-weight="600">
-    <rect x="494" y="287" width="134" height="44" rx="22" fill="#7367F0" opacity="0.20" stroke="#7367F0"/>
-    <text x="516" y="315" fill="#F4F5FA">1.000 níveis</text>
-    <rect x="642" y="287" width="166" height="44" rx="22" fill="#5B8DEF" opacity="0.18" stroke="#5B8DEF"/>
-    <text x="663" y="315" fill="#F4F5FA">Dicas opcionais</text>
-    <rect x="822" y="287" width="140" height="44" rx="22" fill="#2E9B63" opacity="0.18" stroke="#2E9B63"/>
-    <text x="844" y="315" fill="#F4F5FA">100% offline</text>
+    <rect x="494" y="282" width="126" height="44" rx="22" fill="#7367F0" opacity="0.20" stroke="#7367F0"/>
+    <text x="517" y="310" fill="#F4F5FA">3–8 letras</text>
+    <rect x="636" y="282" width="154" height="44" rx="22" fill="#5B8DEF" opacity="0.18" stroke="#5B8DEF"/>
+    <text x="658" y="310" fill="#F4F5FA">Dicas PT + EN</text>
+    <rect x="806" y="282" width="150" height="44" rx="22" fill="#2E9B63" opacity="0.18" stroke="#2E9B63"/>
+    <text x="829" y="310" fill="#F4F5FA">100% offline</text>
   </g>
 </svg>

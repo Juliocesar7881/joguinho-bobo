@@ -136,6 +136,7 @@ class _LetterTile extends StatelessWidget {
           : 'Linha ${row + 1}, coluna ${column + 1}, '
                 'letra ${letter.toUpperCase()}, $state',
       child: Container(
+        key: ValueKey<String>('board_tile_${row}_$column'),
         width: size,
         height: size,
         decoration: BoxDecoration(

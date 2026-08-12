@@ -4,15 +4,24 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $brandingDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
+$temporaryRoot = if ($env:LEXINEXO_TEMP) {
+  $env:LEXINEXO_TEMP
+} else {
+  'D:\LexiNexoToolchain\temp'
+}
+$profile = Join-Path $temporaryRoot 'branding-chrome-profile'
 
 if (-not (Test-Path -LiteralPath $ChromePath)) {
   throw "Chrome not found at: $ChromePath"
 }
 
+New-Item -ItemType Directory -Force -Path $profile | Out-Null
+
 $assets = @(
   'lexinexo-icon',
   'lexinexo-splash',
-  'lexinexo-adaptive-foreground'
+  'lexinexo-adaptive-foreground',
+  'lexinexo-adaptive-monochrome'
 )
 
 foreach ($asset in $assets) {
@@ -31,6 +40,7 @@ foreach ($asset in $assets) {
     --hide-scrollbars `
     --force-device-scale-factor=1 `
     --default-background-color=00000000 `
+    "--user-data-dir=$profile" `
     --window-size=1024,1024 `
     "--screenshot=$destination" `
     $sourceUri | Out-Null

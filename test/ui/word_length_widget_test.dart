@@ -37,9 +37,9 @@ void main() {
     expect(find.text('50/50 concluídos'), findsOneWidget);
     expect(find.text('2/100 concluídos'), findsOneWidget);
     expect(find.text('1/125 concluídos'), findsOneWidget);
-    expect(find.text('Categoria concluída'), findsOneWidget);
-    expect(find.text('Partida em andamento'), findsOneWidget);
-    expect(find.text('Resultado pendente'), findsOneWidget);
+    expect(find.text('Concluída'), findsOneWidget);
+    expect(find.text('Em jogo'), findsOneWidget);
+    expect(find.text('Resultado'), findsOneWidget);
     expect(
       find.bySemanticsLabel(RegExp(r'3 letras, concluída')),
       findsOneWidget,
@@ -49,6 +49,51 @@ void main() {
       findsOneWidget,
     );
     semantics.dispose();
+  });
+
+  testWidgets('seletor usa grade compacta 3x2 em telefone', (tester) async {
+    tester.view.physicalSize = const Size(320, 568);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    final store = await createTestStore();
+
+    await _pumpLengths(tester, store);
+
+    final cards = <Rect>[
+      for (final band in WordLengthBand.values)
+        tester.getRect(
+          find.byKey(ValueKey<String>('length_card_${band.wordLength}')),
+        ),
+    ];
+    expect(cards.map((rect) => rect.left.round()).toSet(), hasLength(3));
+    expect(cards.map((rect) => rect.top.round()).toSet(), hasLength(2));
+    expect(cards.every((rect) => rect.height <= 118), isTrue);
+    expect(cards.every((rect) => rect.bottom <= 568), isTrue);
+    expect(find.text('Quantas letras?'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('seletor continua acessível com texto 2x', (tester) async {
+    tester.view.physicalSize = const Size(320, 568);
+    tester.view.devicePixelRatio = 1;
+    tester.platformDispatcher.textScaleFactorTestValue = 2;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
+    final store = await createTestStore();
+
+    await _pumpLengths(tester, store);
+
+    final cards = <Rect>[
+      for (final band in WordLengthBand.values)
+        tester.getRect(
+          find.byKey(ValueKey<String>('length_card_${band.wordLength}')),
+        ),
+    ];
+    expect(cards.map((rect) => rect.left.round()).toSet(), hasLength(2));
+    expect(find.byType(SingleChildScrollView), findsOneWidget);
+    expect(tester.takeException(), isNull);
   });
 
   testWidgets('categorias mantêm sessões independentes ao alternar tamanho', (

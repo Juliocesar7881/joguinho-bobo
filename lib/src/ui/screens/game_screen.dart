@@ -380,7 +380,12 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
                                   .clamp(26.0, 56.0)
                                   .toDouble();
                           return SingleChildScrollView(
-                            padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+                            // On very short phones the bilingual hint can make
+                            // the upper section scroll. Anchor that section to
+                            // the board so the playing surface always remains
+                            // visibly separated from the fixed keyboard.
+                            reverse: true,
+                            padding: const EdgeInsets.fromLTRB(8, 4, 8, 0),
                             child: Center(
                               child: ConstrainedBox(
                                 constraints: BoxConstraints(
@@ -428,7 +433,10 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(8, 6, 8, 10),
+                      // The keyboard stays comfortably above the system edge,
+                      // while this top inset clearly separates it from the
+                      // board without consuming another scrollable region.
+                      padding: const EdgeInsets.fromLTRB(8, 18, 8, 18),
                       child: ConstrainedBox(
                         constraints: const BoxConstraints(maxWidth: 600),
                         child: GameKeyboard(

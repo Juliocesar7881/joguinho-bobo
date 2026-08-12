@@ -1,6 +1,6 @@
-# LexiNexo 1.0.0 — relatório de release
+# PalavraX 1.0.0 — relatório de release
 
-Data da validação: 11 de agosto de 2026 (America/Sao_Paulo)
+Data da validação: 12 de agosto de 2026 (America/Sao_Paulo)
 
 ## Estado
 
@@ -20,8 +20,8 @@ Console. Esses valores não foram inventados. O gate completo falha fechado com:
 
 | Artefato | Tamanho | SHA-256 |
 |---|---:|---|
-| `build/app/outputs/bundle/release/app-release.aab` | 47.774.342 bytes | `53840525E910501FBF2889DAE65E7D7B51BFA95A19D33A6A99769EB65257CE1C` |
-| `build/app/outputs/flutter-apk/app-release.apk` | 47.812.988 bytes | `91F3B5D69FF17811D0C8640C72FE354A5B64494F207C283A973CE45E9A70A2E9` |
+| `build/app/outputs/bundle/release/app-release.aab` | 48.032.096 bytes | `B4DF6CB955CEEF6932EE0DADD00567B9111FEDC2EFA37B3E816041B4CF05D3F2` |
+| `build/app/outputs/flutter-apk/app-release.apk` | 48.164.396 bytes | `38762729CFA5FAB7CFF68BA72D14ECD8672BBADCDCDFC263558C74216FFCC03E` |
 
 O AAB é o arquivo para upload na Play Console. O APK é universal, assinado pela
 upload key, e serve para instalação direta e QA. Depois da adesão ao Play App
@@ -31,7 +31,8 @@ atualizações da Play deve usar a assinatura de distribuição do Google.
 ## Identidade Android
 
 - Package e namespace: `com.lexinexo.app`
-- Nome: `LexiNexo`
+- Nome instalado: `PalavraX`
+- Título da ficha: `PalavraX: Aprenda Inglês`
 - `versionName`: `1.0.0`
 - `versionCode`: `1`
 - `minSdk`: 24
@@ -71,14 +72,18 @@ de assinatura JAR.
 - progresso, rascunho, sessão e resultado terminal independentes por modo e
   tamanho, preservando migração do save v1 para o schema v2 na chave existente;
 - numeração local por categoria, mantendo os IDs canônicos 1–500;
+- seletor de tamanho redesenhado como uma grade compacta 3×2, com progresso e
+  estado de sessão em cards menores;
 - teclado QWERTY adaptativo fixo em três linhas, com altura de 44–48 dp e
-  largura limitada em tablets;
+  largura limitada em tablets, elevado 18 dp da borda inferior;
+- separação de 18 dp entre o tabuleiro e o teclado, sem empurrar as teclas para
+  fora da tela;
 - área superior rolável e teclado sempre acessível em telas baixas e texto 2×;
 - dica em português e `Hint (EN)` somente no modo com dicas;
 - preferência de som salva localmente, efeito original via SoundPool sem nova
   permissão e animação de check antes do diálogo de vitória;
-- ícone adaptativo com símbolo X/nexo ampliado para permanecer legível depois
-  do inset de segurança aplicado pelo Android;
+- nova identidade PalavraX, com cinco blocos formando um X, bloco central verde
+  com a letra A e camada monocromática para launchers compatíveis;
 - recuperação segura de falha de persistência e serialização de gravações
   concorrentes, sem ressuscitar uma mutação que falhou.
 
@@ -97,9 +102,9 @@ O WAV original possui 45.908 bytes e SHA-256
 - Revisão editorial v2: 1.000 registros com duas passagens automatizadas
   identificadas, datas, hashes canônicos e aprovações separadas; nenhuma revisão
   humana é alegada pelo manifesto
-- Dados: 836.590 bytes brutos e 234.412 bytes comprimidos
+- Dados: 836.590 bytes brutos e 234.410 bytes comprimidos
 - SHA-256 de `data_manifest.json`:
-  `DDDAB5B10BCF54461165550ACFDF16557D64A55E890B1847B6CE1D8EE1A1B47A`
+  `92AD5C71B466AB8DCCA562A8B1816BF5E962CB625EEFA64C8751FBCD4B5BB151`
 - SHA-256 de `editorial_review.json`:
   `B2A46A5466B842AE6042BA5FAEB914056E9574C3B81FD739E1E8E1C938F6043B`
 
@@ -118,7 +123,7 @@ Sequência final:
 3. `dart format --output=none --set-exit-if-changed .`: 47 arquivos, nenhuma
    alteração.
 4. `flutter analyze --fatal-infos`: nenhum problema.
-5. `flutter test`: 145 testes aprovados.
+5. `flutter test`: 148 testes aprovados.
 6. `integration_test/app_test.dart` no AVD Android 36 normal, offline: 3/3.
 7. Captura integrada real: 6 screenshots phone e 4 tablet, ambos os roteiros
    aprovados; imagens inspecionadas visualmente.
@@ -151,8 +156,8 @@ O verificador final aprovou:
 
 Foram verificados 9 ELF no APK e 15 no AAB. No AVD especial, `getconf PAGE_SIZE`
 retornou `16384`, Wi-Fi estava desativado e `mobile_data=0`. O APK release foi
-instalado, iniciou a `MainActivity` em cold start com status `ok`, permaneceu
-ativo e não produziu crash.
+instalado e iniciou a `MainActivity` a frio com status `ok`; a atividade ficou
+retomada, renderizou a tela inicial e permaneceu ativa sem crash.
 
 ## Ambiente fixado no disco D:
 
@@ -190,7 +195,7 @@ Diretório: `play_store/pt-BR`
 - inventário SHA-256 dos 12 materiais gráficos.
 
 SHA-256 de `STORE_ASSETS_SHA256.txt`:
-`CBBF8838400A2102BFB34A848E130AAEDAA53629416670035E80DEF801E79680`.
+`BDC50647B95B4D54D4D609FFED47E1620F896F6BE67A8E326AC435B8A03833D9`.
 
 `play_store/validate_static_kit.ps1` passou. O gate completo permanece bloqueado
 somente pela ausência deliberada de `play_store/publication_metadata.json`.
@@ -214,5 +219,5 @@ somente pela ausência deliberada de `play_store/publication_metadata.json`.
 1. Copie `app-release.apk` para o telefone Android.
 2. Ao abrir o arquivo, permita temporariamente **Instalar apps desconhecidos**
    para o app usado na abertura (por exemplo, Arquivos ou navegador).
-3. Confirme a instalação e abra **LexiNexo**.
+3. Confirme a instalação e abra **PalavraX**.
 4. Se desejar, desative novamente essa autorização depois da instalação.

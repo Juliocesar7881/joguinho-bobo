@@ -1,6 +1,6 @@
-# LexiNexo
+# PalavraX
 
-LexiNexo é um jogo Android de palavras em inglês, com interface em português
+PalavraX é um jogo Android de palavras em inglês, com interface em português
 brasileiro, 1.000 desafios e dois modos independentes: com dicas bilíngues e
 sem dicas. Em cada modo, o jogador escolhe livremente palavras de 3 a 8 letras,
 com progresso e partida separados por tamanho. O aplicativo funciona

@@ -29,6 +29,14 @@ void main() {
     expect(q.left, lessThanOrEqualTo(10));
     expect(p.right, greaterThanOrEqualTo(310));
     expect(q.width, inInclusiveRange(26, 32));
+    final boardBottom = tester.getRect(
+      find.byKey(const ValueKey<String>('board_tile_5_0')),
+    );
+    final bottomKey = tester.getRect(
+      find.byKey(const ValueKey<String>('letter_key_m')),
+    );
+    expect(q.top - boardBottom.bottom, greaterThanOrEqualTo(17.9));
+    expect(bottomKey.bottom, lessThanOrEqualTo(size.height - 18));
     expect(tester.takeException(), isNull);
   });
 
@@ -118,6 +126,30 @@ void main() {
     expect(find.text('Hint (EN)'), findsOneWidget);
     _expectThreeKeyboardRows(tester, size);
     _expectAdaptiveKeyHeights(tester);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('texto 2x também cabe no telefone 320x568', (tester) async {
+    const size = Size(320, 568);
+    _configureView(tester, size, textScaleFactor: 2);
+    final store = await createTestStore();
+    await pumpGame(
+      tester,
+      store: store,
+      mode: GameMode.withHints,
+      levelNumber: 461,
+    );
+
+    _expectThreeKeyboardRows(tester, size);
+    _expectAdaptiveKeyHeights(tester);
+    final boardBottom = tester.getRect(
+      find.byKey(const ValueKey<String>('board_tile_5_0')),
+    );
+    final keyboardTop = tester.getRect(
+      find.byKey(const ValueKey<String>('letter_key_q')),
+    );
+    expect(keyboardTop.top - boardBottom.bottom, greaterThanOrEqualTo(17.9));
+    expect(find.byType(SingleChildScrollView), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 }

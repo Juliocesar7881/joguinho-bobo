@@ -119,8 +119,9 @@ Assert-NonEmptyText $listing.appName 'listing.appName'
 Assert-NonEmptyText $listing.shortDescription 'listing.shortDescription'
 Assert-NonEmptyText $listing.fullDescription 'listing.fullDescription'
 Assert-Condition ($listing.locale -ceq 'pt-BR') 'O locale da ficha deve ser pt-BR.'
-Assert-Condition ($listing.appName -ceq 'LexiNexo') 'O titulo da ficha deve ser exatamente LexiNexo.'
-$expectedShortDescription = 'Aprenda ingl' + [char]0x00EA + 's em 1.000 desafios de palavras, com dicas opcionais e offline.'
+$expectedAppName = 'PalavraX: Aprenda Ingl' + [char]0x00EA + 's'
+Assert-Condition ($listing.appName -ceq $expectedAppName) 'O titulo da ficha deve ser exatamente PalavraX: Aprenda Ingles.'
+$expectedShortDescription = 'Aprenda ingl' + [char]0x00EA + 's jogando 1.000 desafios de palavras, com dicas e offline.'
 Assert-Condition (
   $listing.shortDescription -ceq $expectedShortDescription
 ) 'A descricao curta nao corresponde ao texto aprovado.'
@@ -286,7 +287,7 @@ foreach ($set in $screenshotSets) {
 }
 
 if ($StaticOnly) {
-  Write-Output 'Conteudo estatico do kit LexiNexo 1.0.0 validado.'
+  Write-Output 'Conteudo estatico do kit PalavraX 1.0.0 validado.'
 } else {
-  Write-Output 'Kit de publicacao LexiNexo 1.0.0 validado.'
+  Write-Output 'Kit de publicacao PalavraX 1.0.0 validado.'
 }

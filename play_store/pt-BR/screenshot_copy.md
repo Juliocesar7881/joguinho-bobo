@@ -4,7 +4,7 @@ As imagens são capturadas diretamente do aplicativo no Android 36. Não há mol
 
 ## Telefone
 
-1. `01-inicio.png` — Tela inicial do LexiNexo com os modos Com dicas e Sem dicas.
+1. `01-inicio.png` — Tela inicial do PalavraX com os modos Com dicas e Sem dicas.
 2. `02-tamanhos.png` — Seleção de palavras de 3 a 8 letras, com progresso separado em cada categoria.
 3. `03-niveis-4-letras.png` — Grade da categoria de 4 letras com o próximo desafio disponível.
 4. `04-jogo-dicas-bilingues.png` — Dicas em português e inglês, tabuleiro e teclado QWERTY adaptativo de três linhas.

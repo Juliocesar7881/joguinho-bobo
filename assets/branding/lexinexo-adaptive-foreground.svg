@@ -1,43 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
-  <title id="title">Foreground adaptativo do LexiNexo</title>
-  <desc id="desc">Símbolo em X dentro da zona segura de ícones adaptativos Android.</desc>
+  <title id="title">Foreground adaptativo do PalavraX</title>
+  <desc id="desc">X de cinco blocos com a letra A central dentro da zona segura Android.</desc>
   <defs>
-    <linearGradient id="violetBranch" x1="220" y1="512" x2="804" y2="512" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#8B7CFF"/>
+    <linearGradient id="violet" x1="100" y1="100" x2="924" y2="924" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9A8CFF"/>
       <stop offset="1" stop-color="#7367F0"/>
     </linearGradient>
-    <linearGradient id="blueBranch" x1="512" y1="220" x2="512" y2="804" gradientUnits="userSpaceOnUse">
+    <linearGradient id="blue" x1="924" y1="100" x2="100" y2="924" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#70A4FF"/>
       <stop offset="1" stop-color="#5B8DEF"/>
     </linearGradient>
-    <linearGradient id="nexus" x1="448" y1="448" x2="576" y2="576" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#8B7CFF"/>
-      <stop offset="1" stop-color="#5B8DEF"/>
+    <linearGradient id="green" x1="376" y1="368" x2="648" y2="656" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#46B77D"/>
+      <stop offset="1" stop-color="#2E9B63"/>
     </linearGradient>
   </defs>
 
-  <!--
-    flutter_launcher_icons applies a 16% inset around adaptive foregrounds.
-    Expanding the source keeps the nexus legible after that Android safe-zone
-    inset while every visible tile remains inside this 1024 px canvas.
-  -->
-  <g transform="translate(512 512) scale(1.8) translate(-512 -512)">
-  <g transform="rotate(45 512 512)">
-    <g fill="url(#violetBranch)">
-      <rect x="220" y="462" width="100" height="100" rx="24" opacity="0.68"/>
-      <rect x="336" y="462" width="100" height="100" rx="24" opacity="0.86"/>
-      <rect x="588" y="462" width="100" height="100" rx="24" opacity="0.86"/>
-      <rect x="704" y="462" width="100" height="100" rx="24" opacity="0.68"/>
-    </g>
-    <g fill="url(#blueBranch)">
-      <rect x="462" y="220" width="100" height="100" rx="24" opacity="0.68"/>
-      <rect x="462" y="336" width="100" height="100" rx="24" opacity="0.86"/>
-      <rect x="462" y="588" width="100" height="100" rx="24" opacity="0.86"/>
-      <rect x="462" y="704" width="100" height="100" rx="24" opacity="0.68"/>
-    </g>
-    <rect x="448" y="448" width="128" height="128" rx="30" fill="url(#nexus)" stroke="#F4F5FA" stroke-width="6"/>
-    <rect x="490" y="490" width="44" height="44" rx="11" fill="#F4F5FA"/>
-  </g>
-  </g>
+  <!-- Fills 82% of the source so the symbol stays bold after the 16% inset
+       applied by flutter_launcher_icons to adaptive foregrounds. -->
+  <rect x="92" y="92" width="252" height="252" rx="72" fill="url(#violet)"/>
+  <rect x="680" y="92" width="252" height="252" rx="72" fill="url(#blue)"/>
+  <rect x="92" y="680" width="252" height="252" rx="72" fill="url(#blue)"/>
+  <rect x="680" y="680" width="252" height="252" rx="72" fill="url(#violet)"/>
+  <rect x="368" y="368" width="288" height="288" rx="84" fill="url(#green)" stroke="#D5F5E4" stroke-width="9"/>
+  <path d="M432 592L512 424L592 592M464 534H560" fill="none" stroke="#FFFFFF" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

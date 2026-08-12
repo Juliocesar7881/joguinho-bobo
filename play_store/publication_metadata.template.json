@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "packageName": "com.lexinexo.app",
-  "developerDisplayName": "EXEMPLO: Estúdio LexiNexo",
+  "developerDisplayName": "EXEMPLO: Estúdio PalavraX",
   "privacyContactEmail": "privacidade@seu-dominio.example",
-  "privacyPolicyUrl": "https://seu-dominio.example/lexinexo/privacidade",
+  "privacyPolicyUrl": "https://seu-dominio.example/palavrax/privacidade",
   "primaryLocale": "pt-BR",
   "distributionCountries": [
     "BR"

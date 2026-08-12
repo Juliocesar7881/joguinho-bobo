@@ -1,4 +1,4 @@
-# LexiNexo catalog editorial policy
+# PalavraX catalog editorial policy
 
 Catalog revision: `lexinexo-1.0.0-scowl-rel-2026.02.25-bilingual-hints`
 

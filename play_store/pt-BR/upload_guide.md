@@ -1,4 +1,4 @@
-# Guia de upload — LexiNexo 1.0.0
+# Guia de upload — PalavraX 1.0.0
 
 ## 1. Completar a identidade pública
 
@@ -9,7 +9,7 @@
 
 ## 2. Criar o aplicativo
 
-- Nome: **LexiNexo**.
+- Nome: **PalavraX: Aprenda Inglês**.
 - Idioma padrão: **Português (Brasil)**.
 - Aplicativo ou jogo: **Jogo**.
 - Gratuito ou pago: **Gratuito**.
@@ -57,4 +57,4 @@ Essa verificação cobre textos, nomes, limites e dimensões dos materiais. Ela 
 & .\play_store\prepare_publication.ps1
 ```
 
-Saída esperada: `Kit de publicacao LexiNexo 1.0.0 validado.` Qualquer falha interrompe a liberação.
+Saída esperada: `Kit de publicacao PalavraX 1.0.0 validado.` Qualquer falha interrompe a liberação.

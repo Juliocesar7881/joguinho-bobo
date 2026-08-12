@@ -9,7 +9,7 @@ abstract interface class SuccessAudioService {
   Future<bool> playSuccess();
 }
 
-/// Android-backed success audio exposed by LexiNexo's native activity.
+/// Android-backed success audio exposed by PalavraX's native activity.
 final class NativeSuccessAudioService implements SuccessAudioService {
   NativeSuccessAudioService({MethodChannel? channel})
     : _channel = channel ?? const MethodChannel(channelName);
