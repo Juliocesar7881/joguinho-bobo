@@ -10,9 +10,10 @@ validados e executados offline no Android 36. O APK release também foi instalad
 e iniciado em um AVD com páginas de memória de 16 KiB.
 
 O envio completo da ficha à Google Play continua bloqueado somente pelos dados
-externos que pertencem ao titular da conta: nome público do desenvolvedor,
-e-mail real de privacidade, URL HTTPS pública da política e acesso à Play
-Console. Esses valores não foram inventados. O gate completo falha fechado com:
+externos que pertencem ao titular: tipo e identidade verificados da conta, nome
+público do desenvolvedor, contatos reais de suporte e privacidade, site HTTPS,
+páginas HTTPS públicas de suporte e privacidade e acesso à Play Console. Esses
+valores do schema v2 não foram inventados. O gate completo falha fechado com:
 
 `publication_metadata.json nao existe; os dados publicos reais sao obrigatorios para liberar a publicacao.`
 
@@ -20,8 +21,8 @@ Console. Esses valores não foram inventados. O gate completo falha fechado com:
 
 | Artefato | Tamanho | SHA-256 |
 |---|---:|---|
-| `build/app/outputs/bundle/release/app-release.aab` | 48.032.096 bytes | `B4DF6CB955CEEF6932EE0DADD00567B9111FEDC2EFA37B3E816041B4CF05D3F2` |
-| `build/app/outputs/flutter-apk/app-release.apk` | 48.164.396 bytes | `38762729CFA5FAB7CFF68BA72D14ECD8672BBADCDCDFC263558C74216FFCC03E` |
+| `release/app-release.aab` no pacote (`build/app/outputs/bundle/release/app-release.aab` no projeto) | 48.032.096 bytes | `B4DF6CB955CEEF6932EE0DADD00567B9111FEDC2EFA37B3E816041B4CF05D3F2` |
+| `qa/app-release.apk` no pacote (`build/app/outputs/flutter-apk/app-release.apk` no projeto) | 48.164.396 bytes | `38762729CFA5FAB7CFF68BA72D14ECD8672BBADCDCDFC263558C74216FFCC03E` |
 
 O AAB é o arquivo para upload na Play Console. O APK é universal, assinado pela
 upload key, e serve para instalação direta e QA. Depois da adesão ao Play App
@@ -51,8 +52,8 @@ A única permissão declarada no artefato é a permissão interna AndroidX de n�
 
 ## Assinatura de upload
 
-- Keystore externo: `D:\LexiNexoRelease\signing\lexinexo-upload.jks`
-- Certificado público: `D:\LexiNexoRelease\signing\lexinexo-upload-certificate.pem`
+- Keystore privado: externo ao projeto e deliberadamente ausente do pacote
+- Certificado público no pacote: `signing-public/upload-certificate.pem`
 - Alias: `lexinexo-upload`
 - Chave: RSA 4096 bits, `SHA256withRSA`
 - SHA-1: `52:34:B6:6F:FD:24:13:F6:F5:6C:C3:5C:24:3F:F1:42:2C:A5:A2:33`
@@ -202,17 +203,25 @@ somente pela ausência deliberada de `play_store/publication_metadata.json`.
 
 ## Etapas externas restantes
 
+Os caminhos e comandos a seguir são relativos ao repositório-fonte; os
+artefatos equivalentes do pacote estão identificados nas seções anteriores.
+
 1. Copiar `play_store/publication_metadata.template.json` para
-   `play_store/publication_metadata.json` e preencher nome público real, e-mail
-   real de privacidade e URL HTTPS pública.
+   `play_store/publication_metadata.json` e preencher todos os campos reais do
+   schema v2: tipo de conta, nome público, contatos, site e URLs HTTPS de suporte
+   e privacidade.
 2. Executar `play_store/prepare_publication.ps1`; ele gera as políticas finais
    HTML e Markdown. Hospedar o HTML exatamente na URL declarada e rodar
    `play_store/validate_publication.ps1`.
-3. Na Play Console: verificar identidade, reservar `com.lexinexo.app`, aderir ao
-   Play App Signing, cadastrar contatos, preencher Data Safety/IARC/público e
-   ausência de anúncios, e enviar primeiro ao teste interno.
+3. Na Play Console: verificar identidade e contatos privados da conta; para
+   organização, confirmar D‑U‑N‑S e contatos públicos exigidos; reservar
+   `com.lexinexo.app`, aderir ao Play App Signing, preencher Data
+   Safety/IARC/público e ausência de anúncios e enviar primeiro ao teste interno.
 4. Se a conta real for pessoal criada depois de 13/11/2023, cumprir o teste
    fechado exigido antes da produção.
+5. Antes do lançamento público, pesquisar **PalavraX** no INPI e avaliar
+   eventuais conflitos de marca; disponibilidade do nome/package não é parecer
+   jurídico.
 
 ## Instalação direta do APK
 

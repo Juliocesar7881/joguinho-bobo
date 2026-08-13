@@ -33,6 +33,9 @@ migrate_working_dir/
 /build/
 **/build/
 /coverage/
+/dist/
+/play_store/generated_publication/
+/play_store/publication_metadata.json
 **/node_modules/
 **/.kotlin/
 

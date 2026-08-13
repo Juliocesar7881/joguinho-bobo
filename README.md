@@ -79,3 +79,12 @@ são rejeitados deliberadamente:
 
 Esses dados públicos e o acesso à Play Console pertencem ao titular da conta e
 não são inferidos pelo projeto.
+
+A matriz completa de respostas da Console está em
+`play_store/pt-BR/PLAY_CONSOLE_ANSWERS.md`. Para montar uma pasta e ZIP com AAB,
+APK, certificado público, imagens, textos, declarações e relatório, sem incluir
+chave privada ou senha, execute:
+
+```powershell
+.\play_store\build_submission_package.ps1
+```

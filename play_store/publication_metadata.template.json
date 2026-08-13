@@ -1,13 +1,17 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "packageName": "com.lexinexo.app",
   "developerDisplayName": "EXEMPLO: Estúdio PalavraX",
+  "accountType": "CONFIRMAR: personal ou organization",
+  "supportContactEmail": "suporte@seu-dominio.example",
   "privacyContactEmail": "privacidade@seu-dominio.example",
+  "developerWebsiteUrl": "https://seu-dominio.example/palavrax",
+  "supportPageUrl": "https://seu-dominio.example/palavrax/suporte",
   "privacyPolicyUrl": "https://seu-dominio.example/palavrax/privacidade",
+  "supportPhone": null,
   "primaryLocale": "pt-BR",
   "distributionCountries": [
     "BR"
   ],
-  "accountType": "organization",
   "targetAudience": "13+"
 }

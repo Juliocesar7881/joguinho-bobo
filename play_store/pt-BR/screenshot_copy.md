@@ -2,6 +2,10 @@
 
 As imagens são capturadas diretamente do aplicativo no Android 36. Não há molduras, elementos promocionais sobrepostos nem telas reconstruídas.
 
+Na Play Console, envie as imagens na ordem promocional definida em
+`ASSET_UPLOAD_MAP.md`, que começa pela jogabilidade. A sequência abaixo mantém
+os nomes canônicos usados pelo teste automático de captura.
+
 ## Telefone
 
 1. `01-inicio.png` — Tela inicial do PalavraX com os modos Com dicas e Sem dicas.

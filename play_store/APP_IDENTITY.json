@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "product": {
+    "brandName": "PalavraX",
+    "installedName": "PalavraX",
+    "storeTitle": "PalavraX: Aprenda Inglês",
+    "applicationType": "game",
+    "price": "free",
+    "primaryLocale": "pt-BR",
+    "category": "GAME_WORD",
+    "distributionCountries": [
+      "BR"
+    ],
+    "targetAgeGroups": [
+      "13-15",
+      "16-17",
+      "18+"
+    ]
+  },
+  "android": {
+    "packageName": "com.lexinexo.app",
+    "namespace": "com.lexinexo.app",
+    "dartProjectName": "lexinexo",
+    "versionName": "1.0.0",
+    "versionCode": 1,
+    "minSdk": 24,
+    "targetSdk": 36,
+    "compileSdk": 36,
+    "orientation": "portrait",
+    "formFactors": [
+      "phone",
+      "tablet"
+    ],
+    "abis": [
+      "armeabi-v7a",
+      "arm64-v8a",
+      "x86_64"
+    ],
+    "supports16KiBPages": true,
+    "internetPermission": false,
+    "dangerousPermissions": []
+  },
+  "businessModel": {
+    "containsAds": false,
+    "inAppPurchases": false,
+    "subscriptions": false,
+    "accounts": false,
+    "onlineServices": false
+  },
+  "privacy": {
+    "collectsUserData": false,
+    "sharesUserData": false,
+    "usesTelemetry": false,
+    "usesAdvertisingId": false,
+    "localDataOnly": true,
+    "localDataDeletion": "clear_app_data_or_uninstall"
+  },
+  "releaseArtifacts": {
+    "pathScope": "submission_package_root",
+    "playUpload": "release/app-release.aab",
+    "directInstallAndQa": "qa/app-release.apk",
+    "releaseReport": "reports/RELEASE_1.0.0.md"
+  },
+  "uploadCertificate": {
+    "algorithm": "RSA-4096",
+    "subjectCommonName": "LexiNexo Upload",
+    "subjectNameIsHistoricalAndNotPublicBrand": true,
+    "sha1": "52:34:B6:6F:FD:24:13:F6:F5:6C:C3:5C:24:3F:F1:42:2C:A5:A2:33",
+    "sha256": "59:54:66:16:88:06:3D:35:EF:33:92:B7:50:2F:46:22:D1:ED:6F:0A:74:FD:63:8E:46:68:88:CB:C4:78:79:96"
+  }
+}

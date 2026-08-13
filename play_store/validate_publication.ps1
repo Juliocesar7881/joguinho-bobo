@@ -1,6 +1,8 @@
 param(
   [string]$MetadataPath = (Join-Path $PSScriptRoot 'publication_metadata.json'),
-  [switch]$StaticOnly
+  [string]$GeneratedPagesDirectory = (Join-Path $PSScriptRoot 'generated_publication'),
+  [switch]$StaticOnly,
+  [switch]$MetadataOnly
 )
 
 $ErrorActionPreference = 'Stop'
@@ -15,6 +17,49 @@ function Assert-NonEmptyText {
   Assert-Condition (
     $Value -is [string] -and -not [string]::IsNullOrWhiteSpace($Value)
   ) "$FieldName deve ser um texto nao vazio."
+}
+
+function Assert-ExactKeys {
+  param(
+    [object]$Value,
+    [string[]]$ExpectedKeys,
+    [string]$ObjectName
+  )
+  Assert-Condition ($null -ne $Value) "$ObjectName deve ser um objeto JSON."
+  $actualKeys = @($Value.PSObject.Properties.Name | Sort-Object)
+  $sortedExpectedKeys = @($ExpectedKeys | Sort-Object)
+  Assert-Condition (
+    (($actualKeys -join '|') -ceq ($sortedExpectedKeys -join '|'))
+  ) "$ObjectName deve conter exatamente estas chaves: $($sortedExpectedKeys -join ', ')."
+}
+
+function Assert-ExactStringArray {
+  param(
+    [object]$Value,
+    [string[]]$ExpectedValues,
+    [string]$FieldName
+  )
+  $actualValues = @($Value)
+  Assert-Condition (
+    $actualValues.Count -eq $ExpectedValues.Count
+  ) "$FieldName deve conter exatamente $($ExpectedValues.Count) valor(es)."
+  for ($index = 0; $index -lt $ExpectedValues.Count; $index++) {
+    Assert-Condition (
+      $actualValues[$index] -is [string] -and
+      $actualValues[$index] -ceq $ExpectedValues[$index]
+    ) "$FieldName deve ser exatamente: $($ExpectedValues -join ', ')."
+  }
+}
+
+function Assert-BooleanValue {
+  param(
+    [object]$Value,
+    [bool]$ExpectedValue,
+    [string]$FieldName
+  )
+  Assert-Condition (
+    $Value -is [bool] -and $Value -eq $ExpectedValue
+  ) "$FieldName deve ser o booleano $($ExpectedValue.ToString().ToLowerInvariant())."
 }
 
 function Convert-ToSearchText {
@@ -43,11 +88,14 @@ function Get-PngInfo {
   [pscustomobject]@{ Width = $width; Height = $height; BitDepth = $bytes[24]; ColorType = $bytes[25] }
 }
 
+Assert-Condition (-not ($StaticOnly -and $MetadataOnly)) 'StaticOnly e MetadataOnly nao podem ser usados juntos.'
+
 if (-not $StaticOnly) {
   Assert-Condition (Test-Path -LiteralPath $MetadataPath) 'publication_metadata.json nao existe; os dados publicos reais sao obrigatorios para liberar a publicacao.'
   $metadata = Get-Content -Raw -Encoding utf8 $MetadataPath | ConvertFrom-Json
   $expectedMetadataKeys = @(
     'accountType',
+    'developerWebsiteUrl',
     'developerDisplayName',
     'distributionCountries',
     'packageName',
@@ -55,35 +103,420 @@ if (-not $StaticOnly) {
     'privacyContactEmail',
     'privacyPolicyUrl',
     'schemaVersion',
+    'supportContactEmail',
+    'supportPageUrl',
+    'supportPhone',
     'targetAudience'
   )
-  $actualMetadataKeys = @($metadata.PSObject.Properties.Name | Sort-Object)
-  Assert-Condition (
-    (($actualMetadataKeys -join '|') -ceq (($expectedMetadataKeys | Sort-Object) -join '|'))
-  ) 'publication_metadata.json deve conter exatamente as chaves esperadas.'
+  Assert-ExactKeys $metadata $expectedMetadataKeys 'publication_metadata.json'
   $serializedMetadata = $metadata | ConvertTo-Json -Depth 10
   Assert-Condition (
     $serializedMetadata -notmatch '(?i)EXEMPLO|EXAMPLE|SUBSTITUA|CHANGEME|PLACEHOLDER|TODO|seu-dominio|your[-_ ]?(name|domain|email)|\.example\b|\bexample\.(com|org|net)\b'
   ) 'Os metadados contem placeholders ou valores de exemplo.'
-  Assert-Condition ($metadata.schemaVersion -eq 1) 'schemaVersion de publicacao incompativel.'
+  Assert-Condition ($metadata.schemaVersion -eq 2) 'schemaVersion de publicacao incompativel.'
   Assert-Condition ($metadata.packageName -eq 'com.lexinexo.app') 'packageName deve ser com.lexinexo.app.'
   Assert-NonEmptyText $metadata.developerDisplayName 'developerDisplayName'
+  Assert-NonEmptyText $metadata.supportContactEmail 'supportContactEmail'
   Assert-NonEmptyText $metadata.privacyContactEmail 'privacyContactEmail'
+  Assert-NonEmptyText $metadata.developerWebsiteUrl 'developerWebsiteUrl'
+  Assert-NonEmptyText $metadata.supportPageUrl 'supportPageUrl'
   Assert-NonEmptyText $metadata.privacyPolicyUrl 'privacyPolicyUrl'
+  Assert-Condition ($metadata.supportContactEmail -match '^[^\s@]+@[^\s@]+\.[^\s@]+$') 'supportContactEmail invalido.'
   Assert-Condition ($metadata.privacyContactEmail -match '^[^\s@]+@[^\s@]+\.[^\s@]+$') 'privacyContactEmail invalido.'
-  $privacyUri = $null
-  Assert-Condition ([Uri]::TryCreate($metadata.privacyPolicyUrl, [UriKind]::Absolute, [ref]$privacyUri)) 'privacyPolicyUrl invalida.'
-  Assert-Condition ($privacyUri.Scheme -eq 'https') 'privacyPolicyUrl deve usar HTTPS.'
-  Assert-Condition ($metadata.primaryLocale -eq 'pt-BR') 'primaryLocale deve ser pt-BR.'
-  Assert-Condition ($metadata.accountType -eq 'organization') 'accountType deve ser organization.'
-  Assert-Condition ($metadata.targetAudience -eq '13+') 'targetAudience deve ser 13+.'
-  $distributionCountries = @($metadata.distributionCountries)
+  foreach ($urlField in @('developerWebsiteUrl', 'supportPageUrl', 'privacyPolicyUrl')) {
+    $uri = $null
+    Assert-Condition ([Uri]::TryCreate([string]$metadata.$urlField, [UriKind]::Absolute, [ref]$uri)) "$urlField invalida."
+    Assert-Condition ($uri.Scheme -eq 'https') "$urlField deve usar HTTPS."
+  }
   Assert-Condition (
-    $distributionCountries.Count -eq 1 -and $distributionCountries[0] -ceq 'BR'
-  ) 'distributionCountries deve conter somente BR, sem duplicatas.'
+    $null -eq $metadata.supportPhone -or (
+      $metadata.supportPhone -is [string] -and
+      $metadata.supportPhone -match '^\+[1-9][0-9]{7,14}$'
+    )
+  ) 'supportPhone deve ser null ou E.164.'
+  Assert-Condition ($metadata.primaryLocale -eq 'pt-BR') 'primaryLocale deve ser pt-BR.'
+  Assert-Condition ($metadata.accountType -in @('personal', 'organization')) 'accountType deve ser personal ou organization.'
+  Assert-Condition ($metadata.targetAudience -eq '13+') 'targetAudience deve ser 13+.'
+  Assert-ExactStringArray $metadata.distributionCountries @('BR') 'distributionCountries'
+}
+
+if ($MetadataOnly) {
+  Write-Output 'Metadados publicos do kit PalavraX 1.0.0 validados.'
+  return
 }
 
 $localeRoot = Join-Path $PSScriptRoot 'pt-BR'
+$expectedPublicTitle = 'PalavraX: Aprenda Ingl' + [char]0x00EA + 's'
+$identityPath = Join-Path $PSScriptRoot 'APP_IDENTITY.json'
+$answersJsonPath = Join-Path $localeRoot 'PLAY_CONSOLE_ANSWERS.json'
+$answersMarkdownPath = Join-Path $localeRoot 'PLAY_CONSOLE_ANSWERS.md'
+$assetUploadMapPath = Join-Path $localeRoot 'ASSET_UPLOAD_MAP.md'
+$storeListingCopyPath = Join-Path $localeRoot 'STORE_LISTING_COPY.md'
+$packageReadmePath = Join-Path $PSScriptRoot 'PACKAGE_README.md'
+$ownerActionsPath = Join-Path $PSScriptRoot 'PREENCHA_COM_SEUS_DADOS.md'
+$metadataTemplatePath = Join-Path $PSScriptRoot 'publication_metadata.template.json'
+foreach ($requiredPublicationFile in @(
+    $identityPath,
+    $answersJsonPath,
+    $answersMarkdownPath,
+    $assetUploadMapPath,
+    $storeListingCopyPath,
+    $packageReadmePath,
+    $ownerActionsPath,
+    $metadataTemplatePath
+  )) {
+  Assert-Condition (
+    Test-Path -LiteralPath $requiredPublicationFile -PathType Leaf
+  ) "Arquivo obrigatorio do pacote de publicacao ausente: $requiredPublicationFile"
+}
+
+$identity = Get-Content -Raw -Encoding utf8 $identityPath | ConvertFrom-Json
+Assert-ExactKeys $identity @(
+  'android',
+  'businessModel',
+  'privacy',
+  'product',
+  'releaseArtifacts',
+  'schemaVersion',
+  'uploadCertificate'
+) 'APP_IDENTITY'
+Assert-Condition ($identity.schemaVersion -eq 1) 'APP_IDENTITY schemaVersion incompativel.'
+Assert-ExactKeys $identity.product @(
+  'applicationType',
+  'brandName',
+  'category',
+  'distributionCountries',
+  'installedName',
+  'price',
+  'primaryLocale',
+  'storeTitle',
+  'targetAgeGroups'
+) 'APP_IDENTITY.product'
+Assert-Condition ($identity.product.brandName -ceq 'PalavraX') 'Marca divergente em APP_IDENTITY.'
+Assert-Condition ($identity.product.storeTitle -ceq $expectedPublicTitle) 'Titulo divergente em APP_IDENTITY.'
+Assert-Condition ($identity.product.installedName -ceq 'PalavraX') 'Nome instalado divergente em APP_IDENTITY.'
+Assert-Condition ($identity.product.applicationType -ceq 'game') 'Tipo deve ser game em APP_IDENTITY.'
+Assert-Condition ($identity.product.price -ceq 'free') 'Preco deve ser free em APP_IDENTITY.'
+Assert-Condition ($identity.product.primaryLocale -ceq 'pt-BR') 'Locale divergente em APP_IDENTITY.'
+Assert-Condition ($identity.product.category -ceq 'GAME_WORD') 'Categoria divergente em APP_IDENTITY.'
+Assert-ExactStringArray $identity.product.distributionCountries @('BR') 'APP_IDENTITY.product.distributionCountries'
+Assert-ExactStringArray $identity.product.targetAgeGroups @('13-15', '16-17', '18+') 'APP_IDENTITY.product.targetAgeGroups'
+
+Assert-ExactKeys $identity.android @(
+  'abis',
+  'compileSdk',
+  'dangerousPermissions',
+  'dartProjectName',
+  'formFactors',
+  'internetPermission',
+  'minSdk',
+  'namespace',
+  'orientation',
+  'packageName',
+  'supports16KiBPages',
+  'targetSdk',
+  'versionCode',
+  'versionName'
+) 'APP_IDENTITY.android'
+Assert-Condition ($identity.android.packageName -ceq 'com.lexinexo.app') 'Package divergente em APP_IDENTITY.'
+Assert-Condition ($identity.android.namespace -ceq 'com.lexinexo.app') 'Namespace divergente em APP_IDENTITY.'
+Assert-Condition ($identity.android.dartProjectName -ceq 'lexinexo') 'Nome do projeto Dart divergente em APP_IDENTITY.'
+Assert-Condition ($identity.android.versionName -ceq '1.0.0' -and $identity.android.versionCode -eq 1) 'Versao divergente em APP_IDENTITY.'
+Assert-Condition ($identity.android.minSdk -eq 24 -and $identity.android.targetSdk -eq 36 -and $identity.android.compileSdk -eq 36) 'SDKs divergentes em APP_IDENTITY.'
+Assert-Condition ($identity.android.orientation -ceq 'portrait') 'Orientacao divergente em APP_IDENTITY.'
+Assert-ExactStringArray $identity.android.formFactors @('phone', 'tablet') 'APP_IDENTITY.android.formFactors'
+Assert-ExactStringArray $identity.android.abis @('armeabi-v7a', 'arm64-v8a', 'x86_64') 'APP_IDENTITY.android.abis'
+Assert-BooleanValue $identity.android.supports16KiBPages $true 'APP_IDENTITY.android.supports16KiBPages'
+Assert-BooleanValue $identity.android.internetPermission $false 'APP_IDENTITY.android.internetPermission'
+Assert-Condition (@($identity.android.dangerousPermissions).Count -eq 0) 'APP_IDENTITY nao pode declarar permissao perigosa.'
+
+Assert-ExactKeys $identity.businessModel @(
+  'accounts',
+  'containsAds',
+  'inAppPurchases',
+  'onlineServices',
+  'subscriptions'
+) 'APP_IDENTITY.businessModel'
+foreach ($businessFlag in @('accounts', 'containsAds', 'inAppPurchases', 'onlineServices', 'subscriptions')) {
+  Assert-BooleanValue $identity.businessModel.$businessFlag $false "APP_IDENTITY.businessModel.$businessFlag"
+}
+
+Assert-ExactKeys $identity.privacy @(
+  'collectsUserData',
+  'localDataDeletion',
+  'localDataOnly',
+  'sharesUserData',
+  'usesAdvertisingId',
+  'usesTelemetry'
+) 'APP_IDENTITY.privacy'
+foreach ($privacyFalseFlag in @('collectsUserData', 'sharesUserData', 'usesAdvertisingId', 'usesTelemetry')) {
+  Assert-BooleanValue $identity.privacy.$privacyFalseFlag $false "APP_IDENTITY.privacy.$privacyFalseFlag"
+}
+Assert-BooleanValue $identity.privacy.localDataOnly $true 'APP_IDENTITY.privacy.localDataOnly'
+Assert-Condition (
+  $identity.privacy.localDataDeletion -ceq 'clear_app_data_or_uninstall'
+) 'Exclusao de dados locais divergente em APP_IDENTITY.'
+
+Assert-ExactKeys $identity.releaseArtifacts @(
+  'directInstallAndQa',
+  'pathScope',
+  'playUpload',
+  'releaseReport'
+) 'APP_IDENTITY.releaseArtifacts'
+Assert-Condition (
+  $identity.releaseArtifacts.pathScope -ceq 'submission_package_root'
+) 'APP_IDENTITY.releaseArtifacts.pathScope deve ser submission_package_root.'
+Assert-NonEmptyText $identity.releaseArtifacts.playUpload 'APP_IDENTITY.releaseArtifacts.playUpload'
+Assert-NonEmptyText $identity.releaseArtifacts.directInstallAndQa 'APP_IDENTITY.releaseArtifacts.directInstallAndQa'
+Assert-NonEmptyText $identity.releaseArtifacts.releaseReport 'APP_IDENTITY.releaseArtifacts.releaseReport'
+Assert-Condition (
+  [string]$identity.releaseArtifacts.playUpload -match '(?i)\.aab$'
+) 'Artefato de upload deve ser um AAB em APP_IDENTITY.'
+Assert-Condition (
+  [string]$identity.releaseArtifacts.directInstallAndQa -match '(?i)\.apk$'
+) 'Artefato de QA deve ser um APK em APP_IDENTITY.'
+Assert-Condition (
+  [string]$identity.releaseArtifacts.releaseReport -match '(?i)\.md$'
+) 'Relatorio de release deve ser Markdown em APP_IDENTITY.'
+
+Assert-ExactKeys $identity.uploadCertificate @(
+  'algorithm',
+  'sha1',
+  'sha256',
+  'subjectCommonName',
+  'subjectNameIsHistoricalAndNotPublicBrand'
+) 'APP_IDENTITY.uploadCertificate'
+Assert-Condition ($identity.uploadCertificate.algorithm -ceq 'RSA-4096') 'Algoritmo do certificado divergente.'
+Assert-NonEmptyText $identity.uploadCertificate.subjectCommonName 'APP_IDENTITY.uploadCertificate.subjectCommonName'
+Assert-BooleanValue $identity.uploadCertificate.subjectNameIsHistoricalAndNotPublicBrand $true 'APP_IDENTITY.uploadCertificate.subjectNameIsHistoricalAndNotPublicBrand'
+Assert-Condition (
+  $identity.uploadCertificate.sha1 -cmatch '^(?:[0-9A-F]{2}:){19}[0-9A-F]{2}$'
+) 'Fingerprint SHA-1 invalida em APP_IDENTITY.'
+Assert-Condition (
+  $identity.uploadCertificate.sha256 -cmatch '^(?:[0-9A-F]{2}:){31}[0-9A-F]{2}$'
+) 'Fingerprint SHA-256 invalida em APP_IDENTITY.'
+
+$answers = Get-Content -Raw -Encoding utf8 $answersJsonPath | ConvertFrom-Json
+Assert-ExactKeys $answers @(
+  'appContent',
+  'appliesTo',
+  'contentRating',
+  'createApp',
+  'ownerSuppliedFields',
+  'release',
+  'schemaVersion',
+  'storeSettings'
+) 'PLAY_CONSOLE_ANSWERS'
+Assert-Condition ($answers.schemaVersion -eq 1) 'PLAY_CONSOLE_ANSWERS schemaVersion incompativel.'
+Assert-ExactKeys $answers.appliesTo @('packageName', 'versionCode', 'versionName') 'PLAY_CONSOLE_ANSWERS.appliesTo'
+Assert-Condition ($answers.appliesTo.packageName -ceq 'com.lexinexo.app') 'Package divergente nas respostas da Console.'
+Assert-Condition ($answers.appliesTo.versionName -ceq '1.0.0' -and $answers.appliesTo.versionCode -eq 1) 'Versao divergente nas respostas da Console.'
+
+Assert-ExactKeys $answers.createApp @(
+  'acceptDeveloperProgramPolicies',
+  'acceptPlayAppSigning',
+  'acceptUsExportLaws',
+  'defaultLanguage',
+  'name',
+  'price',
+  'type'
+) 'PLAY_CONSOLE_ANSWERS.createApp'
+Assert-Condition ($answers.createApp.name -ceq $expectedPublicTitle) 'Nome divergente nas respostas da Console.'
+Assert-Condition ($answers.createApp.defaultLanguage -ceq 'pt-BR') 'Idioma divergente nas respostas da Console.'
+Assert-Condition ($answers.createApp.type -ceq 'game') 'Tipo deve ser game nas respostas da Console.'
+Assert-Condition ($answers.createApp.price -ceq 'free') 'Preco deve ser free nas respostas da Console.'
+foreach ($acceptanceField in @('acceptDeveloperProgramPolicies', 'acceptPlayAppSigning', 'acceptUsExportLaws')) {
+  Assert-BooleanValue $answers.createApp.$acceptanceField $true "PLAY_CONSOLE_ANSWERS.createApp.$acceptanceField"
+}
+
+Assert-ExactKeys $answers.storeSettings @(
+  'category',
+  'initialCountry',
+  'supportedFormFactors',
+  'untestedFormFactorsDisabled'
+) 'PLAY_CONSOLE_ANSWERS.storeSettings'
+Assert-Condition ($answers.storeSettings.category -ceq 'GAME_WORD') 'Categoria divergente nas respostas da Console.'
+Assert-Condition ($answers.storeSettings.initialCountry -ceq 'BR') 'Pais inicial divergente nas respostas da Console.'
+Assert-ExactStringArray $answers.storeSettings.supportedFormFactors @('phone', 'tablet') 'PLAY_CONSOLE_ANSWERS.storeSettings.supportedFormFactors'
+Assert-ExactStringArray $answers.storeSettings.untestedFormFactorsDisabled @(
+  'wearOs',
+  'androidTv',
+  'automotive',
+  'xr',
+  'playGamesPc'
+) 'PLAY_CONSOLE_ANSWERS.storeSettings.untestedFormFactorsDisabled'
+
+$expectedAppContentKeys = @(
+  'accountCreation',
+  'accountDeletionUrlApplicable',
+  'appAccess',
+  'containsAds',
+  'covidContactTracingOrStatus',
+  'dataCollected',
+  'dataShared',
+  'dataTransmittedOffDevice',
+  'dating',
+  'designedForChildren',
+  'financialFeatures',
+  'governmentAppOrInformation',
+  'healthFeatures',
+  'highRiskOrSensitivePermissions',
+  'inAppPurchases',
+  'newsOrMagazine',
+  'privacyPolicyRequired',
+  'realMoneyGambling',
+  'subscriptions',
+  'targetAgeGroups',
+  'userCommunication',
+  'userGeneratedContent',
+  'usesAdvertisingId'
+)
+Assert-ExactKeys $answers.appContent $expectedAppContentKeys 'PLAY_CONSOLE_ANSWERS.appContent'
+Assert-BooleanValue $answers.appContent.privacyPolicyRequired $true 'PLAY_CONSOLE_ANSWERS.appContent.privacyPolicyRequired'
+Assert-Condition (
+  $answers.appContent.appAccess -ceq 'all_functionality_available_without_special_access'
+) 'appAccess divergente nas respostas da Console.'
+Assert-ExactStringArray $answers.appContent.targetAgeGroups @('13-15', '16-17', '18+') 'PLAY_CONSOLE_ANSWERS.appContent.targetAgeGroups'
+$falseAnswerFields = @(
+  'accountDeletionUrlApplicable',
+  'containsAds',
+  'designedForChildren',
+  'dataCollected',
+  'dataShared',
+  'dataTransmittedOffDevice',
+  'accountCreation',
+  'usesAdvertisingId',
+  'financialFeatures',
+  'healthFeatures',
+  'governmentAppOrInformation',
+  'newsOrMagazine',
+  'covidContactTracingOrStatus',
+  'highRiskOrSensitivePermissions',
+  'realMoneyGambling',
+  'userGeneratedContent',
+  'userCommunication',
+  'dating',
+  'inAppPurchases',
+  'subscriptions'
+)
+foreach ($falseAnswerField in $falseAnswerFields) {
+  Assert-BooleanValue $answers.appContent.$falseAnswerField $false "PLAY_CONSOLE_ANSWERS.appContent.$falseAnswerField"
+}
+
+Assert-ExactKeys $answers.contentRating @(
+  'acceptIarcCalculatedRating',
+  'declareMildTextReferences',
+  'imagesOrGameplayForThoseReferences',
+  'questionnaireType'
+) 'PLAY_CONSOLE_ANSWERS.contentRating'
+Assert-Condition ($answers.contentRating.questionnaireType -ceq 'game') 'Questionario IARC deve ser game.'
+Assert-ExactStringArray $answers.contentRating.declareMildTextReferences @(
+  'conflict',
+  'death',
+  'alcohol'
+) 'PLAY_CONSOLE_ANSWERS.contentRating.declareMildTextReferences'
+Assert-BooleanValue $answers.contentRating.imagesOrGameplayForThoseReferences $false 'PLAY_CONSOLE_ANSWERS.contentRating.imagesOrGameplayForThoseReferences'
+Assert-BooleanValue $answers.contentRating.acceptIarcCalculatedRating $true 'PLAY_CONSOLE_ANSWERS.contentRating.acceptIarcCalculatedRating'
+
+Assert-ExactKeys $answers.release @(
+  'artifact',
+  'firstTrack',
+  'playAppSigning',
+  'uploadKeyIsNotDistributionKey'
+) 'PLAY_CONSOLE_ANSWERS.release'
+Assert-NonEmptyText $answers.release.artifact 'PLAY_CONSOLE_ANSWERS.release.artifact'
+Assert-Condition ([string]$answers.release.artifact -match '(?i)\.aab$') 'O artefato da Console deve ser um AAB.'
+Assert-Condition ($answers.release.firstTrack -ceq 'internal_testing') 'A primeira faixa deve ser internal_testing.'
+Assert-BooleanValue $answers.release.playAppSigning $true 'PLAY_CONSOLE_ANSWERS.release.playAppSigning'
+Assert-BooleanValue $answers.release.uploadKeyIsNotDistributionKey $true 'PLAY_CONSOLE_ANSWERS.release.uploadKeyIsNotDistributionKey'
+
+Assert-ExactStringArray $answers.ownerSuppliedFields @(
+  'accountType',
+  'developerDisplayName',
+  'legalIdentityAndAddress',
+  'verifiedPrivateAccountEmail',
+  'verifiedPrivateAccountPhone',
+  'publicDeveloperEmail',
+  'publicDeveloperPhoneIfOrganization',
+  'organizationContactEmailAndPhoneIfOrganization',
+  'supportContactEmail',
+  'privacyContactEmail',
+  'developerWebsiteUrl',
+  'supportPageUrl',
+  'privacyPolicyUrl',
+  'dunsIfOrganization',
+  'physicalDeviceVerificationIfRequired',
+  'playConsoleAccess'
+) 'PLAY_CONSOLE_ANSWERS.ownerSuppliedFields'
+
+$answersMarkdown = Get-Content -Raw -Encoding utf8 $answersMarkdownPath
+$answersSearchText = Convert-ToSearchText $answersMarkdown
+foreach ($requiredAnswerPhrase in @(
+    'meu app nao contem anuncios',
+    'todas as funcionalidades estao disponiveis sem acesso especial',
+    'meu app nao oferece recursos financeiros',
+    'meu app nao oferece recursos de saude',
+    'nao e um app governamental',
+    'nao e um app de noticias ou revista',
+    'pelo menos 12 testadores inscritos continuamente por 14 dias',
+    'com.lexinexo.app'
+  )) {
+  Assert-Condition (
+    $answersSearchText.Contains($requiredAnswerPhrase)
+  ) "Matriz da Console nao contem a orientacao obrigatoria: $requiredAnswerPhrase"
+}
+
+$assetUploadMap = Get-Content -Raw -Encoding utf8 $assetUploadMapPath
+foreach ($requiredAssetName in @(
+    'graphics/app-icon-512.png',
+    'graphics/feature-graphic-1024x500.jpg',
+    '04-jogo-dicas-bilingues.png',
+    '05-vitoria.png',
+    'tablet/03-jogo-dicas-bilingues.png'
+  )) {
+  Assert-Condition ($assetUploadMap.Contains($requiredAssetName)) "Mapa de upload nao referencia: $requiredAssetName"
+}
+
+$metadataTemplate = Get-Content -Raw -Encoding utf8 $metadataTemplatePath | ConvertFrom-Json
+$expectedMetadataTemplateKeys = @(
+  'accountType',
+  'developerDisplayName',
+  'developerWebsiteUrl',
+  'distributionCountries',
+  'packageName',
+  'primaryLocale',
+  'privacyContactEmail',
+  'privacyPolicyUrl',
+  'schemaVersion',
+  'supportContactEmail',
+  'supportPageUrl',
+  'supportPhone',
+  'targetAudience'
+)
+$actualMetadataTemplateKeys = @($metadataTemplate.PSObject.Properties.Name | Sort-Object)
+Assert-Condition (
+  (($actualMetadataTemplateKeys -join '|') -ceq (($expectedMetadataTemplateKeys | Sort-Object) -join '|'))
+) 'Template de metadados deve conter exatamente as chaves do schema v2.'
+Assert-Condition ($metadataTemplate.schemaVersion -eq 2) 'Template de metadados deve usar schemaVersion 2.'
+Assert-Condition ($metadataTemplate.packageName -ceq 'com.lexinexo.app') 'Template de metadados tem package divergente.'
+
+$supportTemplatePaths = @(
+  (Join-Path $localeRoot 'support_page.template.html'),
+  (Join-Path $localeRoot 'support_page.template.md')
+)
+foreach ($supportTemplatePath in $supportTemplatePaths) {
+  Assert-Condition (Test-Path -LiteralPath $supportTemplatePath -PathType Leaf) "Template de suporte ausente: $supportTemplatePath"
+  $supportTemplateContents = Get-Content -Raw -Encoding utf8 $supportTemplatePath
+  foreach ($placeholder in @(
+      '{{developerDisplayName}}',
+      '{{supportContactEmail}}',
+      '{{supportPageUrl}}',
+      '{{privacyPolicyUrl}}'
+    )) {
+    Assert-Condition ($supportTemplateContents.Contains($placeholder)) "Template de suporte nao contem $placeholder."
+  }
+}
+
 $phoneScreenshotNames = @(
   '01-inicio.png',
   '02-tamanhos.png',
@@ -128,6 +561,10 @@ Assert-Condition (
 Assert-Condition ($listing.appName.Length -le 30) 'O nome do app excede 30 caracteres.'
 Assert-Condition ($listing.shortDescription.Length -le 80) 'A descricao curta excede 80 caracteres.'
 Assert-Condition ($listing.fullDescription.Length -le 4000) 'A descricao completa excede 4.000 caracteres.'
+$storeListingCopy = Get-Content -Raw -Encoding utf8 $storeListingCopyPath
+foreach ($listingValue in @($listing.appName, $listing.shortDescription, $listing.fullDescription)) {
+  Assert-Condition ($storeListingCopy.Contains([string]$listingValue)) 'STORE_LISTING_COPY.md diverge de listing.json.'
+}
 $listingSearchText = Convert-ToSearchText $listing.fullDescription
 $requiredListingPhrases = @(
   'pista em portugues e outra em ingles',
@@ -158,7 +595,12 @@ foreach ($requiredPhrase in $requiredReleasePhrases) {
   ) "As notas da versao nao documentam o recurso aprovado: $requiredPhrase"
 }
 
-$privacyMarkdown = Get-Content -Raw -Encoding utf8 (Join-Path $localeRoot 'privacy_policy.md')
+$privacyMarkdownPath = if ($StaticOnly) {
+  Join-Path $localeRoot 'privacy_policy.md'
+} else {
+  Join-Path $GeneratedPagesDirectory 'privacy_policy.md'
+}
+$privacyMarkdown = Get-Content -Raw -Encoding utf8 $privacyMarkdownPath
 $privacyTemplate = Get-Content -Raw -Encoding utf8 (Join-Path $localeRoot 'privacy_policy.template.html')
 $privacyMarkdownTemplate = Get-Content -Raw -Encoding utf8 (Join-Path $localeRoot 'privacy_policy.template.md')
 $dataSafety = Get-Content -Raw -Encoding utf8 (Join-Path $localeRoot 'data_safety.md')
@@ -218,7 +660,7 @@ Assert-Condition (
 ) 'O inventario nao contem exatamente os 12 nomes de materiais esperados.'
 
 if (-not $StaticOnly) {
-  $privacyHtmlPath = Join-Path $localeRoot 'privacy_policy.html'
+  $privacyHtmlPath = Join-Path $GeneratedPagesDirectory 'privacy_policy.html'
   Assert-Condition (Test-Path -LiteralPath $privacyHtmlPath) 'A politica HTML final nao foi gerada por prepare_publication.ps1.'
   $privacyHtml = Get-Content -Raw -Encoding utf8 $privacyHtmlPath
   Assert-Condition ($privacyHtml -notmatch '\{\{[^}]+\}\}') 'A politica HTML ainda contem placeholders.'
@@ -229,6 +671,22 @@ if (-not $StaticOnly) {
   Assert-Condition ($privacyMarkdown.Contains([string]$metadata.developerDisplayName)) 'O nome do publicador nao corresponde a politica Markdown.'
   Assert-Condition ($privacyMarkdown.Contains([string]$metadata.privacyContactEmail)) 'O contato nao corresponde a politica Markdown.'
   Assert-Condition ($privacyMarkdown.Contains([string]$metadata.privacyPolicyUrl)) 'A URL publica nao corresponde a politica Markdown.'
+
+  $supportHtmlPath = Join-Path $GeneratedPagesDirectory 'support_page.html'
+  $supportMarkdownPath = Join-Path $GeneratedPagesDirectory 'support_page.md'
+  Assert-Condition (Test-Path -LiteralPath $supportHtmlPath) 'A pagina HTML de suporte nao foi gerada.'
+  Assert-Condition (Test-Path -LiteralPath $supportMarkdownPath) 'A pagina Markdown de suporte nao foi gerada.'
+  $supportHtml = Get-Content -Raw -Encoding utf8 $supportHtmlPath
+  $supportMarkdown = Get-Content -Raw -Encoding utf8 $supportMarkdownPath
+  foreach ($supportDocument in @($supportHtml, $supportMarkdown)) {
+    Assert-Condition ($supportDocument -notmatch '\{\{[^}]+\}\}') 'A pagina de suporte ainda contem placeholders.'
+  }
+  foreach ($field in @('developerDisplayName', 'supportContactEmail', 'supportPageUrl', 'privacyPolicyUrl')) {
+    $rawValue = [string]$metadata.$field
+    $htmlValue = [System.Net.WebUtility]::HtmlEncode($rawValue)
+    Assert-Condition ($supportHtml.Contains($htmlValue)) "$field nao corresponde a pagina HTML de suporte."
+    Assert-Condition ($supportMarkdown.Contains($rawValue)) "$field nao corresponde a pagina Markdown de suporte."
+  }
 }
 
 $iconPath = Join-Path $localeRoot 'graphics\app-icon-512.png'

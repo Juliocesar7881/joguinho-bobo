@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "packageName": "com.lexinexo.app",
+  "versionName": "1.0.0",
+  "versionCode": 1,
+  "artifacts": [
+    {
+      "purpose": "google_play_upload",
+      "path": "build/app/outputs/bundle/release/app-release.aab",
+      "packagePath": "release/app-release.aab",
+      "fileName": "app-release.aab",
+      "bytes": 48032096,
+      "sha256": "B4DF6CB955CEEF6932EE0DADD00567B9111FEDC2EFA37B3E816041B4CF05D3F2"
+    },
+    {
+      "purpose": "direct_install_and_qa",
+      "path": "build/app/outputs/flutter-apk/app-release.apk",
+      "packagePath": "qa/app-release.apk",
+      "fileName": "app-release.apk",
+      "bytes": 48164396,
+      "sha256": "38762729CFA5FAB7CFF68BA72D14ECD8672BBADCDCDFC263558C74216FFCC03E"
+    }
+  ],
+  "uploadCertificate": {
+    "sourcePath": "D:/LexiNexoRelease/signing/lexinexo-upload-certificate.pem",
+    "packagePath": "signing-public/upload-certificate.pem",
+    "fileName": "upload-certificate.pem",
+    "bytes": 2000,
+    "sha256": "9301F00325D897E505D7C835BA2EEBDEB2308A8802F57A7841706B1986F24E42",
+    "sha1Fingerprint": "52:34:B6:6F:FD:24:13:F6:F5:6C:C3:5C:24:3F:F1:42:2C:A5:A2:33",
+    "sha256Fingerprint": "59:54:66:16:88:06:3D:35:EF:33:92:B7:50:2F:46:22:D1:ED:6F:0A:74:FD:63:8E:46:68:88:CB:C4:78:79:96"
+  },
+  "publicFingerprintFile": {
+    "sourcePath": "D:/LexiNexoRelease/signing/lexinexo-upload-fingerprints.txt",
+    "packagePath": "signing-public/upload-key-fingerprints.txt",
+    "fileName": "upload-key-fingerprints.txt",
+    "bytes": 885,
+    "sha256": "F0EB9A6063940E5A687DE5F8ACC7D8F73BC031C544358FE45E2376F6F6DDC281"
+  }
+}
