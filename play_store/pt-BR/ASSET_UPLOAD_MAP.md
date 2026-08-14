@@ -1,4 +1,4 @@
-# Mapa de imagens para upload — PalavraX 1.0.0
+# Mapa de imagens para upload — Worde 1.0.0
 
 Use a ordem abaixo na Play Console. Os nomes físicos permanecem ligados aos
 roteiros de captura, mas a ordem de upload começa pela jogabilidade, que vende
@@ -8,8 +8,8 @@ melhor a experiência do jogo.
 
 | Campo | Arquivo | Especificação | Texto alternativo/descritivo |
 |---|---|---|---|
-| Ícone do app | `graphics/app-icon-512.png` | 512×512, PNG RGBA, até 1 MiB | Símbolo PalavraX com cinco blocos coloridos em forma de X e letra A no centro. |
-| Imagem de destaque | `graphics/feature-graphic-1024x500.jpg` | 1024×500, JPEG RGB sem alpha | PalavraX, jogo offline de inglês com palavras de 3 a 8 letras e dicas em português e inglês. |
+| Ícone do app | `graphics/app-icon-512.png` | 512×512, PNG RGBA, até 1 MiB | Blocos com a palavra worde sobre uma lupa de aprendizado em fundo azul. |
+| Imagem de destaque | `graphics/feature-graphic-1024x500.jpg` | 1024×500, JPEG RGB sem alpha | Worde, jogo offline de inglês com palavras de 3 a 8 letras e dicas em português e inglês. |
 
 O ícone acima é o ícone específico da ficha. Os ícones instalados, adaptativo,
 monocromático e splash já estão incorporados no AAB e também são copiados para
@@ -25,7 +25,7 @@ Envie como **Telefone**, nesta ordem:
 | 2 | `screenshots/phone/05-vitoria.png` | Resultado de vitória com a palavra correta e opções para continuar ou jogar novamente. |
 | 3 | `screenshots/phone/02-tamanhos.png` | Seleção compacta de palavras de 3 a 8 letras com progresso separado por categoria. |
 | 4 | `screenshots/phone/03-niveis-4-letras.png` | Grade da categoria de quatro letras com o próximo desafio disponível. |
-| 5 | `screenshots/phone/01-inicio.png` | Tela inicial do PalavraX com os modos Com dicas e Sem dicas. |
+| 5 | `screenshots/phone/01-inicio.png` | Tela inicial do Worde com os modos Com dicas e Sem dicas. |
 | 6 | `screenshots/phone/06-privacidade.png` | Tela Sobre com versão, funcionamento offline, privacidade e licenças. |
 
 Todas medem 1080×1920, são PNG RGB de 24 bits e não possuem alpha, moldura ou

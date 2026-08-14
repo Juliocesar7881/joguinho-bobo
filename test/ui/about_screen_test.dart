@@ -9,7 +9,7 @@ void main() {
     await tester.pumpWidget(const MaterialApp(home: AboutScreen()));
     await tester.pumpAndSettle();
 
-    expect(find.text('Sobre o PalavraX'), findsOneWidget);
+    expect(find.text('Sobre o Worde'), findsOneWidget);
     expect(find.text('Versão 1.0.0'), findsOneWidget);
     expect(find.text('Privacidade e funcionamento offline'), findsOneWidget);
     expect(find.textContaining('não coleta, envia, vende'), findsOneWidget);

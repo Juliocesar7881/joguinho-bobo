@@ -1,8 +1,8 @@
 # Third-party notices
 
-PalavraX includes English word-list data generated exclusively from the pinned
+Worde includes English word-list data generated exclusively from the pinned
 SCOWL/ESDB dictionaries. Its PT-BR translations, meanings, and clues are
-original editorial content created for PalavraX. The development-only
+original editorial content created for Worde. The development-only
 dictionary build tooling uses `hunspell-reader`.
 
 ## SCOWL/ESDB — rel-2026.02.25

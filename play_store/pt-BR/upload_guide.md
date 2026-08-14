@@ -1,4 +1,4 @@
-# Guia de upload — PalavraX 1.0.0
+# Guia de upload — Worde 1.0.0
 
 ## 1. Completar a identidade pública
 
@@ -9,11 +9,11 @@
 
 ## 2. Criar o aplicativo
 
-- Nome: **PalavraX: Aprenda Inglês**.
+- Nome: **Worde: Aprenda Palavras**.
 - Idioma padrão: **Português (Brasil)**.
 - Aplicativo ou jogo: **Jogo**.
 - Gratuito ou pago: **Gratuito**.
-- Package: **com.lexinexo.app**. Não altere depois do primeiro upload.
+- Package: **worde.com**. Não altere depois do primeiro upload.
 - Ative o Play App Signing e use a chave enviada apenas como upload key.
 
 ## 3. Preencher a ficha
@@ -61,7 +61,7 @@ Essa verificação cobre textos, nomes, limites e dimensões dos materiais. Ela 
 & .\play_store\prepare_publication.ps1
 ```
 
-Saída esperada: `Kit de publicacao PalavraX 1.0.0 validado.` Qualquer falha interrompe a liberação.
+Saída esperada: `Kit de publicacao Worde 1.0.0 validado.` Qualquer falha interrompe a liberação.
 
 Depois do gate, gere a entrega única:
 
@@ -69,4 +69,4 @@ Depois do gate, gere a entrega única:
 & .\play_store\build_submission_package.ps1 -IncludeFinalHostedPages
 ```
 
-O script cria `dist/PalavraX-1.0.0-google-play/` e o ZIP correspondente, sem JKS ou senhas.
+O script cria `dist/Worde-1.0.0-google-play/` e o ZIP correspondente, sem JKS ou senhas.

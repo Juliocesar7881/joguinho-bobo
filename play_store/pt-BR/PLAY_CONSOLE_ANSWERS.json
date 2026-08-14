@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "appliesTo": {
-    "packageName": "com.lexinexo.app",
+    "packageName": "worde.com",
     "versionName": "1.0.0",
     "versionCode": 1
   },
   "createApp": {
     "defaultLanguage": "pt-BR",
-    "name": "PalavraX: Aprenda Inglês",
+    "name": "Worde: Aprenda Palavras",
     "type": "game",
     "price": "free",
     "acceptDeveloperProgramPolicies": true,

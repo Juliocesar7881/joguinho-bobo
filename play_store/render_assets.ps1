@@ -50,22 +50,27 @@ function Invoke-SvgRender {
   }
 }
 
-$iconRender = Join-Path $temporaryRoot 'lexinexo-play-icon.png'
 $iconPath = Join-Path $destination 'app-icon-512.png'
 $featurePng = Join-Path $temporaryRoot 'lexinexo-feature-graphic.png'
 $featureJpeg = Join-Path $destination 'feature-graphic-1024x500.jpg'
 
-Invoke-SvgRender -SourcePath (Join-Path $source 'play-icon.svg') -DestinationPath $iconRender -Width 512 -Height 512
 Invoke-SvgRender -SourcePath (Join-Path $source 'feature-graphic.svg') -DestinationPath $featurePng -Width 1024 -Height 500
 
 Add-Type -AssemblyName System.Drawing
-$renderedIcon = [System.Drawing.Bitmap]::new($iconRender)
+$iconSourcePath = Join-Path (Split-Path $root -Parent) 'assets\branding\worde-icon.png'
+if (-not (Test-Path -LiteralPath $iconSourcePath -PathType Leaf)) {
+  throw "Master do icone Worde ausente: $iconSourcePath"
+}
+$renderedIcon = [System.Drawing.Bitmap]::new($iconSourcePath)
 try {
   $rgbaIcon = [System.Drawing.Bitmap]::new(512, 512, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
   try {
     $iconGraphics = [System.Drawing.Graphics]::FromImage($rgbaIcon)
     try {
-      $iconGraphics.DrawImageUnscaled($renderedIcon, 0, 0)
+      $iconGraphics.CompositingQuality = [System.Drawing.Drawing2D.CompositingQuality]::HighQuality
+      $iconGraphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+      $iconGraphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+      $iconGraphics.DrawImage($renderedIcon, 0, 0, 512, 512)
     } finally {
       $iconGraphics.Dispose()
     }
@@ -75,7 +80,6 @@ try {
   }
 } finally {
   $renderedIcon.Dispose()
-  Remove-Item -LiteralPath $iconRender -Force
 }
 
 $bitmap = [System.Drawing.Bitmap]::new($featurePng)

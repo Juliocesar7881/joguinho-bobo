@@ -1,6 +1,6 @@
 # Segurança dos dados — respostas para a Play Console
 
-Estas respostas descrevem a versão 1.0.0 (`com.lexinexo.app`, código 1). Devem ser reconfirmadas na Play Console antes de cada atualização.
+Estas respostas descrevem a versão 1.0.0 (`worde.com`, código 1). Devem ser reconfirmadas na Play Console antes de cada atualização.
 
 ## Coleta e compartilhamento
 
@@ -12,7 +12,7 @@ Estas respostas descrevem a versão 1.0.0 (`com.lexinexo.app`, código 1). Devem
 
 ## Dados locais
 
-O app grava somente o progresso por modo e categoria de tamanho, o último tamanho e nível abertos, as tentativas, os rascunhos e a preferência de som de acerto no armazenamento privado do Android. Esses dados não saem do aparelho. O usuário pode apagá-los em **Configurações → Apps → PalavraX → Armazenamento → Limpar dados** ou ao desinstalar o app.
+O app grava somente o progresso por modo e categoria de tamanho, o último tamanho e nível abertos, as tentativas, os rascunhos e a preferência de som de acerto no armazenamento privado do Android. Esses dados não saem do aparelho. O usuário pode apagá-los em **Configurações → Apps → Worde → Armazenamento → Limpar dados** ou ao desinstalar o app.
 
 O som de acerto é reproduzido a partir de um arquivo empacotado. O app não usa o microfone, não grava áudio e não acessa a biblioteca de mídia.
 

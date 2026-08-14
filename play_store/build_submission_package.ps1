@@ -6,7 +6,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
-$packageName = 'PalavraX-1.0.0-google-play'
+$packageName = 'Worde-1.0.0-google-play'
 $destination = Join-Path $OutputRoot $packageName
 $zipPath = Join-Path $OutputRoot "$packageName.zip"
 
@@ -80,7 +80,7 @@ Assert-ExactProperties $artifactManifest @(
 ) 'Manifesto de artefatos'
 Assert-Condition ($artifactManifest.schemaVersion -is [int] -and
   $artifactManifest.schemaVersion -eq 1) 'schemaVersion do manifesto deve ser exatamente 1.'
-Assert-Condition ($artifactManifest.packageName -ceq 'com.lexinexo.app') 'packageName do manifesto e invalido.'
+Assert-Condition ($artifactManifest.packageName -ceq 'worde.com') 'packageName do manifesto e invalido.'
 Assert-Condition ($artifactManifest.versionName -ceq '1.0.0') 'versionName do manifesto e invalido.'
 Assert-Condition ($artifactManifest.versionCode -is [int] -and
   $artifactManifest.versionCode -eq 1) 'versionCode do manifesto deve ser exatamente 1.'
@@ -283,14 +283,12 @@ $copyMap = @(
   @{ Source = (Join-Path $PSScriptRoot 'pt-BR\support_page.template.md'); Destination = 'legal/support_page.template.md' },
   @{ Source = (Resolve-ProjectFile 'THIRD_PARTY_NOTICES.md'); Destination = 'legal/THIRD_PARTY_NOTICES.md' },
   @{ Source = (Resolve-ProjectFile 'RELEASE_1.0.0.md'); Destination = 'reports/RELEASE_1.0.0.md' },
-  @{ Source = (Resolve-ProjectFile 'assets/branding/lexinexo-icon.png'); Destination = 'mobile-branding/palavrax-icon-1024.png' },
-  @{ Source = (Resolve-ProjectFile 'assets/branding/lexinexo-icon.svg'); Destination = 'mobile-branding/palavrax-icon.svg' },
-  @{ Source = (Resolve-ProjectFile 'assets/branding/lexinexo-adaptive-foreground.png'); Destination = 'mobile-branding/palavrax-adaptive-foreground.png' },
-  @{ Source = (Resolve-ProjectFile 'assets/branding/lexinexo-adaptive-foreground.svg'); Destination = 'mobile-branding/palavrax-adaptive-foreground.svg' },
-  @{ Source = (Resolve-ProjectFile 'assets/branding/lexinexo-adaptive-monochrome.png'); Destination = 'mobile-branding/palavrax-adaptive-monochrome.png' },
-  @{ Source = (Resolve-ProjectFile 'assets/branding/lexinexo-adaptive-monochrome.svg'); Destination = 'mobile-branding/palavrax-adaptive-monochrome.svg' },
-  @{ Source = (Resolve-ProjectFile 'assets/branding/lexinexo-splash.png'); Destination = 'mobile-branding/palavrax-splash.png' },
-  @{ Source = (Resolve-ProjectFile 'assets/branding/lexinexo-splash.svg'); Destination = 'mobile-branding/palavrax-splash.svg' }
+  @{ Source = (Resolve-ProjectFile 'assets/branding/worde-icon-source.png'); Destination = 'mobile-branding/worde-icon-source.png' },
+  @{ Source = (Resolve-ProjectFile 'assets/branding/worde-icon.png'); Destination = 'mobile-branding/worde-icon-1024.png' },
+  @{ Source = (Resolve-ProjectFile 'assets/branding/worde-adaptive-foreground.png'); Destination = 'mobile-branding/worde-adaptive-foreground.png' },
+  @{ Source = (Resolve-ProjectFile 'assets/branding/worde-adaptive-monochrome.png'); Destination = 'mobile-branding/worde-adaptive-monochrome.png' },
+  @{ Source = (Resolve-ProjectFile 'assets/branding/worde-splash.png'); Destination = 'mobile-branding/worde-splash.png' },
+  @{ Source = (Resolve-ProjectFile 'assets/branding/render_branding.ps1'); Destination = 'mobile-branding/render_branding.ps1' }
 )
 
 foreach ($mapping in $copyMap) {

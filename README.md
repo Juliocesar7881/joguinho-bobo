@@ -1,6 +1,6 @@
-# PalavraX
+# Worde
 
-PalavraX é um jogo Android de palavras em inglês, com interface em português
+Worde é um jogo Android de palavras em inglês, com interface em português
 brasileiro, 1.000 desafios e dois modos independentes: com dicas bilíngues e
 sem dicas. Em cada modo, o jogador escolhe livremente palavras de 3 a 8 letras,
 com progresso e partida separados por tamanho. O aplicativo funciona
@@ -16,7 +16,7 @@ tátil.
 - Flutter 3.44.8 e Dart 3.12.2
 - JDK 17
 - Android SDK 36, `minSdk 24` e `targetSdk 36`
-- namespace `com.lexinexo.app`
+- namespace `worde.com`
 - versão `1.0.0+1`
 
 O ambiente oficial mantém Flutter, Android SDK, JDK, Gradle, Pub, AVDs e

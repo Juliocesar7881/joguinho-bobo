@@ -1,4 +1,4 @@
-package com.lexinexo.app
+package worde.com
 
 import android.media.AudioAttributes
 import android.media.SoundPool
@@ -73,7 +73,7 @@ class MainActivity : FlutterActivity() {
     }
 
     private companion object {
-        const val audioChannelName = "com.lexinexo.app/audio"
+        const val audioChannelName = "worde.com/audio"
         const val playSuccessMethod = "playSuccess"
         const val playbackVolume = 0.72f
     }

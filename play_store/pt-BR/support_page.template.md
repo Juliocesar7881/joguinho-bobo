@@ -1,13 +1,13 @@
-# Suporte do PalavraX
+# Suporte do Worde
 
-O PalavraX é um jogo de palavras em inglês para Android, funciona totalmente
+O Worde é um jogo de palavras em inglês para Android, funciona totalmente
 offline e não exige conta.
 
 ## Perguntas frequentes
 
 ### Como apagar meu progresso?
 
-Abra **Configurações do Android → Apps → PalavraX → Armazenamento → Limpar
+Abra **Configurações do Android → Apps → Worde → Armazenamento → Limpar
 dados**. Desinstalar o aplicativo também remove o progresso local.
 
 ### O jogo precisa de internet?
@@ -15,7 +15,7 @@ dados**. Desinstalar o aplicativo também remove o progresso local.
 Não. Depois da instalação, palavras, dicas, traduções, significados e o som de
 acerto são carregados do próprio aplicativo.
 
-### O PalavraX coleta dados?
+### O Worde coleta dados?
 
 Não. O progresso e a preferência de som permanecem apenas no aparelho. Leia a
 [Política de Privacidade]({{privacyPolicyUrl}}).

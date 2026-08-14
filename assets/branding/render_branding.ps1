@@ -1,60 +1,117 @@
 param(
-  [string]$ChromePath = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
+  [string]$SourcePath = (Join-Path $PSScriptRoot 'worde-icon-source.png')
 )
 
 $ErrorActionPreference = 'Stop'
-$brandingDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
-$temporaryRoot = if ($env:LEXINEXO_TEMP) {
-  $env:LEXINEXO_TEMP
-} else {
-  'D:\LexiNexoToolchain\temp'
-}
-$profile = Join-Path $temporaryRoot 'branding-chrome-profile'
+Add-Type -AssemblyName System.Drawing
 
-if (-not (Test-Path -LiteralPath $ChromePath)) {
-  throw "Chrome not found at: $ChromePath"
+if (-not (Test-Path -LiteralPath $SourcePath -PathType Leaf)) {
+  throw "Fonte do icone Worde ausente: $SourcePath"
 }
 
-New-Item -ItemType Directory -Force -Path $profile | Out-Null
-
-$assets = @(
-  'lexinexo-icon',
-  'lexinexo-splash',
-  'lexinexo-adaptive-foreground',
-  'lexinexo-adaptive-monochrome'
-)
-
-foreach ($asset in $assets) {
-  $source = Join-Path $brandingDirectory "$asset.svg"
-  $destination = Join-Path $brandingDirectory "$asset.png"
-  $sourceUri = [System.Uri]::new($source).AbsoluteUri
-
-  if (Test-Path -LiteralPath $destination) {
-    Remove-Item -LiteralPath $destination -Force
-  }
-
-  & $ChromePath `
-    --headless=new `
-    --disable-gpu `
-    --no-sandbox `
-    --hide-scrollbars `
-    --force-device-scale-factor=1 `
-    --default-background-color=00000000 `
-    "--user-data-dir=$profile" `
-    --window-size=1024,1024 `
-    "--screenshot=$destination" `
-    $sourceUri | Out-Null
-
-  # Chrome can hand the capture to an existing browser process and return first.
-  for ($attempt = 0; $attempt -lt 50 -and -not (Test-Path -LiteralPath $destination); $attempt++) {
-    Start-Sleep -Milliseconds 100
-  }
-
-  if (-not (Test-Path -LiteralPath $destination)) {
-    throw "Could not render $asset.svg"
-  }
+function New-RoundedRectanglePath {
+  param([float]$X, [float]$Y, [float]$Width, [float]$Height, [float]$Radius)
+  $diameter = $Radius * 2
+  $path = [Drawing.Drawing2D.GraphicsPath]::new()
+  $path.AddArc($X, $Y, $diameter, $diameter, 180, 90)
+  $path.AddArc($X + $Width - $diameter, $Y, $diameter, $diameter, 270, 90)
+  $path.AddArc($X + $Width - $diameter, $Y + $Height - $diameter, $diameter, $diameter, 0, 90)
+  $path.AddArc($X, $Y + $Height - $diameter, $diameter, $diameter, 90, 90)
+  $path.CloseFigure()
+  return $path
 }
 
-Get-FileHash -Algorithm SHA256 ($assets | ForEach-Object {
-  Join-Path $brandingDirectory "$_.png"
-}) | Select-Object Path, Hash
+function New-TransparentBitmap {
+  param([int]$Width, [int]$Height)
+  return [Drawing.Bitmap]::new($Width, $Height, [Drawing.Imaging.PixelFormat]::Format32bppArgb)
+}
+
+function Set-HighQualityGraphics {
+  param([Drawing.Graphics]$Graphics)
+  $Graphics.CompositingMode = [Drawing.Drawing2D.CompositingMode]::SourceOver
+  $Graphics.CompositingQuality = [Drawing.Drawing2D.CompositingQuality]::HighQuality
+  $Graphics.InterpolationMode = [Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+  $Graphics.PixelOffsetMode = [Drawing.Drawing2D.PixelOffsetMode]::HighQuality
+  $Graphics.SmoothingMode = [Drawing.Drawing2D.SmoothingMode]::AntiAlias
+}
+
+$source = [Drawing.Bitmap]::new((Resolve-Path -LiteralPath $SourcePath).Path)
+try {
+  if ($source.Width -ne $source.Height) { throw 'A fonte do icone deve ser quadrada.' }
+
+  $master = New-TransparentBitmap 1024 1024
+  try {
+    $graphics = [Drawing.Graphics]::FromImage($master)
+    try {
+      Set-HighQualityGraphics $graphics
+      $graphics.Clear([Drawing.Color]::Transparent)
+      $clip = New-RoundedRectanglePath 16 16 992 992 168
+      try {
+        $graphics.SetClip($clip)
+        $graphics.DrawImage($source, 0, 0, 1024, 1024)
+      } finally { $clip.Dispose() }
+    } finally { $graphics.Dispose() }
+    $master.Save((Join-Path $PSScriptRoot 'worde-icon.png'), [Drawing.Imaging.ImageFormat]::Png)
+
+    $adaptive = New-TransparentBitmap 1024 1024
+    try {
+      $graphics = [Drawing.Graphics]::FromImage($adaptive)
+      try {
+        Set-HighQualityGraphics $graphics
+        $graphics.Clear([Drawing.Color]::Transparent)
+        # Mantém letras e lupa dentro da zona segura de máscaras circulares.
+        $graphics.DrawImage($master, 132, 132, 760, 760)
+      } finally { $graphics.Dispose() }
+      $adaptive.Save((Join-Path $PSScriptRoot 'worde-adaptive-foreground.png'), [Drawing.Imaging.ImageFormat]::Png)
+    } finally { $adaptive.Dispose() }
+
+    $splash = New-TransparentBitmap 1024 1024
+    try {
+      $graphics = [Drawing.Graphics]::FromImage($splash)
+      try {
+        Set-HighQualityGraphics $graphics
+        $graphics.Clear([Drawing.Color]::Transparent)
+        $graphics.DrawImage($master, 192, 192, 640, 640)
+      } finally { $graphics.Dispose() }
+      $splash.Save((Join-Path $PSScriptRoot 'worde-splash.png'), [Drawing.Imaging.ImageFormat]::Png)
+    } finally { $splash.Dispose() }
+
+    # Android usa o alpha desta camada nos ícones temáticos. Mantemos letras,
+    # lupa e detalhes claros/amarelos e removemos o fundo azul.
+    $monochrome = New-TransparentBitmap 1024 1024
+    try {
+      $scaled = New-TransparentBitmap 760 760
+      try {
+        $graphics = [Drawing.Graphics]::FromImage($scaled)
+        try {
+          Set-HighQualityGraphics $graphics
+          $graphics.Clear([Drawing.Color]::Transparent)
+          $graphics.DrawImage($master, 0, 0, 760, 760)
+        } finally { $graphics.Dispose() }
+        for ($y = 0; $y -lt 760; $y++) {
+          for ($x = 0; $x -lt 760; $x++) {
+            $pixel = $scaled.GetPixel($x, $y)
+            if ($pixel.A -eq 0) { continue }
+            $isBlueBackground = (
+              $pixel.B -gt 115 -and
+              $pixel.B -gt ($pixel.R * 1.45) -and
+              $pixel.B -gt ($pixel.G * 1.12) -and
+              ($pixel.R + $pixel.G + $pixel.B) -gt 190
+            )
+            if (-not $isBlueBackground) {
+              $monochrome.SetPixel($x + 132, $y + 132, [Drawing.Color]::FromArgb($pixel.A, 255, 255, 255))
+            }
+          }
+        }
+      } finally { $scaled.Dispose() }
+      $monochrome.Save((Join-Path $PSScriptRoot 'worde-adaptive-monochrome.png'), [Drawing.Imaging.ImageFormat]::Png)
+    } finally { $monochrome.Dispose() }
+  } finally { $master.Dispose() }
+} finally { $source.Dispose() }
+
+Get-FileHash -Algorithm SHA256 @(
+  (Join-Path $PSScriptRoot 'worde-icon.png'),
+  (Join-Path $PSScriptRoot 'worde-adaptive-foreground.png'),
+  (Join-Path $PSScriptRoot 'worde-adaptive-monochrome.png'),
+  (Join-Path $PSScriptRoot 'worde-splash.png')
+) | Select-Object Path, Hash

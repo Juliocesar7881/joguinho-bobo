@@ -12,4 +12,4 @@ Ferramenta de desenvolvimento
 O hunspell-reader 10.0.1 foi usado apenas durante a geração do catálogo. Ele é software disponibilizado sob a licença MIT e não é uma dependência de execução do aplicativo.
 
 Conteúdo editorial
-As traduções, os significados e as dicas em português brasileiro e inglês do PalavraX são conteúdo editorial próprio. As listas de palavras e o som de acerto são carregados localmente; nenhuma consulta externa ocorre durante o jogo.
+As traduções, os significados e as dicas em português brasileiro e inglês do Worde são conteúdo editorial próprio. As listas de palavras e o som de acerto são carregados localmente; nenhuma consulta externa ocorre durante o jogo.

@@ -1,7 +1,7 @@
-# Respostas prontas para a Google Play Console — PalavraX 1.0.0
+# Respostas prontas para a Google Play Console — Worde 1.0.0
 
 Documento conferido em 12 de agosto de 2026. Ele descreve exatamente o binário
-`com.lexinexo.app`, versão `1.0.0` (código 1). Reconfirme as respostas quando o
+`worde.com`, versão `1.0.0` (código 1). Reconfirme as respostas quando o
 aplicativo ganhar novas funções, SDKs, permissões, anúncios ou serviços online.
 
 ## 1. Campos que já estão definidos
@@ -9,10 +9,10 @@ aplicativo ganhar novas funções, SDKs, permissões, anúncios ou serviços onl
 | Campo da Play Console | Resposta |
 |---|---|
 | Idioma padrão | Português (Brasil) — `pt-BR` |
-| Nome do app | `PalavraX: Aprenda Inglês` |
+| Nome do app | `Worde: Aprenda Palavras` |
 | App ou jogo | Jogo |
 | Gratuito ou pago | Gratuito |
-| Nome do pacote | `com.lexinexo.app` |
+| Nome do pacote | `worde.com` |
 | Categoria | Jogos → Palavras |
 | País inicial | Brasil |
 | Disponibilidade | Somente celular e tablet Android no Brasil |
@@ -25,7 +25,7 @@ aplicativo ganhar novas funções, SDKs, permissões, anúncios ou serviços onl
 | Funcionamento | Totalmente offline |
 
 O package é exclusivo e permanente depois do primeiro upload. Não crie outro
-aplicativo na Console com package diferente e não altere `com.lexinexo.app`.
+aplicativo na Console com package diferente e não altere `worde.com`.
 
 ## 2. Dados que o titular precisa fornecer
 
@@ -69,7 +69,7 @@ site. Não coloque contatos privados no JSON, GitHub ou pacote público.
 Na tela **Criar app**:
 
 1. Idioma padrão: **Português (Brasil)**.
-2. Nome: **PalavraX: Aprenda Inglês**.
+2. Nome: **Worde: Aprenda Palavras**.
 3. Selecione **Jogo**.
 4. Selecione **Gratuito**.
 5. Informe o e-mail público real de suporte.
@@ -78,7 +78,7 @@ Na tela **Criar app**:
 8. Aceite os termos do **Play App Signing**.
 
 Um app que já foi disponibilizado gratuitamente não pode depois virar pago com
-o mesmo package. O PalavraX não possui compras nem assinaturas.
+o mesmo package. O Worde não possui compras nem assinaturas.
 
 ## 4. Configurações e ficha da loja
 
@@ -86,8 +86,8 @@ o mesmo package. O PalavraX não possui compras nem assinaturas.
 - Categoria: **Palavras**.
 - Idioma principal: **pt-BR**.
 - País/região inicial: **Brasil**.
-- Nome instalado no Android: **PalavraX**.
-- Título da ficha: **PalavraX: Aprenda Inglês**.
+- Nome instalado no Android: **Worde**.
+- Título da ficha: **Worde: Aprenda Palavras**.
 - Descrição curta e completa: no pacote, copiar de
   `store/pt-BR/STORE_LISTING_COPY.md`; no repositório, de
   `play_store/pt-BR/listing.json`.
@@ -128,7 +128,7 @@ Selecione: **Todas as funcionalidades estão disponíveis sem acesso especial**.
 
 Texto para o revisor, se houver campo livre:
 
-> O PalavraX funciona totalmente offline e não exige login, conta, assinatura,
+> O Worde funciona totalmente offline e não exige login, conta, assinatura,
 > localização ou credenciais. Todas as telas podem ser acessadas diretamente
 > após abrir o app.
 
@@ -274,11 +274,11 @@ pessoal mais antiga, mas o teste interno continua recomendado.
 
 - Verificar identidade, e-mail e telefone do titular.
 - Para organização, verificar o D‑U‑N‑S e a correspondência dos dados legais.
-- Confirmar o registro de `com.lexinexo.app` na conta.
+- Confirmar o registro de `worde.com` na conta.
 - Até 30/09/2026, conferir que o package está registrado para a verificação de
   desenvolvedor Android aplicável ao Brasil.
 
-Antes do lançamento público, pesquise **PalavraX** no INPI e nas lojas
+Antes do lançamento público, pesquise **Worde** no INPI e nas lojas
 relevantes. A ausência de resultados em busca comum, a disponibilidade do nome,
 do package ou de um domínio não equivale a liberação jurídica de marca. Procure
 orientação profissional se houver conflito ou dúvida.

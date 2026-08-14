@@ -29,8 +29,8 @@ $bundletool = $env:BUNDLETOOL_JAR
 $readelf = Join-Path $env:ANDROID_HOME 'ndk\28.2.13676358\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-readelf.exe'
 $expectedCertificateSha256 = '5954661688063D35EF3392B7502F4622D1ED6F0A74FD638E466888CBC4787996'
 $expectedAabSignatureBase = 'LEXINEXO'
-$expectedInternalPermission = 'com.lexinexo.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
-$expectedApplicationLabel = 'PalavraX'
+$expectedInternalPermission = 'worde.com.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+$expectedApplicationLabel = 'Worde'
 $androidNamespace = 'http://schemas.android.com/apk/res/android'
 $expectedAbis = @('armeabi-v7a', 'arm64-v8a', 'x86_64')
 $expectedElfMachines = @{
@@ -170,7 +170,7 @@ try {
     throw "bundletool returned invalid manifest XML: $($_.Exception.Message)"
 }
 $bundleManifest = $bundleManifestXml.DocumentElement
-Assert-Condition ($bundleManifest.GetAttribute('package') -eq 'com.lexinexo.app') 'AAB package name is incorrect.'
+Assert-Condition ($bundleManifest.GetAttribute('package') -eq 'worde.com') 'AAB package name is incorrect.'
 Assert-Condition ((Get-AndroidAttribute $bundleManifest 'versionCode') -eq '1') 'AAB versionCode is not 1.'
 Assert-Condition ((Get-AndroidAttribute $bundleManifest 'versionName') -eq '1.0.0') 'AAB versionName is not 1.0.0.'
 Assert-Condition ((Get-AndroidAttribute $bundleManifest 'compileSdkVersion') -eq '36') 'AAB compileSdk is not 36.'
@@ -182,7 +182,7 @@ Assert-Condition ((Get-AndroidAttribute $bundleUsesSdk 'targetSdkVersion') -eq '
 
 $bundleApplication = $bundleManifest.SelectSingleNode('./application')
 Assert-Condition ($null -ne $bundleApplication) 'AAB manifest does not declare application.'
-Assert-Condition ((Get-AndroidAttribute $bundleApplication 'label') -eq $expectedApplicationLabel) 'AAB application label is not PalavraX.'
+Assert-Condition ((Get-AndroidAttribute $bundleApplication 'label') -eq $expectedApplicationLabel) 'AAB application label is not Worde.'
 $allowBackup = Get-AndroidAttribute $bundleApplication 'allowBackup'
 Assert-Condition ($allowBackup -eq 'false' -or $allowBackup -eq '0') 'AAB application does not explicitly set allowBackup=false.'
 Assert-FalseOrAbsentAndroidAttribute $bundleApplication 'debuggable' 'AAB application is debuggable.'
@@ -193,7 +193,7 @@ $bundleMainActivity = @(
     $bundleApplication.SelectNodes('./activity') |
         Where-Object {
             $activityName = Get-AndroidAttribute $_ 'name'
-            $activityName -eq '.MainActivity' -or $activityName -eq 'com.lexinexo.app.MainActivity'
+            $activityName -eq '.MainActivity' -or $activityName -eq 'worde.com.MainActivity'
         }
 ) | Select-Object -First 1
 Assert-Condition ($null -ne $bundleMainActivity) 'AAB does not contain the LexiNexo MainActivity.'
@@ -224,15 +224,15 @@ Assert-Condition ($actualCertificateSha256 -eq $expectedCertificateSha256) 'APK 
 Assert-Condition ($signerText -match 'Verified using v2 scheme.*true') 'APK v2 signature is missing.'
 
 $badging = (Invoke-Checked $aapt @('dump', 'badging', $apk)) -join "`n"
-Assert-Condition ($badging -match "package: name='com\.lexinexo\.app' versionCode='1' versionName='1\.0\.0'") 'Package name or version is incorrect.'
+Assert-Condition ($badging -match "package: name='worde\.com' versionCode='1' versionName='1\.0\.0'") 'Package name or version is incorrect.'
 Assert-Condition ($badging -match "sdkVersion:'24'") 'minSdk is not 24.'
 Assert-Condition ($badging -match "targetSdkVersion:'36'") 'targetSdk is not 36.'
 Assert-Condition ($badging -match "compileSdkVersion='36'") 'APK compileSdk is not 36.'
-Assert-Condition ($badging -match "(?m)^application-label:'PalavraX'") 'APK application label is not PalavraX.'
+Assert-Condition ($badging -match "(?m)^application-label:'Worde'") 'APK application label is not Worde.'
 Assert-Condition ($badging -notmatch '(?m)^application-debuggable') 'APK is debuggable.'
 
 $apkManifestTree = (Invoke-Checked $aapt @('dump', 'xmltree', $apk, 'AndroidManifest.xml')) -join "`n"
-Assert-Condition ($apkManifestTree -match 'A: package="com\.lexinexo\.app"') 'APK manifest package name is incorrect.'
+Assert-Condition ($apkManifestTree -match 'A: package="worde\.com"') 'APK manifest package name is incorrect.'
 Assert-Condition ($apkManifestTree -match 'android:versionCode[^\r\n]*0x1(?:\s|$)') 'APK manifest versionCode is not 1.'
 Assert-Condition ($apkManifestTree -match 'android:versionName[^\r\n]*"1\.0\.0"') 'APK manifest versionName is not 1.0.0.'
 Assert-Condition ($apkManifestTree -match 'android:compileSdkVersion[^\r\n]*0x24(?:\s|$)') 'APK manifest compileSdk is not 36.'
@@ -247,7 +247,7 @@ $apkActivityBlocks = [regex]::Matches(
 $apkMainActivityBlocks = @(
     $apkActivityBlocks |
         Where-Object {
-            $_.Value -match 'android:name[^\r\n]*"(?:com\.lexinexo\.app\.)?MainActivity"'
+            $_.Value -match 'android:name[^\r\n]*"(?:worde\.com\.)?MainActivity"'
         }
 )
 Assert-Condition ($apkMainActivityBlocks.Count -eq 1) 'APK does not contain exactly one LexiNexo MainActivity.'
@@ -416,7 +416,7 @@ $apkItem = Get-Item -LiteralPath $apk
 $aabHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $aab).Hash
 $apkHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $apk).Hash
 
-Write-Output 'PalavraX release artifacts verified.'
+Write-Output 'Worde release artifacts verified.'
 Write-Output "AAB bytes: $($aabItem.Length)"
 Write-Output "AAB SHA-256: $aabHash"
 Write-Output "APK bytes: $($apkItem.Length)"

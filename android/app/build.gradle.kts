@@ -43,7 +43,7 @@ fun requiredReleaseSigningProperty(name: String): String {
 }
 
 android {
-    namespace = "com.lexinexo.app"
+    namespace = "worde.com"
     compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
@@ -53,7 +53,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.lexinexo.app"
+        applicationId = "worde.com"
         minSdk = 24
         targetSdk = 36
         versionCode = flutter.versionCode

@@ -1,4 +1,4 @@
-Primeira versão do PalavraX.
+Primeira versão do Worde.
 
 • 1.000 desafios de palavras em inglês.
 • Categorias de 3 a 8 letras, com progressos independentes.

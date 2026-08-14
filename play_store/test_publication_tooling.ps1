@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 
-$temporaryRoot = Join-Path $env:TEMP 'palavrax-publication-tooling-test'
+$temporaryRoot = Join-Path $env:TEMP 'worde-publication-tooling-test'
 if (Test-Path -LiteralPath $temporaryRoot) {
   $resolvedTemp = [IO.Path]::GetFullPath($env:TEMP).TrimEnd('\') + '\'
   $resolvedTest = [IO.Path]::GetFullPath($temporaryRoot)
@@ -15,14 +15,14 @@ $metadataPath = Join-Path $temporaryRoot 'metadata.json'
 $outputDirectory = Join-Path $temporaryRoot 'generated'
 $metadata = [ordered]@{
   schemaVersion = 2
-  packageName = 'com.lexinexo.app'
+  packageName = 'worde.com'
   developerDisplayName = 'Estudio de Teste da Ferramenta'
   accountType = 'personal'
   supportContactEmail = 'suporte@validacao.invalid'
   privacyContactEmail = 'privacidade@validacao.invalid'
-  developerWebsiteUrl = 'https://validacao.invalid/palavrax'
-  supportPageUrl = 'https://validacao.invalid/palavrax/suporte'
-  privacyPolicyUrl = 'https://validacao.invalid/palavrax/privacidade'
+  developerWebsiteUrl = 'https://validacao.invalid/worde'
+  supportPageUrl = 'https://validacao.invalid/worde/suporte'
+  privacyPolicyUrl = 'https://validacao.invalid/worde/privacidade'
   supportPhone = $null
   primaryLocale = 'pt-BR'
   distributionCountries = @('BR')

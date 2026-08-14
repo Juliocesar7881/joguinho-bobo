@@ -11,7 +11,7 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Sobre o PalavraX')),
+      appBar: AppBar(title: const Text('Sobre o Worde')),
       body: SafeArea(
         top: false,
         child: Center(
@@ -63,7 +63,7 @@ class _AboutHeader extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: Image.asset(
-                'assets/branding/lexinexo-icon.png',
+                'assets/branding/worde-icon.png',
                 width: 64,
                 height: 64,
                 fit: BoxFit.cover,
@@ -75,7 +75,7 @@ class _AboutHeader extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'PalavraX',
+                    'Worde',
                     style: TextStyle(fontSize: 23, fontWeight: FontWeight.w800),
                   ),
                   SizedBox(height: 4),

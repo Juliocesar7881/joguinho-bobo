@@ -1,4 +1,4 @@
-# PalavraX 1.0.0 — relatório de release
+# Worde 1.0.0 — relatório de release
 
 Data da validação: 12 de agosto de 2026 (America/Sao_Paulo)
 
@@ -21,8 +21,8 @@ valores do schema v2 não foram inventados. O gate completo falha fechado com:
 
 | Artefato | Tamanho | SHA-256 |
 |---|---:|---|
-| `release/app-release.aab` no pacote (`build/app/outputs/bundle/release/app-release.aab` no projeto) | 48.032.096 bytes | `B4DF6CB955CEEF6932EE0DADD00567B9111FEDC2EFA37B3E816041B4CF05D3F2` |
-| `qa/app-release.apk` no pacote (`build/app/outputs/flutter-apk/app-release.apk` no projeto) | 48.164.396 bytes | `38762729CFA5FAB7CFF68BA72D14ECD8672BBADCDCDFC263558C74216FFCC03E` |
+| `release/app-release.aab` no pacote (`build/app/outputs/bundle/release/app-release.aab` no projeto) | 51.124.746 bytes | `21763747DF275A1898CD6645108253FCA3B174E9023E2A2C4A089891AEAC8049` |
+| `qa/app-release.apk` no pacote (`build/app/outputs/flutter-apk/app-release.apk` no projeto) | 51.248.273 bytes | `7B315088C3CAF5E37BC5B1FF8AE4D3EC23E778AEBF0535DD65E74DE09C39A218` |
 
 O AAB é o arquivo para upload na Play Console. O APK é universal, assinado pela
 upload key, e serve para instalação direta e QA. Depois da adesão ao Play App
@@ -31,9 +31,9 @@ atualizações da Play deve usar a assinatura de distribuição do Google.
 
 ## Identidade Android
 
-- Package e namespace: `com.lexinexo.app`
-- Nome instalado: `PalavraX`
-- Título da ficha: `PalavraX: Aprenda Inglês`
+- Package e namespace: `worde.com`
+- Nome instalado: `Worde`
+- Título da ficha: `Worde: Aprenda Palavras`
 - `versionName`: `1.0.0`
 - `versionCode`: `1`
 - `minSdk`: 24
@@ -48,7 +48,7 @@ atualizações da Play deve usar a assinatura de distribuição do Google.
 A única permissão declarada no artefato é a permissão interna AndroidX de nível
 `signature`:
 
-`com.lexinexo.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`
+`worde.com.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`
 
 ## Assinatura de upload
 
@@ -83,8 +83,9 @@ de assinatura JAR.
 - dica em português e `Hint (EN)` somente no modo com dicas;
 - preferência de som salva localmente, efeito original via SoundPool sem nova
   permissão e animação de check antes do diálogo de vitória;
-- nova identidade PalavraX, com cinco blocos formando um X, bloco central verde
-  com a letra A e camada monocromática para launchers compatíveis;
+- nova identidade Worde baseada no ícone fornecido pelo titular, com os cinco
+  blocos `worde`, lupa de aprendizado, fundo azul e camada monocromática para
+  launchers compatíveis;
 - recuperação segura de falha de persistência e serialização de gravações
   concorrentes, sem ressuscitar uma mutação que falhou.
 
@@ -196,7 +197,7 @@ Diretório: `play_store/pt-BR`
 - inventário SHA-256 dos 12 materiais gráficos.
 
 SHA-256 de `STORE_ASSETS_SHA256.txt`:
-`BDC50647B95B4D54D4D609FFED47E1620F896F6BE67A8E326AC435B8A03833D9`.
+`92D062A342391C9269BBC8AA0C47A7E0E67CA912C7D5CAD9C792FF471608EB96`.
 
 `play_store/validate_static_kit.ps1` passou. O gate completo permanece bloqueado
 somente pela ausência deliberada de `play_store/publication_metadata.json`.
@@ -215,11 +216,11 @@ artefatos equivalentes do pacote estão identificados nas seções anteriores.
    `play_store/validate_publication.ps1`.
 3. Na Play Console: verificar identidade e contatos privados da conta; para
    organização, confirmar D‑U‑N‑S e contatos públicos exigidos; reservar
-   `com.lexinexo.app`, aderir ao Play App Signing, preencher Data
+   `worde.com`, aderir ao Play App Signing, preencher Data
    Safety/IARC/público e ausência de anúncios e enviar primeiro ao teste interno.
 4. Se a conta real for pessoal criada depois de 13/11/2023, cumprir o teste
    fechado exigido antes da produção.
-5. Antes do lançamento público, pesquisar **PalavraX** no INPI e avaliar
+5. Antes do lançamento público, pesquisar **Worde** no INPI e avaliar
    eventuais conflitos de marca; disponibilidade do nome/package não é parecer
    jurídico.
 
@@ -228,5 +229,5 @@ artefatos equivalentes do pacote estão identificados nas seções anteriores.
 1. Copie `app-release.apk` para o telefone Android.
 2. Ao abrir o arquivo, permita temporariamente **Instalar apps desconhecidos**
    para o app usado na abertura (por exemplo, Arquivos ou navegador).
-3. Confirme a instalação e abra **PalavraX**.
+3. Confirme a instalação e abra **Worde**.
 4. Se desejar, desative novamente essa autorização depois da instalação.

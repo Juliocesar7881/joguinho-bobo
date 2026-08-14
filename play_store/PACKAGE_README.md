@@ -1,4 +1,4 @@
-# PalavraX 1.0.0 — pacote para Google Play
+# Worde 1.0.0 — pacote para Google Play
 
 Esta pasta reúne tudo o que pode ser preparado tecnicamente antes de acessar a
 conta do titular na Google Play Console.
@@ -23,8 +23,8 @@ entrega autocontida para preencher a Console e enviar os materiais.
 - `qa/`: APK universal para instalação direta e testes.
 - `signing-public/`: certificado e fingerprints públicos da upload key.
 - `store/pt-BR/`: título, descrições, notas, ícone, feature graphic e capturas.
-- `mobile-branding/`: ícone instalado, fontes SVG, adaptive foreground,
-  monochrome e splash.
+- `mobile-branding/`: imagem original fornecida, master do ícone instalado,
+  adaptive foreground, monochrome, splash e renderizador determinístico.
 - `compliance/`: respostas para todos os formulários de Conteúdo do app.
 - `legal/`: política, suporte, licenças e templates para hospedagem.
 - `reports/`: relatório técnico completo da release.
@@ -45,7 +45,7 @@ Este pacote não contém a chave privada JKS, senhas ou propriedades de
 assinatura. Nunca envie esses dados à Play Console, ao GitHub ou por e-mail. O
 certificado PEM incluído é público e serve para conferência da upload key. O
 assunto desse certificado ainda usa o nome técnico histórico `LexiNexo Upload`;
-isso não altera a marca pública PalavraX, o package ou a assinatura.
+isso não altera a marca pública Worde, o package ou a assinatura.
 
 O arquivo `upload-key-fingerprints.txt` também é um registro público para
 auditoria. Ele menciona o SHA-256 da JKS, mas não contém a JKS, senha ou material
@@ -66,7 +66,7 @@ templates de `legal/` conforme as instruções daquele documento.
 
 ## Nome e marca
 
-O nome público preparado é **PalavraX: Aprenda Inglês**, mas o kit não constitui
+O nome público preparado é **Worde: Aprenda Palavras**, mas o kit não constitui
 busca ou parecer de marca. Antes do lançamento público, o titular deve pesquisar
 o nome no INPI e nas lojas relevantes e, se necessário, consultar um
 profissional. A ausência de resultado em uma busca comum, a disponibilidade do

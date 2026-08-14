@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "packageName": "com.lexinexo.app",
+  "packageName": "worde.com",
   "versionName": "1.0.0",
   "versionCode": 1,
   "artifacts": [
@@ -9,16 +9,16 @@
       "path": "build/app/outputs/bundle/release/app-release.aab",
       "packagePath": "release/app-release.aab",
       "fileName": "app-release.aab",
-      "bytes": 48032096,
-      "sha256": "B4DF6CB955CEEF6932EE0DADD00567B9111FEDC2EFA37B3E816041B4CF05D3F2"
+      "bytes": 51124746,
+      "sha256": "21763747DF275A1898CD6645108253FCA3B174E9023E2A2C4A089891AEAC8049"
     },
     {
       "purpose": "direct_install_and_qa",
       "path": "build/app/outputs/flutter-apk/app-release.apk",
       "packagePath": "qa/app-release.apk",
       "fileName": "app-release.apk",
-      "bytes": 48164396,
-      "sha256": "38762729CFA5FAB7CFF68BA72D14ECD8672BBADCDCDFC263558C74216FFCC03E"
+      "bytes": 51248273,
+      "sha256": "7B315088C3CAF5E37BC5B1FF8AE4D3EC23E778AEBF0535DD65E74DE09C39A218"
     }
   ],
   "uploadCertificate": {

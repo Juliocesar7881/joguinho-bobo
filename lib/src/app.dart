@@ -44,7 +44,7 @@ class _LexiNexoAppState extends State<LexiNexoApp> with WidgetsBindingObserver {
     return GameScope(
       store: widget.store,
       child: MaterialApp(
-        title: 'PalavraX',
+        title: 'Worde',
         debugShowCheckedModeBanner: false,
         theme: buildAppTheme(),
         locale: const Locale('pt', 'BR'),

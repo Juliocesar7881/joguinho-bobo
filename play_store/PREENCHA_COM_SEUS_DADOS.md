@@ -1,6 +1,6 @@
 # Dados do titular ainda necessários
 
-O código, os binários, os textos e as imagens do PalavraX estão prontos. A
+O código, os binários, os textos e as imagens do Worde estão prontos. A
 Google exige que os dados abaixo sejam verdadeiros e correspondam ao titular da
 conta. Eles não podem ser inventados por uma ferramenta ou desenvolvedor.
 
@@ -79,7 +79,7 @@ corresponder ao titular real.
 
 ## Conferir a marca antes do lançamento
 
-Pesquise **PalavraX** no INPI e nas lojas onde o app será oferecido. Essa busca
+Pesquise **Worde** no INPI e nas lojas onde o app será oferecido. Essa busca
 é responsabilidade do titular e não está substituída pela disponibilidade de
-`com.lexinexo.app`, do nome na Play Console ou de um domínio. Em caso de dúvida,
+`worde.com`, do nome na Play Console ou de um domínio. Em caso de dúvida,
 obtenha orientação profissional antes da produção.

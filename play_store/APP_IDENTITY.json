@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "product": {
-    "brandName": "PalavraX",
-    "installedName": "PalavraX",
-    "storeTitle": "PalavraX: Aprenda Inglês",
+    "brandName": "Worde",
+    "installedName": "Worde",
+    "storeTitle": "Worde: Aprenda Palavras",
     "applicationType": "game",
     "price": "free",
     "primaryLocale": "pt-BR",
@@ -18,8 +18,8 @@
     ]
   },
   "android": {
-    "packageName": "com.lexinexo.app",
-    "namespace": "com.lexinexo.app",
+    "packageName": "worde.com",
+    "namespace": "worde.com",
     "dartProjectName": "lexinexo",
     "versionName": "1.0.0",
     "versionCode": 1,

@@ -1,9 +1,9 @@
-# Ficha da loja pronta para copiar — PalavraX 1.0.0
+# Ficha da loja pronta para copiar — Worde 1.0.0
 
 ## Identificação
 
-- Package permanente: `com.lexinexo.app`
-- Nome instalado no celular: `PalavraX`
+- Package permanente: `worde.com`
+- Nome instalado no celular: `Worde`
 - Idioma padrão: `Português (Brasil) — pt-BR`
 - Tipo: `Jogo`
 - Categoria: `Palavras`
@@ -12,10 +12,10 @@
 - Versão: `1.0.0`
 - Código da versão: `1`
 
-## Nome do app — 24 de 30 caracteres
+## Nome do app — 23 de 30 caracteres
 
 ```text
-PalavraX: Aprenda Inglês
+Worde: Aprenda Palavras
 ```
 
 ## Descrição curta — 71 de 80 caracteres
@@ -29,7 +29,7 @@ Aprenda inglês jogando 1.000 desafios de palavras, com dicas e offline.
 ```text
 Descubra palavras, amplie seu vocabulário e aprenda inglês em 1.000 desafios com interface em português brasileiro.
 
-No PalavraX, cada palavra pode ser resolvida em até seis tentativas. As cores e os indicadores do tabuleiro mostram quais letras estão na posição certa, quais pertencem à palavra e quais não fazem parte da resposta.
+No Worde, cada palavra pode ser resolvida em até seis tentativas. As cores e os indicadores do tabuleiro mostram quais letras estão na posição certa, quais pertencem à palavra e quais não fazem parte da resposta.
 
 ESCOLHA COMO JOGAR
 • Com dicas: veja uma pista em português e outra em inglês para o mesmo sentido da palavra.
@@ -46,13 +46,13 @@ APRENDA NO SEU RITMO
 • Funciona totalmente offline depois da instalação.
 • Sem anúncios, compras, moedas, vidas, contas ou ranking.
 
-Seu progresso por categoria, suas partidas atuais e a preferência de som ficam somente no aparelho. Abra o PalavraX quando quiser e continue exatamente de onde parou.
+Seu progresso por categoria, suas partidas atuais e a preferência de som ficam somente no aparelho. Abra o Worde quando quiser e continue exatamente de onde parou.
 ```
 
 ## Notas da versão — até 500 caracteres
 
 ```text
-Primeira versão do PalavraX.
+Primeira versão do Worde.
 
 • 1.000 desafios de palavras em inglês.
 • Categorias de 3 a 8 letras, com progressos independentes.

@@ -114,7 +114,7 @@ if (-not $StaticOnly) {
     $serializedMetadata -notmatch '(?i)EXEMPLO|EXAMPLE|SUBSTITUA|CHANGEME|PLACEHOLDER|TODO|seu-dominio|your[-_ ]?(name|domain|email)|\.example\b|\bexample\.(com|org|net)\b'
   ) 'Os metadados contem placeholders ou valores de exemplo.'
   Assert-Condition ($metadata.schemaVersion -eq 2) 'schemaVersion de publicacao incompativel.'
-  Assert-Condition ($metadata.packageName -eq 'com.lexinexo.app') 'packageName deve ser com.lexinexo.app.'
+  Assert-Condition ($metadata.packageName -eq 'worde.com') 'packageName deve ser worde.com.'
   Assert-NonEmptyText $metadata.developerDisplayName 'developerDisplayName'
   Assert-NonEmptyText $metadata.supportContactEmail 'supportContactEmail'
   Assert-NonEmptyText $metadata.privacyContactEmail 'privacyContactEmail'
@@ -141,12 +141,12 @@ if (-not $StaticOnly) {
 }
 
 if ($MetadataOnly) {
-  Write-Output 'Metadados publicos do kit PalavraX 1.0.0 validados.'
+  Write-Output 'Metadados publicos do kit Worde 1.0.0 validados.'
   return
 }
 
 $localeRoot = Join-Path $PSScriptRoot 'pt-BR'
-$expectedPublicTitle = 'PalavraX: Aprenda Ingl' + [char]0x00EA + 's'
+$expectedPublicTitle = 'Worde: Aprenda Palavras'
 $identityPath = Join-Path $PSScriptRoot 'APP_IDENTITY.json'
 $answersJsonPath = Join-Path $localeRoot 'PLAY_CONSOLE_ANSWERS.json'
 $answersMarkdownPath = Join-Path $localeRoot 'PLAY_CONSOLE_ANSWERS.md'
@@ -192,9 +192,9 @@ Assert-ExactKeys $identity.product @(
   'storeTitle',
   'targetAgeGroups'
 ) 'APP_IDENTITY.product'
-Assert-Condition ($identity.product.brandName -ceq 'PalavraX') 'Marca divergente em APP_IDENTITY.'
+Assert-Condition ($identity.product.brandName -ceq 'Worde') 'Marca divergente em APP_IDENTITY.'
 Assert-Condition ($identity.product.storeTitle -ceq $expectedPublicTitle) 'Titulo divergente em APP_IDENTITY.'
-Assert-Condition ($identity.product.installedName -ceq 'PalavraX') 'Nome instalado divergente em APP_IDENTITY.'
+Assert-Condition ($identity.product.installedName -ceq 'Worde') 'Nome instalado divergente em APP_IDENTITY.'
 Assert-Condition ($identity.product.applicationType -ceq 'game') 'Tipo deve ser game em APP_IDENTITY.'
 Assert-Condition ($identity.product.price -ceq 'free') 'Preco deve ser free em APP_IDENTITY.'
 Assert-Condition ($identity.product.primaryLocale -ceq 'pt-BR') 'Locale divergente em APP_IDENTITY.'
@@ -218,8 +218,8 @@ Assert-ExactKeys $identity.android @(
   'versionCode',
   'versionName'
 ) 'APP_IDENTITY.android'
-Assert-Condition ($identity.android.packageName -ceq 'com.lexinexo.app') 'Package divergente em APP_IDENTITY.'
-Assert-Condition ($identity.android.namespace -ceq 'com.lexinexo.app') 'Namespace divergente em APP_IDENTITY.'
+Assert-Condition ($identity.android.packageName -ceq 'worde.com') 'Package divergente em APP_IDENTITY.'
+Assert-Condition ($identity.android.namespace -ceq 'worde.com') 'Namespace divergente em APP_IDENTITY.'
 Assert-Condition ($identity.android.dartProjectName -ceq 'lexinexo') 'Nome do projeto Dart divergente em APP_IDENTITY.'
 Assert-Condition ($identity.android.versionName -ceq '1.0.0' -and $identity.android.versionCode -eq 1) 'Versao divergente em APP_IDENTITY.'
 Assert-Condition ($identity.android.minSdk -eq 24 -and $identity.android.targetSdk -eq 36 -and $identity.android.compileSdk -eq 36) 'SDKs divergentes em APP_IDENTITY.'
@@ -309,7 +309,7 @@ Assert-ExactKeys $answers @(
 ) 'PLAY_CONSOLE_ANSWERS'
 Assert-Condition ($answers.schemaVersion -eq 1) 'PLAY_CONSOLE_ANSWERS schemaVersion incompativel.'
 Assert-ExactKeys $answers.appliesTo @('packageName', 'versionCode', 'versionName') 'PLAY_CONSOLE_ANSWERS.appliesTo'
-Assert-Condition ($answers.appliesTo.packageName -ceq 'com.lexinexo.app') 'Package divergente nas respostas da Console.'
+Assert-Condition ($answers.appliesTo.packageName -ceq 'worde.com') 'Package divergente nas respostas da Console.'
 Assert-Condition ($answers.appliesTo.versionName -ceq '1.0.0' -and $answers.appliesTo.versionCode -eq 1) 'Versao divergente nas respostas da Console.'
 
 Assert-ExactKeys $answers.createApp @(
@@ -459,7 +459,7 @@ foreach ($requiredAnswerPhrase in @(
     'nao e um app governamental',
     'nao e um app de noticias ou revista',
     'pelo menos 12 testadores inscritos continuamente por 14 dias',
-    'com.lexinexo.app'
+    'worde.com'
   )) {
   Assert-Condition (
     $answersSearchText.Contains($requiredAnswerPhrase)
@@ -498,7 +498,7 @@ Assert-Condition (
   (($actualMetadataTemplateKeys -join '|') -ceq (($expectedMetadataTemplateKeys | Sort-Object) -join '|'))
 ) 'Template de metadados deve conter exatamente as chaves do schema v2.'
 Assert-Condition ($metadataTemplate.schemaVersion -eq 2) 'Template de metadados deve usar schemaVersion 2.'
-Assert-Condition ($metadataTemplate.packageName -ceq 'com.lexinexo.app') 'Template de metadados tem package divergente.'
+Assert-Condition ($metadataTemplate.packageName -ceq 'worde.com') 'Template de metadados tem package divergente.'
 
 $supportTemplatePaths = @(
   (Join-Path $localeRoot 'support_page.template.html'),
@@ -552,8 +552,8 @@ Assert-NonEmptyText $listing.appName 'listing.appName'
 Assert-NonEmptyText $listing.shortDescription 'listing.shortDescription'
 Assert-NonEmptyText $listing.fullDescription 'listing.fullDescription'
 Assert-Condition ($listing.locale -ceq 'pt-BR') 'O locale da ficha deve ser pt-BR.'
-$expectedAppName = 'PalavraX: Aprenda Ingl' + [char]0x00EA + 's'
-Assert-Condition ($listing.appName -ceq $expectedAppName) 'O titulo da ficha deve ser exatamente PalavraX: Aprenda Ingles.'
+$expectedAppName = 'Worde: Aprenda Palavras'
+Assert-Condition ($listing.appName -ceq $expectedAppName) 'O titulo da ficha deve ser exatamente Worde: Aprenda Palavras.'
 $expectedShortDescription = 'Aprenda ingl' + [char]0x00EA + 's jogando 1.000 desafios de palavras, com dicas e offline.'
 Assert-Condition (
   $listing.shortDescription -ceq $expectedShortDescription
@@ -745,7 +745,7 @@ foreach ($set in $screenshotSets) {
 }
 
 if ($StaticOnly) {
-  Write-Output 'Conteudo estatico do kit PalavraX 1.0.0 validado.'
+  Write-Output 'Conteudo estatico do kit Worde 1.0.0 validado.'
 } else {
-  Write-Output 'Kit de publicacao PalavraX 1.0.0 validado.'
+  Write-Output 'Kit de publicacao Worde 1.0.0 validado.'
 }

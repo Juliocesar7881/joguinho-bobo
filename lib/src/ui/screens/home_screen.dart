@@ -69,7 +69,7 @@ class _BrandHeader extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(22),
             child: Image.asset(
-              'assets/branding/lexinexo-icon.png',
+              'assets/branding/worde-icon.png',
               width: 76,
               height: 76,
               fit: BoxFit.cover,
@@ -87,7 +87,7 @@ class _BrandHeader extends StatelessWidget {
           ),
           const SizedBox(height: 18),
           Text(
-            'PalavraX',
+            'Worde',
             style: Theme.of(context).textTheme.displaySmall?.copyWith(
               fontWeight: FontWeight.w800,
               letterSpacing: -.8,
