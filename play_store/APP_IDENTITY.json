@@ -37,22 +37,22 @@
       "x86_64"
     ],
     "supports16KiBPages": true,
-    "internetPermission": false,
+    "internetPermission": true,
     "dangerousPermissions": []
   },
   "businessModel": {
-    "containsAds": false,
+    "containsAds": true,
     "inAppPurchases": false,
     "subscriptions": false,
     "accounts": false,
-    "onlineServices": false
+    "onlineServices": true
   },
   "privacy": {
-    "collectsUserData": false,
-    "sharesUserData": false,
-    "usesTelemetry": false,
-    "usesAdvertisingId": false,
-    "localDataOnly": true,
+    "collectsUserData": true,
+    "sharesUserData": true,
+    "usesTelemetry": true,
+    "usesAdvertisingId": true,
+    "localDataOnly": false,
     "localDataDeletion": "clear_app_data_or_uninstall"
   },
   "releaseArtifacts": {

@@ -1,8 +1,10 @@
 # Dados do titular ainda necessários
 
-O código, os binários, os textos e as imagens do Worde estão prontos. A
-Google exige que os dados abaixo sejam verdadeiros e correspondam ao titular da
-conta. Eles não podem ser inventados por uma ferramenta ou desenvolvedor.
+O código e o kit de preparação do Worde estão organizados. O AAB e o APK finais
+com anúncios ainda precisam ser reconstruídos depois que os IDs reais do AdMob
+forem fornecidos. A Google também exige que os dados abaixo sejam verdadeiros e
+correspondam ao titular da conta. Eles não podem ser inventados por uma
+ferramenta ou desenvolvedor.
 
 No pacote extraído, copie
 `owner-action/publication_metadata.template.json` para
@@ -57,6 +59,28 @@ tipo e o país da conta.
 Também conclua diretamente na conta:
 
 - aceite dos termos e acesso à Play Console.
+
+## Dados reais do AdMob
+
+Crie o app Android `worde.com` na conta real do AdMob e forneça ao ambiente de
+build:
+
+- `WORDE_ADMOB_APP_ID`: App ID no formato
+  `ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY`;
+- `WORDE_ADMOB_INTERSTITIAL_ID`: unidade intersticial no formato
+  `ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY`;
+- Publisher ID `pub-XXXXXXXXXXXXXXXX` para publicar o `app-ads.txt` no domínio
+  real do desenvolvedor.
+
+Esses valores não podem ser inventados. O build release falha fechado se os
+IDs estiverem ausentes, inválidos ou forem os IDs públicos de teste do Google.
+Siga todas as etapas de consentimento UMP, frequência, Data Safety e
+`app-ads.txt` em `play_store/ADMOB_SETUP.md` no repositório-fonte ou em
+`owner-action/ADMOB_SETUP.md` no pacote extraído.
+
+Até os dois IDs reais e o Publisher ID existirem, qualquer APK debug usa
+unidades oficiais de teste e serve apenas para desenvolvimento; ele não é um
+artefato de publicação nem gera receita.
 
 ## Gerar as páginas públicas
 

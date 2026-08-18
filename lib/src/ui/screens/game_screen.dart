@@ -8,6 +8,7 @@ import '../../domain/models.dart';
 import '../../domain/word_evaluator.dart';
 import '../../state/game_store.dart';
 import '../app_theme.dart';
+import '../ads_scope.dart';
 import '../game_scope.dart';
 import '../navigation.dart';
 import '../widgets/game_board.dart';
@@ -168,10 +169,21 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
     if (outcome.won) {
       unawaited(HapticFeedback.mediumImpact());
       await _playSuccessFeedback(store);
+      await _showAdAtNaturalBreak();
       if (mounted) await _showResult(true);
     } else if (outcome.lost) {
       unawaited(HapticFeedback.mediumImpact());
+      await _showAdAtNaturalBreak();
       if (mounted) await _showResult(false);
+    }
+  }
+
+  Future<void> _showAdAtNaturalBreak() async {
+    if (!mounted) return;
+    try {
+      await AdsScope.of(context).showInterstitialAtNaturalBreak();
+    } on Object {
+      // Ads are optional. A network or SDK failure never blocks the result.
     }
   }
 
@@ -436,7 +448,7 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
                       // The keyboard stays comfortably above the system edge,
                       // while this top inset clearly separates it from the
                       // board without consuming another scrollable region.
-                      padding: const EdgeInsets.fromLTRB(8, 18, 8, 18),
+                      padding: const EdgeInsets.fromLTRB(8, 18, 8, 44),
                       child: ConstrainedBox(
                         constraints: const BoxConstraints(maxWidth: 600),
                         child: GameKeyboard(

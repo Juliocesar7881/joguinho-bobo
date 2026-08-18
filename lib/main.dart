@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'src/app.dart';
+import 'src/ads/game_ads.dart';
 import 'src/data/catalog_repository.dart';
 import 'src/data/save_repository.dart';
 import 'src/state/game_store.dart';
@@ -25,7 +26,7 @@ Future<void> main() async {
     if (remainingMilliseconds > 0) {
       await Future<void>.delayed(Duration(milliseconds: remainingMilliseconds));
     }
-    runApp(LexiNexoApp(store: store));
+    runApp(LexiNexoApp(store: store, ads: GoogleGameAds()));
     binding.allowFirstFrame();
   } on Object {
     runApp(const InitializationErrorApp());

@@ -14,15 +14,19 @@ void main() {
   ) async {
     final saves = _TrackingSaveRepository();
     final store = GameStore(catalog: FakeCatalog(), saves: saves);
+    final ads = RecordingGameAds();
     await store.initialize();
-    await tester.pumpWidget(LexiNexoApp(store: store));
+    await tester.pumpWidget(LexiNexoApp(store: store, ads: ads));
     await tester.pumpAndSettle();
+    expect(ads.initializeCalls, 1);
 
     tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.paused);
     await tester.pump();
 
     expect(saves.flushCalls, 1);
     tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
+    await tester.pump();
+    expect(ads.initializeCalls, 2);
   });
 }
 

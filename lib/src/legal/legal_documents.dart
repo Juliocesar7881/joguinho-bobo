@@ -1,19 +1,23 @@
 const privacyPolicyPtBr = '''
-Última atualização: 10 de agosto de 2026.
+Última atualização: 17 de agosto de 2026.
 
-O Worde funciona totalmente offline. O aplicativo não exige conta, não exibe anúncios, não realiza compras e não usa serviços de telemetria.
+O Worde não exige conta nem realiza compras. A partida, o catálogo e o progresso funcionam offline. Quando há conexão, o aplicativo pode exibir anúncios intersticiais fornecidos pelo Google AdMob em pausas naturais. O app considera uma exibição somente depois de cada três resultados novos e mantém um intervalo local mínimo de três minutos; se o anúncio não estiver pronto, o jogo segue sem espera.
 
 Dados armazenados no aparelho
-O progresso de cada categoria de 3 a 8 letras, as partidas em andamento, as tentativas, os rascunhos e a preferência do som de acerto são armazenados somente no próprio aparelho. Esses dados servem exclusivamente para continuar o jogo e respeitar sua configuração.
+O progresso de cada categoria de 3 a 8 letras, as partidas em andamento, as tentativas, os rascunhos e a preferência do som de acerto são armazenados no próprio aparelho. Esses dados servem para continuar o jogo e respeitar sua configuração.
 
-Coleta e compartilhamento
-O Worde não coleta, envia, vende nem compartilha dados pessoais ou dados de uso. O aplicativo não solicita permissão de internet e não se comunica com servidores.
+Anúncios, consentimento e dados transmitidos
+O Worde usa o SDK Google Mobile Ads e a plataforma de consentimento UMP. Antes de solicitar anúncios, o app consulta as escolhas de privacidade aplicáveis. Quando exigido, a tela Sobre oferece acesso às preferências de privacidade de anúncios.
 
-Como apagar os dados
-Você pode excluir todos os dados locais do Worde nas configurações do Android, usando a opção de limpar armazenamento, ou desinstalando o aplicativo. Como não existe conta nem armazenamento remoto, não há outros dados a excluir.
+Segundo a documentação do Google Mobile Ads, o SDK pode coletar e compartilhar automaticamente endereço IP (inclusive para estimar localização aproximada), interações com o aplicativo e anúncios, informações de diagnóstico e identificadores do dispositivo ou da conta, como o identificador de publicidade e o App Set ID. Esses dados são usados pelo Google para publicidade, análise e prevenção de fraude e são criptografados em trânsito. O desenvolvedor do Worde não recebe o conteúdo bruto desses dados e não vende dados pessoais.
+
+O jogo continua funcionando quando não há conexão ou quando anúncios não podem ser solicitados. O som de acerto é local; o aplicativo não usa microfone, câmera, contatos ou arquivos de mídia do usuário.
+
+Controles e exclusão
+Você pode apagar o progresso e as preferências locais nas configurações do Android, usando Limpar armazenamento, ou desinstalando o aplicativo. As configurações de anúncios do Android e a Central de anúncios do Google permitem redefinir ou excluir o identificador de publicidade e gerenciar personalização. Informações tratadas pelo Google seguem a política disponível em policies.google.com/privacy.
 
 Público
-O jogo é destinado a pessoas com 13 anos ou mais.
+O jogo é destinado a pessoas com 13 anos ou mais e não foi projetado para crianças menores de 13 anos.
 
 Contato
 Para dúvidas sobre privacidade, use os dados de contato do desenvolvedor exibidos na ficha oficial do Worde na Google Play.
@@ -35,4 +39,7 @@ O hunspell-reader 10.0.1 foi usado apenas durante a geração do catálogo. Ele 
 
 Conteúdo editorial
 As traduções, os significados e as dicas em português brasileiro e inglês do Worde são conteúdo editorial próprio. As listas de palavras e o som de acerto são carregados localmente; nenhuma consulta externa ocorre durante o jogo.
+
+Anúncios
+O aplicativo inclui google_mobile_ads 9.1.0, plugin do Google publicado sob a licença Apache 2.0, e o Google Mobile Ads SDK/UMP para Android. Os avisos, termos e políticas completos estão documentados no arquivo THIRD_PARTY_NOTICES.md distribuído com o projeto.
 ''';

@@ -31,7 +31,7 @@
   },
   "appContent": {
     "privacyPolicyRequired": true,
-    "containsAds": false,
+    "containsAds": true,
     "appAccess": "all_functionality_available_without_special_access",
     "targetAgeGroups": [
       "13-15",
@@ -39,12 +39,12 @@
       "18+"
     ],
     "designedForChildren": false,
-    "dataCollected": false,
-    "dataShared": false,
-    "dataTransmittedOffDevice": false,
+    "dataCollected": true,
+    "dataShared": true,
+    "dataTransmittedOffDevice": true,
     "accountCreation": false,
     "accountDeletionUrlApplicable": false,
-    "usesAdvertisingId": false,
+    "usesAdvertisingId": true,
     "financialFeatures": false,
     "healthFeatures": false,
     "governmentAppOrInformation": false,

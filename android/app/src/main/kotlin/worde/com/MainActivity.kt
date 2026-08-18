@@ -8,6 +8,7 @@ import io.flutter.plugin.common.MethodChannel
 
 class MainActivity : FlutterActivity() {
     private var audioChannel: MethodChannel? = null
+    private var adsConfigChannel: MethodChannel? = null
     private var soundPool: SoundPool? = null
     private var successSoundId = 0
 
@@ -46,11 +47,32 @@ class MainActivity : FlutterActivity() {
                     }
                 }
             }
+
+        adsConfigChannel =
+            MethodChannel(flutterEngine.dartExecutor.binaryMessenger, adsConfigChannelName).also {
+                channel ->
+                channel.setMethodCallHandler { call, result ->
+                    when (call.method) {
+                        getAdsConfigMethod -> {
+                            val metadata = applicationInfo.metaData
+                            result.success(
+                                mapOf(
+                                    "interstitialAdUnitId" to
+                                        metadata?.getString(interstitialMetadataName).orEmpty(),
+                                ),
+                            )
+                        }
+                        else -> result.notImplemented()
+                    }
+                }
+            }
     }
 
     override fun onDestroy() {
         audioChannel?.setMethodCallHandler(null)
         audioChannel = null
+        adsConfigChannel?.setMethodCallHandler(null)
+        adsConfigChannel = null
         successSoundLoaded = false
         successSoundId = 0
         soundPool?.release()
@@ -74,7 +96,10 @@ class MainActivity : FlutterActivity() {
 
     private companion object {
         const val audioChannelName = "worde.com/audio"
+        const val adsConfigChannelName = "worde.com/ads_config"
         const val playSuccessMethod = "playSuccess"
+        const val getAdsConfigMethod = "getConfig"
+        const val interstitialMetadataName = "worde.com.ADMOB_INTERSTITIAL_ID"
         const val playbackVolume = 0.72f
     }
 }

@@ -261,6 +261,8 @@ $copyMap = @(
   @{ Source = (Join-Path $PSScriptRoot 'APP_IDENTITY.json'); Destination = 'identity/APP_IDENTITY.json' },
   @{ Source = (Join-Path $PSScriptRoot 'publication_metadata.template.json'); Destination = 'owner-action/publication_metadata.template.json' },
   @{ Source = (Join-Path $PSScriptRoot 'PREENCHA_COM_SEUS_DADOS.md'); Destination = 'owner-action/PREENCHA_COM_SEUS_DADOS.md' },
+  @{ Source = (Join-Path $PSScriptRoot 'ADMOB_SETUP.md'); Destination = 'owner-action/ADMOB_SETUP.md' },
+  @{ Source = (Join-Path $PSScriptRoot 'app-ads.template.txt'); Destination = 'owner-action/app-ads.template.txt' },
   @{ Source = (Resolve-ProjectFile 'build/app/outputs/bundle/release/app-release.aab'); Destination = 'release/app-release.aab' },
   @{ Source = (Resolve-ProjectFile 'build/app/outputs/flutter-apk/app-release.apk'); Destination = 'qa/app-release.apk' },
   @{ Source = $certificatePath; Destination = 'signing-public/upload-certificate.pem' },

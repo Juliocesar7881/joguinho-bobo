@@ -4,6 +4,12 @@
         android:label="Worde"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="${admobAppId}"/>
+        <meta-data
+            android:name="worde.com.ADMOB_INTERSTITIAL_ID"
+            android:value="${admobInterstitialId}"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

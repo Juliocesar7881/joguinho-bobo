@@ -3,15 +3,19 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'ads/game_ads.dart';
 import 'state/game_store.dart';
+import 'ui/ads_scope.dart';
 import 'ui/app_theme.dart';
 import 'ui/game_scope.dart';
 import 'ui/screens/home_screen.dart';
 
 class LexiNexoApp extends StatefulWidget {
-  const LexiNexoApp({required this.store, super.key});
+  LexiNexoApp({required this.store, GameAds? ads, super.key})
+    : ads = ads ?? DisabledGameAds();
 
   final GameStore store;
+  final GameAds ads;
 
   @override
   State<LexiNexoApp> createState() => _LexiNexoAppState();
@@ -22,10 +26,16 @@ class _LexiNexoAppState extends State<LexiNexoApp> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      unawaited(widget.ads.initialize().catchError((Object _) {}));
+    });
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      unawaited(widget.ads.initialize().catchError((Object _) {}));
+    }
     if (state == AppLifecycleState.inactive ||
         state == AppLifecycleState.paused ||
         state == AppLifecycleState.detached) {
@@ -36,6 +46,7 @@ class _LexiNexoAppState extends State<LexiNexoApp> with WidgetsBindingObserver {
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
+    widget.ads.dispose();
     super.dispose();
   }
 
@@ -43,14 +54,17 @@ class _LexiNexoAppState extends State<LexiNexoApp> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     return GameScope(
       store: widget.store,
-      child: MaterialApp(
-        title: 'Worde',
-        debugShowCheckedModeBanner: false,
-        theme: buildAppTheme(),
-        locale: const Locale('pt', 'BR'),
-        supportedLocales: const <Locale>[Locale('pt', 'BR')],
-        localizationsDelegates: GlobalMaterialLocalizations.delegates,
-        home: const HomeScreen(),
+      child: AdsScope(
+        ads: widget.ads,
+        child: MaterialApp(
+          title: 'Worde',
+          debugShowCheckedModeBanner: false,
+          theme: buildAppTheme(),
+          locale: const Locale('pt', 'BR'),
+          supportedLocales: const <Locale>[Locale('pt', 'BR')],
+          localizationsDelegates: GlobalMaterialLocalizations.delegates,
+          home: const HomeScreen(),
+        ),
       ),
     );
   }

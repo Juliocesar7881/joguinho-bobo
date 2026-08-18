@@ -60,6 +60,7 @@ void main() {
     tester,
   ) async {
     final audio = RecordingSuccessAudio();
+    final ads = RecordingGameAds();
     final store = await createTestStore(
       initialSave: appSave(
         withHints: modeProgress(
@@ -77,17 +78,20 @@ void main() {
       mode: GameMode.withHints,
       levelNumber: 1,
       audio: audio,
+      ads: ads,
     );
 
     expect(find.text('Você acertou!'), findsOneWidget);
     expect(find.text('Próximo nível'), findsOneWidget);
     expect(find.byKey(const Key('success_check_animation')), findsNothing);
     expect(audio.calls, 0);
+    expect(ads.naturalBreakCalls, 0);
   });
 
   testWidgets('restaurar derrota terminal reabre resposta e significado', (
     tester,
   ) async {
+    final ads = RecordingGameAds();
     final store = await createTestStore(
       initialSave: appSave(
         withHints: modeProgress(
@@ -113,6 +117,7 @@ void main() {
       store: store,
       mode: GameMode.withHints,
       levelNumber: 1,
+      ads: ads,
     );
 
     expect(find.text('Não foi dessa vez'), findsOneWidget);
@@ -120,6 +125,7 @@ void main() {
     expect(find.text('Tradução: tradução de cat'), findsOneWidget);
     expect(find.textContaining('Significado:'), findsOneWidget);
     expect(find.text('Tentar novamente'), findsOneWidget);
+    expect(ads.naturalBreakCalls, 0);
   });
 
   testWidgets('fechar durante revelação restaura a vitória persistida', (

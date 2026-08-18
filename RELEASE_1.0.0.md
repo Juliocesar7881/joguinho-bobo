@@ -1,33 +1,50 @@
 # Worde 1.0.0 — relatório de release
 
-Data da validação: 12 de agosto de 2026 (America/Sao_Paulo)
+Última atualização deste relatório: 17 de agosto de 2026
+(America/Sao_Paulo)
 
 ## Estado
 
-O release está tecnicamente aprovado. O AAB e o APK universal foram
-reconstruídos com o código atual, assinados pela upload key de produção,
-validados e executados offline no Android 36. O APK release também foi instalado
-e iniciado em um AVD com páginas de memória de 16 KiB.
+O release com anúncios **ainda não está aprovado para upload**. O código passou
+a usar Google Mobile Ads/UMP, e o teclado foi elevado novamente; por isso, os
+AAB/APK e hashes gerados em 14 de agosto pertencem à revisão anterior sem esse
+SDK e não são candidatos da versão atual.
 
-O envio completo da ficha à Google Play continua bloqueado somente pelos dados
-externos que pertencem ao titular: tipo e identidade verificados da conta, nome
-público do desenvolvedor, contatos reais de suporte e privacidade, site HTTPS,
-páginas HTTPS públicas de suporte e privacidade e acesso à Play Console. Esses
-valores do schema v2 não foram inventados. O gate completo falha fechado com:
+O build de produção falha fechado até o titular fornecer um App ID e uma unidade
+intersticial reais do AdMob. Também faltam o Publisher ID para `app-ads.txt`, o
+tipo e a identidade verificados da conta, nome público do desenvolvedor,
+contatos reais de suporte e privacidade, site HTTPS, páginas HTTPS públicas de
+suporte e privacidade e acesso à Play Console. Nenhum desses valores foi
+inventado.
 
-`publication_metadata.json nao existe; os dados publicos reais sao obrigatorios para liberar a publicacao.`
+Depois de receber esses dados, é obrigatório reconstruir e revalidar o AAB/APK
+de produção e substituir os campos pendentes deste relatório. As dez capturas
+atuais e o inventário gráfico já foram regenerados e validados. Um APK debug
+com IDs oficiais de teste foi gerado para QA, mas não é publicável nem
+monetizável.
 
-## Artefatos finais
+## Artefatos anteriores — obsoletos
 
 | Artefato | Tamanho | SHA-256 |
 |---|---:|---|
-| `release/app-release.aab` no pacote (`build/app/outputs/bundle/release/app-release.aab` no projeto) | 51.124.746 bytes | `21763747DF275A1898CD6645108253FCA3B174E9023E2A2C4A089891AEAC8049` |
-| `qa/app-release.apk` no pacote (`build/app/outputs/flutter-apk/app-release.apk` no projeto) | 51.248.273 bytes | `7B315088C3CAF5E37BC5B1FF8AE4D3EC23E778AEBF0535DD65E74DE09C39A218` |
+| AAB pré-AdMob (`build/app/outputs/bundle/release/app-release.aab`) | 51.124.746 bytes | `21763747DF275A1898CD6645108253FCA3B174E9023E2A2C4A089891AEAC8049` |
+| APK pré-AdMob (`build/app/outputs/flutter-apk/app-release.apk`) | 51.248.273 bytes | `7B315088C3CAF5E37BC5B1FF8AE4D3EC23E778AEBF0535DD65E74DE09C39A218` |
 
-O AAB é o arquivo para upload na Play Console. O APK é universal, assinado pela
-upload key, e serve para instalação direta e QA. Depois da adesão ao Play App
-Signing, um APK distribuído em paralelo que precise receber as mesmas
-atualizações da Play deve usar a assinatura de distribuição do Google.
+Esses dois arquivos não contêm a implementação atual de anúncios e não devem ser
+enviados. `play_store/RELEASE_ARTIFACTS.json`, o pacote em `dist/` e os hashes
+dos binários também precisam ser regenerados após o build final.
+
+## APK atual para QA — anúncios oficiais de teste
+
+| Artefato | Tamanho | SHA-256 |
+|---|---:|---|
+| `build/app/outputs/flutter-apk/Worde-1.0.0-test-ads.apk` | 181.506.305 bytes | `3A3BF648F492B7804662E22A31011FE0C0014110F958FD7AF79D4EF921229B36` |
+
+Esse APK universal contém `armeabi-v7a`, `arm64-v8a` e `x86_64`, usa somente os
+IDs oficiais de teste do Google, possui um signatário debug e serve para
+instalação/avaliação funcional. Ele foi instalado e iniciado com sucesso no AVD
+Android 36 de páginas de 16 KiB, com Wi-Fi e dados móveis desligados. Não o
+envie à Play Console. A verificação `zipalign -c -P 16 4` também passou.
 
 ## Identidade Android
 
@@ -43,12 +60,11 @@ atualizações da Play deve usar a assinatura de distribuição do Google.
 - Orientação da `MainActivity`: retrato
 - `android:allowBackup`: `false`
 - Release sem `debuggable` e sem `testOnly`
-- Nenhuma permissão de internet ou permissão perigosa
-
-A única permissão declarada no artefato é a permissão interna AndroidX de nível
-`signature`:
-
-`worde.com.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`
+- Permissões perigosas em runtime: nenhuma
+- Permissões do APK QA atual: `INTERNET`, `ACCESS_NETWORK_STATE`, `AD_ID`,
+  `ACCESS_ADSERVICES_AD_ID`, `ACCESS_ADSERVICES_ATTRIBUTION`,
+  `ACCESS_ADSERVICES_TOPICS`, `WAKE_LOCK`, `FOREGROUND_SERVICE` e a permissão
+  interna `worde.com.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`
 
 ## Assinatura de upload
 
@@ -64,8 +80,9 @@ A única permissão declarada no artefato é a permissão interna AndroidX de n�
 A chave privada e as senhas permanecem fora do projeto, com ACL limitada ao
 usuário local. Tarefas Gradle release falham se
 `LEXINEXO_KEY_PROPERTIES` não estiver configurado. O APK possui exatamente um
-signatário; o certificado coincide com a upload key. O AAB passou na validação
-de assinatura JAR.
+signatário; no release anterior, o certificado coincidiu com a upload key e o
+AAB passou na validação de assinatura JAR. Isso será verificado novamente no
+release com IDs AdMob reais.
 
 ## Recursos entregues nesta revisão
 
@@ -76,13 +93,20 @@ de assinatura JAR.
 - seletor de tamanho redesenhado como uma grade compacta 3×2, com progresso e
   estado de sessão em cards menores;
 - teclado QWERTY adaptativo fixo em três linhas, com altura de 44–48 dp e
-  largura limitada em tablets, elevado 18 dp da borda inferior;
+  largura limitada em tablets, agora elevado 44 dp da borda inferior;
 - separação de 18 dp entre o tabuleiro e o teclado, sem empurrar as teclas para
   fora da tela;
 - área superior rolável e teclado sempre acessível em telas baixas e texto 2×;
 - dica em português e `Hint (EN)` somente no modo com dicas;
 - preferência de som salva localmente, efeito original via SoundPool sem nova
   permissão e animação de check antes do diálogo de vitória;
+- Google Mobile Ads/UMP com intersticial somente em pausa natural, uma
+  oportunidade a cada três resultados novos e intervalo local mínimo de três
+  minutos; ausência/falha de anúncio não bloqueia o jogo e resultados
+  restaurados não disparam publicidade;
+- opção de rever preferências de privacidade na tela Sobre quando exigida pela
+  UMP, classificação máxima de conteúdo publicitário `T` e IDs de teste
+  restritos ao debug;
 - nova identidade Worde baseada no ícone fornecido pelo titular, com os cinco
   blocos `worde`, lupa de aprendizado, fundo azul e camada monocromática para
   launchers compatíveis;
@@ -104,9 +128,9 @@ O WAV original possui 45.908 bytes e SHA-256
 - Revisão editorial v2: 1.000 registros com duas passagens automatizadas
   identificadas, datas, hashes canônicos e aprovações separadas; nenhuma revisão
   humana é alegada pelo manifesto
-- Dados: 836.590 bytes brutos e 234.410 bytes comprimidos
+- Dados: 836.590 bytes brutos e 234.412 bytes comprimidos
 - SHA-256 de `data_manifest.json`:
-  `92AD5C71B466AB8DCCA562A8B1816BF5E962CB625EEFA64C8751FBCD4B5BB151`
+  `66AA0CDDD1A315913FE678F66A5669546DF7011A881DDBD3F2A225F3329997BD`
 - SHA-256 de `editorial_review.json`:
   `B2A46A5466B842AE6042BA5FAEB914056E9574C3B81FD739E1E8E1C938F6043B`
 
@@ -115,9 +139,38 @@ duplicidades, denylist, dicas PT/EN, textos truncados, famílias de templates,
 hashes, versões, dicionários e aprovações editoriais. Os avisos legais do SCOWL
 e do `hunspell-reader` estão em `THIRD_PARTY_NOTICES.md` e dentro do app.
 
-## Testes e verificações executados
+## Validação da revisão atual com AdMob
 
-Sequência final:
+Executado em 17 de agosto de 2026:
+
+1. `flutter pub get`: aprovado.
+2. Validador Dart e verificador Node do catálogo: 1.000 níveis, 42.039
+   tentativas e limites de dados aprovados.
+3. `dart format --output=none --set-exit-if-changed .`: 50 arquivos, nenhuma
+   alteração.
+4. `flutter analyze --fatal-infos`: nenhum problema.
+5. `flutter test`: 152 testes aprovados.
+6. `integration_test/app_test.dart` no AVD Android 36 normal, offline: 3/3.
+7. Captura integrada real: seis screenshots phone e quatro tablet; todas
+   inspecionadas visualmente e validadas por dimensão, formato e SHA-256.
+8. AVD Android 36 de 16 KiB: `PAGE_SIZE=16384`; APK QA instalado, atividade
+   principal retomada e nenhum crash/ANR do Worde.
+9. Tooling e kit estático da Play Store: aprovados.
+10. Build release sem IDs reais: rejeitado corretamente com a mensagem
+    `Release AdMob App ID is missing or invalid`.
+11. Gate completo de publicação: rejeitado corretamente apenas porque
+    `play_store/publication_metadata.json` real ainda não foi fornecido.
+
+Os testes cobrem frequência de três resultados/intervalo de três minutos,
+consentimento, falha de anúncio sem bloquear o jogo, vitória e derrota frescas,
+ausência de anúncio em resultado restaurado, som/animação, persistência,
+migração, categorias e layouts responsivos. O SDK também descarta anúncios
+vencidos após uma hora, invalida o cache ao rever consentimento, evita
+reentrância do formulário e tenta novo preload ao retomar o app.
+
+## Baseline anterior
+
+Antes da inclusão do SDK de anúncios, a sequência abaixo havia sido concluída:
 
 1. `flutter pub get`: aprovado.
 2. `dart run tool\validate_catalog.dart`: 1.000 níveis, 42.039 tentativas e
@@ -132,8 +185,13 @@ Sequência final:
 8. `integration_test/app_test.dart` no AVD Android 36 de 16 KiB, offline: 3/3.
 9. Busca por `TODO`, `FIXME` e `Lorem`: nenhuma pendência no produto; somente as
    denylist dos próprios validadores contêm esses termos.
-10. Build AAB e APK release assinado: aprovado.
-11. Verificação integral dos artefatos e cold start do APK release: aprovado.
+10. Build AAB e APK release assinado: aprovado para a revisão anterior.
+11. Verificação integral dos artefatos e cold start do APK release: aprovado
+    para a revisão anterior.
+
+Esse histórico não substitui o build final. Depois de receber os IDs reais, o
+AAB/APK de produção deve ser construído e ter assinatura, IDs, manifesto,
+permissões, alinhamento 16 KiB e instalação novamente verificados.
 
 A suíte cobre avaliação com letras repetidas, teclado, palavra incompleta ou
 inválida sem consumo, sexta tentativa, desbloqueio por categoria, replay, modos
@@ -144,7 +202,7 @@ texto 2×, som ligado/desligado, falha de áudio e animações reduzidas.
 
 ## Validação Android e 16 KiB
 
-O verificador final aprovou:
+O verificador da revisão anterior aprovou:
 
 - `bundletool validate`, `jarsigner`, `keytool`, `apksigner`, `aapt` e
   `zipalign -c -P 16 -v 4`;
@@ -156,10 +214,14 @@ O verificador final aprovou:
 - ABI compatível com `Machine` e nenhum diretório ABI extra;
 - todos os segmentos `LOAD` alinhados a pelo menos 16.384 bytes.
 
-Foram verificados 9 ELF no APK e 15 no AAB. No AVD especial, `getconf PAGE_SIZE`
+Foram verificados 9 ELF no APK e 15 no AAB anterior. No AVD especial, `getconf PAGE_SIZE`
 retornou `16384`, Wi-Fi estava desativado e `mobile_data=0`. O APK release foi
 instalado e iniciou a `MainActivity` a frio com status `ok`; a atividade ficou
 retomada, renderizou a tela inicial e permaneceu ativa sem crash.
+
+Na revisão atual, o APK QA com Google Mobile Ads foi instalado no mesmo tipo de
+AVD; `getconf PAGE_SIZE` retornou `16384`, o processo permaneceu ativo e
+`worde.com/.MainActivity` ficou como `topResumedActivity`, sem crash ou ANR.
 
 ## Ambiente fixado no disco D:
 
@@ -173,6 +235,7 @@ retomada, renderizou a tela inicial e permaneceu ativa sem crash.
 - Kotlin 2.3.20
 - bundletool 1.18.3
 - `shared_preferences 2.5.5`
+- `google_mobile_ads 9.1.0`
 
 Flutter, Android SDK, JDK, Gradle, Pub, temporários e AVDs usam o D:. A entrada
 oficial do ambiente é:
@@ -193,40 +256,56 @@ Diretório: `play_store/pt-BR`
 - 4 screenshots tablet 1440×2560 PNG RGB24;
 - política de privacidade em templates HTML e Markdown, com gerador que injeta
   somente metadados reais;
-- matriz Data Safety, IARC e declarações de público/ausência de anúncios;
+- matriz Data Safety, IARC, declaração de anúncios, Advertising ID e UMP;
+- guia de configuração do AdMob e template de `app-ads.txt`;
 - inventário SHA-256 dos 12 materiais gráficos.
 
+O inventário gráfico atual foi regenerado e seus 12 registros foram verificados.
 SHA-256 de `STORE_ASSETS_SHA256.txt`:
-`92D062A342391C9269BBC8AA0C47A7E0E67CA912C7D5CAD9C792FF471608EB96`.
+`3A1F5FA3C8322D0A6E590B3669F8AE15DBCC1A1DB9FA69F21D620A3157ABA22A`.
 
-`play_store/validate_static_kit.ps1` passou. O gate completo permanece bloqueado
-somente pela ausência deliberada de `play_store/publication_metadata.json`.
+O kit narrativo, os gráficos/capturas e os validadores estáticos estão atuais.
+O gate completo permanece bloqueado por `play_store/publication_metadata.json`,
+pelos IDs reais do AdMob, pelo Publisher ID e pelos novos artefatos release
+assinados.
 
 ## Etapas externas restantes
 
 Os caminhos e comandos a seguir são relativos ao repositório-fonte; os
 artefatos equivalentes do pacote estão identificados nas seções anteriores.
 
-1. Copiar `play_store/publication_metadata.template.json` para
+1. Criar o app `worde.com` e a unidade intersticial na conta real do AdMob;
+   fornecer `WORDE_ADMOB_APP_ID`, `WORDE_ADMOB_INTERSTITIAL_ID` e o Publisher ID
+   real, publicar as mensagens UMP e o `app-ads.txt` conforme
+   `play_store/ADMOB_SETUP.md`.
+2. Copiar `play_store/publication_metadata.template.json` para
    `play_store/publication_metadata.json` e preencher todos os campos reais do
    schema v2: tipo de conta, nome público, contatos, site e URLs HTTPS de suporte
    e privacidade.
-2. Executar `play_store/prepare_publication.ps1`; ele gera as políticas finais
+3. Executar `play_store/prepare_publication.ps1`; ele gera as políticas finais
    HTML e Markdown. Hospedar o HTML exatamente na URL declarada e rodar
    `play_store/validate_publication.ps1`.
-3. Na Play Console: verificar identidade e contatos privados da conta; para
+4. Reconstruir AAB/APK release, executar toda a suíte, validar assinatura,
+   permissões, 16 KiB e instalação, confirmar o kit gráfico atual e atualizar
+   os hashes dos binários.
+5. Na Play Console: verificar identidade e contatos privados da conta; para
    organização, confirmar D‑U‑N‑S e contatos públicos exigidos; reservar
    `worde.com`, aderir ao Play App Signing, preencher Data
-   Safety/IARC/público e ausência de anúncios e enviar primeiro ao teste interno.
-4. Se a conta real for pessoal criada depois de 13/11/2023, cumprir o teste
+   Safety/IARC/público, declarar que contém anúncios e enviar primeiro ao teste
+   interno.
+6. Se a conta real for pessoal criada depois de 13/11/2023, cumprir o teste
    fechado exigido antes da produção.
-5. Antes do lançamento público, pesquisar **Worde** no INPI e avaliar
+7. Antes do lançamento público, pesquisar **Worde** no INPI e avaliar
    eventuais conflitos de marca; disponibilidade do nome/package não é parecer
    jurídico.
 
 ## Instalação direta do APK
 
-1. Copie `app-release.apk` para o telefone Android.
+Para avaliar agora, use `Worde-1.0.0-test-ads.apk`; ele exibe anúncios de teste e
+não deve ser enviado à loja. Para distribuição pública, aguarde o APK/AAB release
+reconstruído com os IDs reais. O APK pré-AdMob listado acima está obsoleto.
+
+1. Copie `Worde-1.0.0-test-ads.apk` para o telefone Android.
 2. Ao abrir o arquivo, permita temporariamente **Instalar apps desconhecidos**
    para o app usado na abertura (por exemplo, Arquivos ou navegador).
 3. Confirme a instalação e abra **Worde**.

@@ -36,7 +36,7 @@ void main() {
       find.byKey(const ValueKey<String>('letter_key_m')),
     );
     expect(q.top - boardBottom.bottom, greaterThanOrEqualTo(17.9));
-    expect(bottomKey.bottom, lessThanOrEqualTo(size.height - 18));
+    expect(bottomKey.bottom, lessThanOrEqualTo(size.height - 44));
     expect(tester.takeException(), isNull);
   });
 

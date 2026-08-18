@@ -30,7 +30,10 @@
 
 ## 4. Conteúdo e segurança
 
-- Declare que o app não contém anúncios.
+- Declare que o app contém anúncios.
+- No pacote, use `owner-action/ADMOB_SETUP.md`; no repositório-fonte, use
+  `play_store/ADMOB_SETUP.md` para cadastrar `worde.com`, criar a unidade
+  intersticial, publicar as mensagens UMP e configurar `app-ads.txt`.
 - Informe acesso irrestrito: não há conta nem credenciais.
 - Preencha Segurança dos dados conforme `compliance/data_safety.md`.
 - Preencha anúncios, acesso ao app, público, dados, saúde, finanças, governo, notícias, COVID-19 e IARC conforme `compliance/PLAY_CONSOLE_ANSWERS.md`; confira a classificação gerada pelo IARC.
@@ -39,10 +42,12 @@
 ## 5. Release
 
 1. Confirme que a conta e a identidade do desenvolvedor estão verificadas.
-2. Execute o gate técnico e confira o relatório de release do projeto.
-3. Envie `release/app-release.aab` do pacote primeiro ao teste interno. No repositório-fonte, o mesmo artefato fica em `build/app/outputs/bundle/release/app-release.aab`.
-4. Confira nome, versão 1.0.0 (código 1), aparelhos compatíveis, integridade, permissões e avisos do pré-lançamento.
-5. Promova à produção somente após resolver todos os alertas obrigatórios. Se a conta pessoal estiver sujeita ao teste fechado obrigatório, cumpra o período e a quantidade de participantes exibidos pela Play Console antes de solicitar acesso à produção.
+2. Configure os dois IDs reais do AdMob no build e publique o `app-ads.txt` com
+   o Publisher ID real. Não envie um APK debug ou um binário com IDs de teste.
+3. Execute o gate técnico e confira o relatório de release do projeto.
+4. Envie `release/app-release.aab` do pacote primeiro ao teste interno. No repositório-fonte, o mesmo artefato fica em `build/app/outputs/bundle/release/app-release.aab`.
+5. Confira nome, versão 1.0.0 (código 1), aparelhos compatíveis, integridade, permissões, declaração de anúncios, Data Safety e avisos do pré-lançamento.
+6. Promova à produção somente após resolver todos os alertas obrigatórios. Se a conta pessoal estiver sujeita ao teste fechado obrigatório, cumpra o período e a quantidade de participantes exibidos pela Play Console antes de solicitar acesso à produção.
 
 ## Gate final
 
@@ -55,7 +60,7 @@ O conteúdo estático pode ser conferido antes de receber os dados públicos rea
 & .\play_store\validate_static_kit.ps1
 ```
 
-Essa verificação cobre textos, nomes, limites e dimensões dos materiais. Ela não substitui a recaptura após mudanças visuais. O gate completo abaixo permanece fechado até existirem `publication_metadata.json` com dados reais e a política HTML final correspondente.
+Essa verificação cobre textos, nomes, limites e dimensões dos materiais. Ela não substitui a recaptura após mudanças visuais. O gate completo abaixo permanece fechado até existirem `publication_metadata.json` com dados reais, a política HTML final correspondente, os IDs reais do AdMob e um release reconstruído e validado.
 
 ```powershell
 & .\play_store\prepare_publication.ps1

@@ -2,12 +2,14 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:lexinexo/src/ads/game_ads.dart';
 import 'package:lexinexo/src/audio/success_audio_service.dart';
 import 'package:lexinexo/src/data/catalog_repository.dart';
 import 'package:lexinexo/src/data/save_repository.dart';
 import 'package:lexinexo/src/domain/models.dart';
 import 'package:lexinexo/src/state/game_store.dart';
 import 'package:lexinexo/src/ui/app_theme.dart';
+import 'package:lexinexo/src/ui/ads_scope.dart';
 import 'package:lexinexo/src/ui/game_scope.dart';
 import 'package:lexinexo/src/ui/screens/game_screen.dart';
 
@@ -141,22 +143,27 @@ Future<void> pumpGame(
   required GameMode mode,
   required int levelNumber,
   SuccessAudioService? audio,
+  GameAds? ads,
   bool disableAnimations = false,
 }) async {
+  final effectiveAds = ads ?? DisabledGameAds();
   await tester.pumpWidget(
     GameScope(
       store: store,
-      child: MaterialApp(
-        theme: buildAppTheme(),
-        home: Builder(
-          builder: (context) => MediaQuery(
-            data: MediaQuery.of(
-              context,
-            ).copyWith(disableAnimations: disableAnimations),
-            child: GameScreen(
-              mode: mode,
-              levelNumber: levelNumber,
-              successAudioService: audio,
+      child: AdsScope(
+        ads: effectiveAds,
+        child: MaterialApp(
+          theme: buildAppTheme(),
+          home: Builder(
+            builder: (context) => MediaQuery(
+              data: MediaQuery.of(
+                context,
+              ).copyWith(disableAnimations: disableAnimations),
+              child: GameScreen(
+                mode: mode,
+                levelNumber: levelNumber,
+                successAudioService: audio,
+              ),
             ),
           ),
         ),
@@ -186,4 +193,32 @@ class RecordingSuccessAudio implements SuccessAudioService {
     if (throwOnPlay) throw StateError('audio indisponível');
     return result;
   }
+}
+
+class RecordingGameAds extends GameAds {
+  RecordingGameAds({
+    this.requirePrivacyOptions = false,
+    this.throwOnShow = false,
+  });
+
+  final bool requirePrivacyOptions;
+  final bool throwOnShow;
+  int initializeCalls = 0;
+  int naturalBreakCalls = 0;
+  int privacyOptionsCalls = 0;
+
+  @override
+  bool get privacyOptionsRequired => requirePrivacyOptions;
+
+  @override
+  Future<void> initialize() async => initializeCalls += 1;
+
+  @override
+  Future<void> showInterstitialAtNaturalBreak() async {
+    naturalBreakCalls += 1;
+    if (throwOnShow) throw StateError('anúncio indisponível');
+  }
+
+  @override
+  Future<void> showPrivacyOptions() async => privacyOptionsCalls += 1;
 }

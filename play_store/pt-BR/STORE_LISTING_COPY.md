@@ -18,10 +18,10 @@
 Worde: Aprenda Palavras
 ```
 
-## Descrição curta — 71 de 80 caracteres
+## Descrição curta — 69 de 80 caracteres
 
 ```text
-Aprenda inglês jogando 1.000 desafios de palavras, com dicas e offline.
+Aprenda inglês em 1.000 desafios, com dicas bilíngues e jogo offline.
 ```
 
 ## Descrição completa
@@ -43,10 +43,10 @@ APRENDA NO SEU RITMO
 • Tradução e significado em português ao fim das partidas.
 • Teclado QWERTY adaptativo de três linhas, resposta tátil e interface acessível.
 • Som e animação de acerto; o som pode ser silenciado no jogo.
-• Funciona totalmente offline depois da instalação.
-• Sem anúncios, compras, moedas, vidas, contas ou ranking.
+• A partida e o progresso funcionam offline.
+• Sem compras, moedas, vidas, contas ou ranking.
 
-Seu progresso por categoria, suas partidas atuais e a preferência de som ficam somente no aparelho. Abra o Worde quando quiser e continue exatamente de onde parou.
+O app contém anúncios intersticiais do Google AdMob em pausas naturais: uma oportunidade a cada três resultados novos, com intervalo local mínimo de três minutos. Eles exigem conexão e respeitam as escolhas de privacidade aplicáveis; se não houver anúncio pronto, o jogo segue sem espera. Seu progresso por categoria, suas partidas atuais e a preferência de som ficam no aparelho.
 ```
 
 ## Notas da versão — até 500 caracteres
@@ -59,7 +59,7 @@ Primeira versão do Worde.
 • Modos com dicas bilíngues ou sem dicas.
 • Teclado adaptativo de três linhas.
 • Traduções, som opcional e animação de acerto.
-• Funcionamento totalmente offline, sem anúncios ou contas.
+• Partida offline e intersticiais espaçados entre resultados, sem contas.
 ```
 
 ## Tags sugeridas

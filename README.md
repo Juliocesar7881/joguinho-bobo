@@ -3,9 +3,11 @@
 Worde é um jogo Android de palavras em inglês, com interface em português
 brasileiro, 1.000 desafios e dois modos independentes: com dicas bilíngues e
 sem dicas. Em cada modo, o jogador escolhe livremente palavras de 3 a 8 letras,
-com progresso e partida separados por tamanho. O aplicativo funciona
-integralmente offline, não exige conta, não exibe anúncios e não coleta nem
-compartilha dados.
+com progresso e partida separados por tamanho. A partida funciona offline e
+não exige conta. Quando há conexão e consentimento aplicável, o app pode exibir
+intersticiais do Google AdMob em pausas naturais entre níveis. O código só
+considera uma exibição a cada três resultados novos e mantém um intervalo local
+mínimo de três minutos; se não houver anúncio pronto, o jogo segue sem espera.
 
 O jogo usa um teclado QWERTY adaptativo de três linhas. Vitórias têm animação
 curta e um som local opcional, que pode ser silenciado sem afetar a resposta
@@ -51,12 +53,19 @@ A assinatura de release é externa ao projeto. `scripts/lexinexo-env.ps1`
 define `LEXINEXO_KEY_PROPERTIES` para a upload key armazenada em
 `D:\LexiNexoRelease\signing`. Nenhuma senha ou chave privada é versionada. Um
 build de release falha de forma explícita quando essa variável ou suas
-propriedades estão ausentes.
+propriedades estão ausentes. A monetização também falha fechada sem os IDs reais
+`WORDE_ADMOB_APP_ID` e `WORDE_ADMOB_INTERSTITIAL_ID`; builds debug usam somente
+os IDs oficiais de teste do Google.
 
 ```powershell
 flutter build appbundle --release
 flutter build apk --release
 ```
+
+Antes do release, crie o app `worde.com` e uma unidade intersticial no AdMob,
+publique as mensagens de consentimento UMP e siga `play_store/ADMOB_SETUP.md`.
+Sem os dois IDs reais do AdMob, o Publisher ID para `app-ads.txt` e os metadados
+públicos verdadeiros do titular, não há AAB de produção pronto para upload.
 
 O AAB é o artefato destinado à Google Play. O APK universal é destinado a
 instalação direta e QA; depois da adesão ao Play App Signing, a distribuição

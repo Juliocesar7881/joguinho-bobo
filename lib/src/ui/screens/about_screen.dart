@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../legal/legal_documents.dart';
+import '../ads_scope.dart';
 import '../app_theme.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -10,6 +11,7 @@ class AboutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ads = AdsScope.maybeOf(context);
     return Scaffold(
       appBar: AppBar(title: const Text('Sobre o Worde')),
       body: SafeArea(
@@ -19,17 +21,41 @@ class AboutScreen extends StatelessWidget {
             constraints: const BoxConstraints(maxWidth: 760),
             child: ListView(
               padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
-              children: const <Widget>[
-                _AboutHeader(),
-                SizedBox(height: 20),
-                _LegalSection(
+              children: <Widget>[
+                const _AboutHeader(),
+                const SizedBox(height: 20),
+                const _LegalSection(
                   icon: Icons.shield_outlined,
-                  title: 'Privacidade e funcionamento offline',
+                  title: 'Privacidade, anúncios e dados locais',
                   documentKey: 'privacy_policy_pt_BR',
                   content: privacyPolicyPtBr,
                 ),
-                SizedBox(height: 16),
-                _LegalSection(
+                if (ads?.privacyOptionsRequired ?? false) ...<Widget>[
+                  const SizedBox(height: 12),
+                  OutlinedButton.icon(
+                    key: const Key('ad_privacy_options'),
+                    onPressed: () async {
+                      try {
+                        await ads!.showPrivacyOptions();
+                      } on Object {
+                        if (!context.mounted) return;
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              'Não foi possível abrir as opções de privacidade.',
+                            ),
+                          ),
+                        );
+                      }
+                    },
+                    icon: const Icon(Icons.tune_rounded),
+                    label: const Text(
+                      'Preferências de privacidade de anúncios',
+                    ),
+                  ),
+                ],
+                const SizedBox(height: 16),
+                const _LegalSection(
                   icon: Icons.description_outlined,
                   title: 'Licenças e créditos',
                   documentKey: 'third_party_notices_pt_BR',
@@ -85,7 +111,7 @@ class _AboutHeader extends StatelessWidget {
                   ),
                   SizedBox(height: 6),
                   Text(
-                    'Jogo de palavras em inglês, feito para funcionar offline.',
+                    'Jogo de palavras em inglês; a partida funciona offline.',
                     style: TextStyle(height: 1.35),
                   ),
                 ],

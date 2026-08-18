@@ -5,4 +5,4 @@ Primeira versão do Worde.
 • Modos com dicas bilíngues ou sem dicas.
 • Teclado adaptativo de três linhas.
 • Traduções, som opcional e animação de acerto.
-• Funcionamento totalmente offline, sem anúncios ou contas.
+• Partida offline e intersticiais espaçados entre resultados, sem contas.

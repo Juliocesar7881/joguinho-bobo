@@ -11,6 +11,7 @@ void main() {
     tester,
   ) async {
     final audio = RecordingSuccessAudio();
+    final ads = RecordingGameAds();
     final store = await createTestStore();
     await pumpGame(
       tester,
@@ -18,6 +19,7 @@ void main() {
       mode: GameMode.withHints,
       levelNumber: 1,
       audio: audio,
+      ads: ads,
     );
 
     await enterWord(tester, 'cat');
@@ -33,6 +35,27 @@ void main() {
     expect(find.byKey(const Key('success_check_animation')), findsNothing);
     expect(find.text('Você acertou!'), findsOneWidget);
     expect(audio.calls, 1);
+    expect(ads.naturalBreakCalls, 1);
+  });
+
+  testWidgets('falha de anúncio nunca bloqueia o resultado', (tester) async {
+    final ads = RecordingGameAds(throwOnShow: true);
+    final store = await createTestStore();
+    await pumpGame(
+      tester,
+      store: store,
+      mode: GameMode.withHints,
+      levelNumber: 1,
+      ads: ads,
+      disableAnimations: true,
+    );
+
+    await enterWord(tester, 'cat');
+    await tester.pumpAndSettle();
+
+    expect(ads.naturalBreakCalls, 1);
+    expect(find.text('Você acertou!'), findsOneWidget);
+    expect(tester.takeException(), isNull);
   });
 
   testWidgets('opção de som desativada é persistida e impede reprodução', (
@@ -115,6 +138,7 @@ void main() {
 
   testWidgets('derrota não toca o som de acerto', (tester) async {
     final audio = RecordingSuccessAudio();
+    final ads = RecordingGameAds();
     final store = await createTestStore();
     await pumpGame(
       tester,
@@ -122,6 +146,7 @@ void main() {
       mode: GameMode.withHints,
       levelNumber: 1,
       audio: audio,
+      ads: ads,
     );
 
     for (var attempt = 0; attempt < 6; attempt++) {
@@ -131,5 +156,6 @@ void main() {
 
     expect(find.text('Não foi dessa vez'), findsOneWidget);
     expect(audio.calls, 0);
+    expect(ads.naturalBreakCalls, 1);
   });
 }

@@ -1,22 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:lexinexo/src/ui/ads_scope.dart';
 import 'package:lexinexo/src/ui/screens/about_screen.dart';
+
+import 'test_support.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('mostra versão e política offline empacotada', (tester) async {
+  testWidgets('mostra versão e política de anúncios empacotada', (
+    tester,
+  ) async {
     await tester.pumpWidget(const MaterialApp(home: AboutScreen()));
     await tester.pumpAndSettle();
 
     expect(find.text('Sobre o Worde'), findsOneWidget);
     expect(find.text('Versão 1.0.0'), findsOneWidget);
-    expect(find.text('Privacidade e funcionamento offline'), findsOneWidget);
-    expect(find.textContaining('não coleta, envia, vende'), findsOneWidget);
-    expect(
-      find.textContaining('não solicita permissão de internet'),
-      findsOneWidget,
+    expect(find.text('Privacidade, anúncios e dados locais'), findsOneWidget);
+    expect(find.textContaining('Google Mobile Ads'), findsOneWidget);
+    expect(find.textContaining('pode coletar e compartilhar'), findsOneWidget);
+  });
+
+  testWidgets('abre preferências UMP quando a região exige', (tester) async {
+    final ads = RecordingGameAds(requirePrivacyOptions: true);
+    await tester.pumpWidget(
+      AdsScope(
+        ads: ads,
+        child: const MaterialApp(home: AboutScreen()),
+      ),
     );
+    await tester.pumpAndSettle();
+
+    final button = find.byKey(const Key('ad_privacy_options'));
+    await tester.scrollUntilVisible(
+      button,
+      300,
+      scrollable: find.byType(Scrollable),
+    );
+    final outlinedButton = tester.widget<OutlinedButton>(button);
+    outlinedButton.onPressed!.call();
+    await tester.pumpAndSettle();
+
+    expect(ads.privacyOptionsCalls, 1);
   });
 
   testWidgets('mostra crédito e licença do SCOWL', (tester) async {

@@ -5,6 +5,25 @@ SCOWL/ESDB dictionaries. Its PT-BR translations, meanings, and clues are
 original editorial content created for Worde. The development-only
 dictionary build tooling uses `hunspell-reader`.
 
+The Android runtime also includes `google_mobile_ads` 9.1.0 and its transitive
+Flutter web-view packages. Flutter packages their license texts in the
+application's generated license bundle.
+
+## Google Mobile Ads Flutter plugin — 9.1.0
+
+Source: <https://pub.dev/packages/google_mobile_ads>
+
+Copyright Google LLC.
+
+Licensed under the Apache License, Version 2.0. You may obtain a copy at
+<https://www.apache.org/licenses/LICENSE-2.0>. Unless required by applicable
+law or agreed to in writing, software distributed under the License is
+distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
+
+Use of the Google Mobile Ads SDK and User Messaging Platform is additionally
+subject to the applicable Google APIs terms and privacy policies:
+<https://developers.google.com/terms> and <https://policies.google.com/privacy>.
+
 ## SCOWL/ESDB — rel-2026.02.25
 
 Source: <https://github.com/en-wl/wordlist/tree/rel-2026.02.25>

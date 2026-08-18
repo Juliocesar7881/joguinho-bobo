@@ -1,0 +1,2 @@
+# Substitua pelo trecho personalizado fornecido em AdMob > Apps > app-ads.txt.
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

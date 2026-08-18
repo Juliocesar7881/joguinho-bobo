@@ -26,7 +26,7 @@ Envie como **Telefone**, nesta ordem:
 | 3 | `screenshots/phone/02-tamanhos.png` | Seleção compacta de palavras de 3 a 8 letras com progresso separado por categoria. |
 | 4 | `screenshots/phone/03-niveis-4-letras.png` | Grade da categoria de quatro letras com o próximo desafio disponível. |
 | 5 | `screenshots/phone/01-inicio.png` | Tela inicial do Worde com os modos Com dicas e Sem dicas. |
-| 6 | `screenshots/phone/06-privacidade.png` | Tela Sobre com versão, funcionamento offline, privacidade e licenças. |
+| 6 | `screenshots/phone/06-privacidade.png` | Tela Sobre com versão, dados locais, anúncios, privacidade e licenças. |
 
 Todas medem 1080×1920, são PNG RGB de 24 bits e não possuem alpha, moldura ou
 elementos promocionais falsos.

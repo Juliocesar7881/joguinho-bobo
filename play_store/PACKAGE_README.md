@@ -9,9 +9,12 @@ conta do titular na Google Play Console.
 2. Confira `identity/APP_IDENTITY.json`.
 3. Preencha os dados verdadeiros indicados em
    `owner-action/PREENCHA_COM_SEUS_DADOS.md`.
-4. Use `release/app-release.aab` no teste interno da Play Console.
-5. Siga `store/pt-BR/upload_guide.md` e `store/pt-BR/ASSET_UPLOAD_MAP.md`.
-6. Copie os textos diretamente de `store/pt-BR/STORE_LISTING_COPY.md`.
+4. Configure os IDs reais e o Publisher ID conforme
+   `owner-action/ADMOB_SETUP.md`.
+5. Depois do build e da validação finais, use `release/app-release.aab` no teste
+   interno da Play Console.
+6. Siga `store/pt-BR/upload_guide.md` e `store/pt-BR/ASSET_UPLOAD_MAP.md`.
+7. Copie os textos diretamente de `store/pt-BR/STORE_LISTING_COPY.md`.
 
 Todos os caminhos deste documento são relativos à raiz da pasta extraída. As
 automações de geração e validação ficam no repositório-fonte; este pacote é a
@@ -26,6 +29,8 @@ entrega autocontida para preencher a Console e enviar os materiais.
 - `mobile-branding/`: imagem original fornecida, master do ícone instalado,
   adaptive foreground, monochrome, splash e renderizador determinístico.
 - `compliance/`: respostas para todos os formulários de Conteúdo do app.
+- `owner-action/ADMOB_SETUP.md`: cadastro do app, UMP, frequência, Data Safety
+  e `app-ads.txt`.
 - `legal/`: política, suporte, licenças e templates para hospedagem.
 - `reports/`: relatório técnico completo da release.
 - `owner-action/`: ações que somente o titular da conta pode concluir.
@@ -53,12 +58,17 @@ capaz de reconstruir a chave privada.
 
 ## Status de publicação
 
-O app e os materiais técnicos estão prontos. Publicação efetiva depende da
-conta verificada, dos dados públicos verdadeiros do titular, da hospedagem HTTPS
-da política/suporte, do questionário IARC, dos termos aceitos e de eventual
-teste fechado exigido para contas pessoais novas.
+O código e os materiais de preparação estão organizados, mas um pacote só pode
+ser chamado de publicável depois de ser reconstruído com os dois IDs reais do
+AdMob, validado e acompanhado do `app-ads.txt` com Publisher ID real. Builds
+debug usam IDs de teste e não são apropriados para envio nem monetização.
 
-Os únicos dados deliberadamente ausentes estão listados em
+A publicação efetiva também depende da conta verificada, dos dados públicos
+verdadeiros do titular, da hospedagem HTTPS da política/suporte, do questionário
+IARC, dos termos aceitos e de eventual teste fechado exigido para contas
+pessoais novas.
+
+Os dados e credenciais deliberadamente ausentes estão listados em
 `owner-action/PREENCHA_COM_SEUS_DADOS.md`. Eles dependem da identidade real do
 titular e não devem ser inventados. Se as páginas finais já tiverem sido
 geradas com esses dados, elas estarão em `legal/final/`; caso contrário, use os

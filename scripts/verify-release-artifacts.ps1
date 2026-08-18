@@ -30,6 +30,21 @@ $readelf = Join-Path $env:ANDROID_HOME 'ndk\28.2.13676358\toolchains\llvm\prebui
 $expectedCertificateSha256 = '5954661688063D35EF3392B7502F4622D1ED6F0A74FD638E466888CBC4787996'
 $expectedAabSignatureBase = 'LEXINEXO'
 $expectedInternalPermission = 'worde.com.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+$expectedUsesPermissions = @(
+    'android.permission.INTERNET',
+    'android.permission.ACCESS_NETWORK_STATE',
+    'com.google.android.gms.permission.AD_ID',
+    'android.permission.ACCESS_ADSERVICES_AD_ID',
+    'android.permission.ACCESS_ADSERVICES_ATTRIBUTION',
+    'android.permission.ACCESS_ADSERVICES_TOPICS',
+    'android.permission.WAKE_LOCK',
+    'android.permission.FOREGROUND_SERVICE',
+    $expectedInternalPermission
+)
+$adMobAppIdPattern = '^ca-app-pub-[0-9]{16}~[0-9]{10}$'
+$adMobInterstitialIdPattern = '^ca-app-pub-[0-9]{16}/[0-9]{10}$'
+$googleTestAdMobAppId = 'ca-app-pub-3940256099942544~3347511713'
+$googleTestInterstitialId = 'ca-app-pub-3940256099942544/1033173712'
 $expectedApplicationLabel = 'Worde'
 $androidNamespace = 'http://schemas.android.com/apk/res/android'
 $expectedAbis = @('armeabi-v7a', 'arm64-v8a', 'x86_64')
@@ -42,6 +57,46 @@ $expectedElfMachines = @{
 function Assert-Condition {
     param([bool]$Condition, [string]$Message)
     if (!$Condition) { throw $Message }
+}
+
+function Assert-ExactStringSet {
+    param(
+        [object[]]$ActualValues,
+        [string[]]$ExpectedValues,
+        [string]$Description
+    )
+    $actualStrings = @($ActualValues | ForEach-Object { [string]$_ })
+    $sortedActual = @($actualStrings | Sort-Object)
+    $sortedExpected = @($ExpectedValues | Sort-Object)
+    Assert-Condition (
+        $actualStrings.Count -eq $ExpectedValues.Count -and
+        (($sortedActual -join '|') -ceq ($sortedExpected -join '|'))
+    ) "$Description must be exactly: $($sortedExpected -join ', ')."
+}
+
+function Assert-ProductionAdMobConfiguration {
+    param(
+        [string]$AppId,
+        [string]$InterstitialId,
+        [string]$ArtifactLabel
+    )
+    Assert-Condition ($AppId -cmatch $adMobAppIdPattern) "$ArtifactLabel contains a missing or malformed AdMob App ID."
+    Assert-Condition ($InterstitialId -cmatch $adMobInterstitialIdPattern) "$ArtifactLabel contains a missing or malformed AdMob interstitial ID."
+    Assert-Condition ($AppId -cne $googleTestAdMobAppId) "$ArtifactLabel contains Google's test AdMob App ID."
+    Assert-Condition ($InterstitialId -cne $googleTestInterstitialId) "$ArtifactLabel contains Google's test interstitial ID."
+
+    $appPublisher = [regex]::Match($AppId, '^ca-app-pub-(?<Publisher>[0-9]{16})~').Groups['Publisher'].Value
+    $unitPublisher = [regex]::Match($InterstitialId, '^ca-app-pub-(?<Publisher>[0-9]{16})/').Groups['Publisher'].Value
+    Assert-Condition ($appPublisher -ceq $unitPublisher) "$ArtifactLabel AdMob IDs belong to different publisher IDs."
+
+    $configuredAppId = [string]$env:WORDE_ADMOB_APP_ID
+    if (-not [string]::IsNullOrWhiteSpace($configuredAppId)) {
+        Assert-Condition ($AppId -ceq $configuredAppId.Trim()) "$ArtifactLabel AdMob App ID differs from WORDE_ADMOB_APP_ID."
+    }
+    $configuredInterstitialId = [string]$env:WORDE_ADMOB_INTERSTITIAL_ID
+    if (-not [string]::IsNullOrWhiteSpace($configuredInterstitialId)) {
+        Assert-Condition ($InterstitialId -ceq $configuredInterstitialId.Trim()) "$ArtifactLabel interstitial ID differs from WORDE_ADMOB_INTERSTITIAL_ID."
+    }
 }
 
 function Invoke-Checked {
@@ -201,15 +256,31 @@ $bundleOrientation = Get-AndroidAttribute $bundleMainActivity 'screenOrientation
 Assert-Condition ($bundleOrientation -eq 'portrait' -or $bundleOrientation -eq '1') 'AAB MainActivity is not locked to portrait.'
 
 $bundleUsesPermissions = @($bundleManifest.SelectNodes("./*[starts-with(local-name(), 'uses-permission')]"))
-Assert-Condition ($bundleUsesPermissions.Count -eq 1) 'AAB must request exactly the allowlisted AndroidX internal permission.'
-$bundleUsesPermissionName = Get-AndroidAttribute $bundleUsesPermissions[0] 'name'
-Assert-Condition ($bundleUsesPermissionName -eq $expectedInternalPermission) "AAB requests a non-allowlisted permission: $bundleUsesPermissionName"
+$bundleUsesPermissionNames = @($bundleUsesPermissions | ForEach-Object { Get-AndroidAttribute $_ 'name' })
+Assert-ExactStringSet $bundleUsesPermissionNames $expectedUsesPermissions 'AAB requested permissions'
 $bundleDeclaredPermissions = @($bundleManifest.SelectNodes('./permission'))
 Assert-Condition ($bundleDeclaredPermissions.Count -eq 1) 'AAB must declare exactly one internal signature permission.'
 $bundleDeclaredPermissionName = Get-AndroidAttribute $bundleDeclaredPermissions[0] 'name'
 $bundleProtectionLevel = Get-AndroidAttribute $bundleDeclaredPermissions[0] 'protectionLevel'
 Assert-Condition ($bundleDeclaredPermissionName -eq $expectedInternalPermission) "AAB declares an unexpected permission: $bundleDeclaredPermissionName"
 Assert-Condition ($bundleProtectionLevel -match '^(?i:signature|2|0x0*2)$') 'AAB internal permission is not protected at signature level.'
+
+$bundleApplicationMetaData = @($bundleApplication.SelectNodes('./meta-data'))
+$bundleAdMobAppIdNodes = @(
+    $bundleApplicationMetaData | Where-Object {
+        (Get-AndroidAttribute $_ 'name') -ceq 'com.google.android.gms.ads.APPLICATION_ID'
+    }
+)
+$bundleInterstitialIdNodes = @(
+    $bundleApplicationMetaData | Where-Object {
+        (Get-AndroidAttribute $_ 'name') -ceq 'worde.com.ADMOB_INTERSTITIAL_ID'
+    }
+)
+Assert-Condition ($bundleAdMobAppIdNodes.Count -eq 1) 'AAB must contain exactly one AdMob App ID metadata entry.'
+Assert-Condition ($bundleInterstitialIdNodes.Count -eq 1) 'AAB must contain exactly one Worde interstitial ID metadata entry.'
+$bundleAdMobAppId = Get-AndroidAttribute $bundleAdMobAppIdNodes[0] 'value'
+$bundleInterstitialId = Get-AndroidAttribute $bundleInterstitialIdNodes[0] 'value'
+Assert-ProductionAdMobConfiguration $bundleAdMobAppId $bundleInterstitialId 'AAB'
 
 $signerOutput = Invoke-Checked $apksigner @('verify', '--verbose', '--print-certs', $apk)
 $signerText = $signerOutput -join "`n"
@@ -262,15 +333,17 @@ foreach ($attributeName in @('debuggable', 'testOnly')) {
 
 $permissions = (Invoke-Checked $aapt @('dump', 'permissions', $apk)) -join "`n"
 $apkUsesPermissionLines = [regex]::Matches($permissions, '(?m)^uses-permission(?:-[^:\r\n]+)?:[^\r\n]*$')
-Assert-Condition ($apkUsesPermissionLines.Count -eq 1) 'APK must request exactly the allowlisted AndroidX internal permission.'
-$apkUsesPermissionMatch = [regex]::Match(
-    $apkUsesPermissionLines[0].Value,
-    "^uses-permission(?:-sdk-\d+)?: name='([^']+)'\s*$"
+$apkUsesPermissionNames = @(
+    foreach ($apkUsesPermissionLine in $apkUsesPermissionLines) {
+        $apkUsesPermissionMatch = [regex]::Match(
+            $apkUsesPermissionLine.Value,
+            "^uses-permission(?:-sdk-\d+)?: name='([^']+)'\s*$"
+        )
+        Assert-Condition $apkUsesPermissionMatch.Success 'APK uses an unsupported uses-permission declaration.'
+        $apkUsesPermissionMatch.Groups[1].Value
+    }
 )
-Assert-Condition $apkUsesPermissionMatch.Success 'APK uses an unsupported uses-permission declaration.'
-$apkUsesPermissionName = $apkUsesPermissionMatch.Groups[1].Value
-Assert-Condition ($apkUsesPermissionName -eq $expectedInternalPermission) "APK requests a non-allowlisted permission: $apkUsesPermissionName"
-Assert-Condition ($permissions -notmatch 'android\.permission\.INTERNET') 'Release APK requests INTERNET.'
+Assert-ExactStringSet $apkUsesPermissionNames $expectedUsesPermissions 'APK requested permissions'
 
 $apkPermissionBlocks = [regex]::Matches(
     $apkManifestTree,
@@ -280,6 +353,30 @@ Assert-Condition ($apkPermissionBlocks.Count -eq 1) 'APK must declare exactly on
 $apkPermissionBlock = $apkPermissionBlocks[0].Value
 Assert-Condition ($apkPermissionBlock -match [regex]::Escape($expectedInternalPermission)) 'APK declares an unexpected internal permission.'
 Assert-Condition ($apkPermissionBlock -match 'android:protectionLevel[^\r\n]*0x2(?:\s|$)') 'APK internal permission is not protected at signature level.'
+
+$apkApplicationMetaDataBlocks = [regex]::Matches(
+    $apkManifestTree,
+    '(?ms)^[ ]{6}E: meta-data(?:[ \t]|\().*?(?=^[ ]{6}E: |^[ ]{4}E: |\z)'
+)
+function Get-ApkApplicationMetaDataValue {
+    param([string]$Name)
+    $escapedName = [regex]::Escape($Name)
+    $namePattern = 'android:name[^\r\n]*="{0}"' -f $escapedName
+    $matchingBlocks = @(
+        $apkApplicationMetaDataBlocks | Where-Object {
+            $_.Value -match $namePattern
+        }
+    )
+    Assert-Condition ($matchingBlocks.Count -eq 1) "APK must contain exactly one application metadata entry named $Name."
+    $valueMatch = [regex]::Match($matchingBlocks[0].Value, 'android:value[^\r\n]*="(?<Value>[^"]+)"')
+    Assert-Condition $valueMatch.Success "APK metadata $Name does not contain a string value."
+    return $valueMatch.Groups['Value'].Value
+}
+$apkAdMobAppId = Get-ApkApplicationMetaDataValue 'com.google.android.gms.ads.APPLICATION_ID'
+$apkInterstitialId = Get-ApkApplicationMetaDataValue 'worde.com.ADMOB_INTERSTITIAL_ID'
+Assert-ProductionAdMobConfiguration $apkAdMobAppId $apkInterstitialId 'APK'
+Assert-Condition ($apkAdMobAppId -ceq $bundleAdMobAppId) 'AAB and APK contain different AdMob App IDs.'
+Assert-Condition ($apkInterstitialId -ceq $bundleInterstitialId) 'AAB and APK contain different interstitial IDs.'
 
 Invoke-Checked $zipalign @('-c', '-P', '16', '-v', '4', $apk) | Out-Null
 
@@ -422,6 +519,8 @@ Write-Output "AAB SHA-256: $aabHash"
 Write-Output "APK bytes: $($apkItem.Length)"
 Write-Output "APK SHA-256: $apkHash"
 Write-Output "Upload certificate SHA-256: $actualCertificateSha256"
-Write-Output "Allowlisted internal signature permission: $expectedInternalPermission"
+Write-Output "Allowlisted permissions: $($expectedUsesPermissions -join ', ')"
+Write-Output "AdMob App ID: $apkAdMobAppId"
+Write-Output "AdMob interstitial ID: $apkInterstitialId"
 Write-Output "ELF files checked in APK: $($elfCounts['APK'])"
 Write-Output "ELF files checked in AAB: $($elfCounts['AAB'])"

@@ -1,8 +1,9 @@
 # Respostas prontas para a Google Play Console — Worde 1.0.0
 
-Documento conferido em 12 de agosto de 2026. Ele descreve exatamente o binário
-`worde.com`, versão `1.0.0` (código 1). Reconfirme as respostas quando o
-aplicativo ganhar novas funções, SDKs, permissões, anúncios ou serviços online.
+Documento atualizado em 17 de agosto de 2026 para o código de preparação de
+`worde.com`, versão `1.0.0` (código 1), com Google Mobile Ads/UMP. As respostas
+devem ser reconfirmadas contra o manifesto e o AAB finais depois que os IDs
+reais forem fornecidos e o release for reconstruído.
 
 ## 1. Campos que já estão definidos
 
@@ -19,10 +20,10 @@ aplicativo ganhar novas funções, SDKs, permissões, anúncios ou serviços onl
 | Versão | `1.0.0` |
 | Código da versão | `1` |
 | Público-alvo | 13–15, 16–17 e 18 anos ou mais |
-| Anúncios | Não contém anúncios |
+| Anúncios | Contém intersticiais do Google AdMob |
 | Compras e assinaturas | Não possui |
 | Login ou conta | Não possui |
-| Funcionamento | Totalmente offline |
+| Funcionamento | Jogo offline; anúncios opcionais exigem conexão |
 
 O package é exclusivo e permanente depois do primeiro upload. Não crie outro
 aplicativo na Console com package diferente e não altere `worde.com`.
@@ -117,10 +118,13 @@ o mesmo package. O Worde não possui compras nem assinaturas.
 
 ### Anúncios
 
-Selecione: **Não, meu app não contém anúncios**.
+Selecione: **Sim, meu app contém anúncios**.
 
-O binário não possui SDK de anúncios, publicidade própria, anúncios nativos ou
-promoções pagas dentro do jogo.
+O binário usa `google_mobile_ads` 9.1.0 e mostra somente intersticiais em pausas
+naturais: uma oportunidade a cada três resultados novos, com intervalo local
+mínimo de três minutos. Se o anúncio não estiver pronto, o jogo segue sem
+espera. Não há banner sobre a área de jogo, anúncio ao abrir/fechar o app,
+recompensa, compra, moeda ou incentivo para clicar.
 
 ### Acesso ao app / detalhes de login
 
@@ -128,9 +132,9 @@ Selecione: **Todas as funcionalidades estão disponíveis sem acesso especial**.
 
 Texto para o revisor, se houver campo livre:
 
-> O Worde funciona totalmente offline e não exige login, conta, assinatura,
-> localização ou credenciais. Todas as telas podem ser acessadas diretamente
-> após abrir o app.
+> O jogo e o progresso do Worde funcionam offline e não exigem login, conta,
+> assinatura, localização precisa ou credenciais. Intersticiais podem aparecer
+> entre alguns resultados quando há conexão e consentimento aplicável.
 
 ### Público-alvo e conteúdo
 
@@ -146,24 +150,29 @@ Famílias. O app não foi projetado especificamente para crianças.
 ### Segurança dos dados (Data Safety)
 
 - O app coleta ou compartilha algum tipo obrigatório de dado do usuário?
-  **Não**.
-- Dados são transmitidos para fora do aparelho? **Não**.
-- Há SDKs que transmitam dados? **Não**.
-- Há processamento remoto ou efêmero? **Não**.
-- Criptografia em trânsito: **Não se aplica**, pois não há transmissão.
-- O usuário pode solicitar exclusão de dados remotos? **Não se aplica**, pois
-  não existe servidor nem conta.
+  **Sim, por meio do Google Mobile Ads SDK**.
+- Dados são transmitidos para fora do aparelho? **Sim**.
+- Há SDKs que transmitam dados? **Sim: Google Mobile Ads e UMP**.
+- Criptografia em trânsito: **Sim, TLS**.
+- Tipos mínimos: localização aproximada derivada do IP; interações no app e
+  anúncios; diagnósticos; dispositivo ou outros IDs.
+- Finalidades: publicidade/marketing, análise e prevenção de
+  fraude/segurança/conformidade.
+- O usuário pode solicitar exclusão de conta? **Não se aplica**, pois não há
+  conta. Progresso local é removido ao limpar os dados ou desinstalar.
 - Há criação de conta? **Não**.
 - URL de exclusão de conta: **Não se aplica**.
 
 Progresso, tentativas, rascunhos e preferência de som ficam no armazenamento
-privado do Android. Armazenamento exclusivamente local não é coleta para esse
-formulário. A exclusão ocorre ao limpar os dados do app ou desinstalá-lo.
+privado do Android e não são enviados ao desenvolvedor ou ao SDK de anúncios.
+Use a matriz detalhada de `data_safety.md` e reconfirme a divulgação oficial do
+SDK na versão efetivamente empacotada.
 
 ### Advertising ID
 
-- O app usa o ID de publicidade? **Não**.
-- O manifesto declara `com.google.android.gms.permission.AD_ID`? **Não**.
+- O app usa o ID de publicidade? **Sim, por meio do Google Mobile Ads SDK**.
+- O manifesto mesclado pode declarar
+  `com.google.android.gms.permission.AD_ID`: **Sim**.
 
 ### Recursos financeiros
 
@@ -195,7 +204,9 @@ de COVID-19**.
 
 ### Permissões sensíveis ou de alto risco
 
-**Nenhuma.** O release não solicita Internet, localização, câmera, microfone,
+**Nenhuma permissão sensível ou de alto risco.** O SDK de anúncios requer
+acesso à Internet e ao estado da rede, e o manifesto mesclado pode declarar o
+ID de publicidade. O app não solicita localização precisa, câmera, microfone,
 contatos, telefone, SMS, registro de chamadas, armazenamento amplo ou
 visibilidade ampla de apps. Não é necessário formulário especial de permissão.
 
@@ -250,8 +261,9 @@ quando quiser disponibilizá-la ao público selecionado.
 - Depois do primeiro upload, baixar e arquivar os certificados públicos da
   upload key e da app signing key gerada pela Google.
 
-O APK incluído no kit serve para instalação direta e QA. O AAB assinado é o
-arquivo correto para a Play Console.
+No pacote final reconstruído, o APK serve para instalação direta e QA, e o AAB
+assinado é o arquivo correto para a Play Console. Não use os binários pré-AdMob
+nem um APK debug com IDs de teste.
 
 ## 9. Testes e acesso à produção
 
@@ -285,20 +297,25 @@ orientação profissional se houver conflito ou dúvida.
 
 ## 11. Ordem final de envio
 
-1. Preencher e validar `publication_metadata.json`.
-2. Gerar e hospedar as páginas de privacidade e suporte.
-3. Criar o app com os dados da seção 1.
-4. Preencher contatos, categoria e ficha.
-5. Enviar ícone, feature graphic e screenshots.
-6. Concluir todas as declarações desta matriz.
-7. Preencher e aceitar a classificação IARC.
-8. Selecionar Brasil e celular/tablet.
-9. Ativar Play App Signing.
-10. Enviar o AAB ao teste interno.
-11. Resolver todos os erros e avisos relevantes do pré-lançamento.
-12. Cumprir teste fechado quando aplicável.
-13. Criar a release `1.0.0 (1)` e colar as notas da versão.
-14. Enviar para análise e, após aprovação, publicar no Brasil.
+1. Criar `worde.com` e a unidade intersticial no AdMob e publicar as mensagens
+   UMP aplicáveis.
+2. Fornecer os dois IDs reais ao ambiente de build e publicar `app-ads.txt` com
+   o Publisher ID real.
+3. Preencher e validar `publication_metadata.json`.
+4. Gerar e hospedar as páginas de privacidade e suporte.
+5. Reconstruir e validar AAB/APK release; recapturar telas e atualizar hashes.
+6. Criar o app com os dados da seção 1.
+7. Preencher contatos, categoria e ficha.
+8. Enviar ícone, feature graphic e screenshots.
+9. Concluir todas as declarações desta matriz.
+10. Preencher e aceitar a classificação IARC.
+11. Selecionar Brasil e celular/tablet.
+12. Ativar Play App Signing.
+13. Enviar o AAB ao teste interno.
+14. Resolver todos os erros e avisos relevantes do pré-lançamento.
+15. Cumprir teste fechado quando aplicável.
+16. Criar a release `1.0.0 (1)` e colar as notas da versão.
+17. Enviar para análise e, após aprovação, publicar no Brasil.
 
 ## Fontes oficiais
 

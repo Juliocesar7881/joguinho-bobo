@@ -155,6 +155,8 @@ $storeListingCopyPath = Join-Path $localeRoot 'STORE_LISTING_COPY.md'
 $packageReadmePath = Join-Path $PSScriptRoot 'PACKAGE_README.md'
 $ownerActionsPath = Join-Path $PSScriptRoot 'PREENCHA_COM_SEUS_DADOS.md'
 $metadataTemplatePath = Join-Path $PSScriptRoot 'publication_metadata.template.json'
+$adMobSetupPath = Join-Path $PSScriptRoot 'ADMOB_SETUP.md'
+$appAdsTemplatePath = Join-Path $PSScriptRoot 'app-ads.template.txt'
 foreach ($requiredPublicationFile in @(
     $identityPath,
     $answersJsonPath,
@@ -163,7 +165,9 @@ foreach ($requiredPublicationFile in @(
     $storeListingCopyPath,
     $packageReadmePath,
     $ownerActionsPath,
-    $metadataTemplatePath
+    $metadataTemplatePath,
+    $adMobSetupPath,
+    $appAdsTemplatePath
   )) {
   Assert-Condition (
     Test-Path -LiteralPath $requiredPublicationFile -PathType Leaf
@@ -227,7 +231,7 @@ Assert-Condition ($identity.android.orientation -ceq 'portrait') 'Orientacao div
 Assert-ExactStringArray $identity.android.formFactors @('phone', 'tablet') 'APP_IDENTITY.android.formFactors'
 Assert-ExactStringArray $identity.android.abis @('armeabi-v7a', 'arm64-v8a', 'x86_64') 'APP_IDENTITY.android.abis'
 Assert-BooleanValue $identity.android.supports16KiBPages $true 'APP_IDENTITY.android.supports16KiBPages'
-Assert-BooleanValue $identity.android.internetPermission $false 'APP_IDENTITY.android.internetPermission'
+Assert-BooleanValue $identity.android.internetPermission $true 'APP_IDENTITY.android.internetPermission'
 Assert-Condition (@($identity.android.dangerousPermissions).Count -eq 0) 'APP_IDENTITY nao pode declarar permissao perigosa.'
 
 Assert-ExactKeys $identity.businessModel @(
@@ -237,7 +241,10 @@ Assert-ExactKeys $identity.businessModel @(
   'onlineServices',
   'subscriptions'
 ) 'APP_IDENTITY.businessModel'
-foreach ($businessFlag in @('accounts', 'containsAds', 'inAppPurchases', 'onlineServices', 'subscriptions')) {
+foreach ($businessFlag in @('containsAds', 'onlineServices')) {
+  Assert-BooleanValue $identity.businessModel.$businessFlag $true "APP_IDENTITY.businessModel.$businessFlag"
+}
+foreach ($businessFlag in @('accounts', 'inAppPurchases', 'subscriptions')) {
   Assert-BooleanValue $identity.businessModel.$businessFlag $false "APP_IDENTITY.businessModel.$businessFlag"
 }
 
@@ -249,10 +256,10 @@ Assert-ExactKeys $identity.privacy @(
   'usesAdvertisingId',
   'usesTelemetry'
 ) 'APP_IDENTITY.privacy'
-foreach ($privacyFalseFlag in @('collectsUserData', 'sharesUserData', 'usesAdvertisingId', 'usesTelemetry')) {
-  Assert-BooleanValue $identity.privacy.$privacyFalseFlag $false "APP_IDENTITY.privacy.$privacyFalseFlag"
+foreach ($privacyTrueFlag in @('collectsUserData', 'sharesUserData', 'usesAdvertisingId', 'usesTelemetry')) {
+  Assert-BooleanValue $identity.privacy.$privacyTrueFlag $true "APP_IDENTITY.privacy.$privacyTrueFlag"
 }
-Assert-BooleanValue $identity.privacy.localDataOnly $true 'APP_IDENTITY.privacy.localDataOnly'
+Assert-BooleanValue $identity.privacy.localDataOnly $false 'APP_IDENTITY.privacy.localDataOnly'
 Assert-Condition (
   $identity.privacy.localDataDeletion -ceq 'clear_app_data_or_uninstall'
 ) 'Exclusao de dados locais divergente em APP_IDENTITY.'
@@ -379,13 +386,8 @@ Assert-Condition (
 Assert-ExactStringArray $answers.appContent.targetAgeGroups @('13-15', '16-17', '18+') 'PLAY_CONSOLE_ANSWERS.appContent.targetAgeGroups'
 $falseAnswerFields = @(
   'accountDeletionUrlApplicable',
-  'containsAds',
   'designedForChildren',
-  'dataCollected',
-  'dataShared',
-  'dataTransmittedOffDevice',
   'accountCreation',
-  'usesAdvertisingId',
   'financialFeatures',
   'healthFeatures',
   'governmentAppOrInformation',
@@ -401,6 +403,15 @@ $falseAnswerFields = @(
 )
 foreach ($falseAnswerField in $falseAnswerFields) {
   Assert-BooleanValue $answers.appContent.$falseAnswerField $false "PLAY_CONSOLE_ANSWERS.appContent.$falseAnswerField"
+}
+foreach ($trueAnswerField in @(
+    'containsAds',
+    'dataCollected',
+    'dataShared',
+    'dataTransmittedOffDevice',
+    'usesAdvertisingId'
+  )) {
+  Assert-BooleanValue $answers.appContent.$trueAnswerField $true "PLAY_CONSOLE_ANSWERS.appContent.$trueAnswerField"
 }
 
 Assert-ExactKeys $answers.contentRating @(
@@ -452,8 +463,11 @@ Assert-ExactStringArray $answers.ownerSuppliedFields @(
 $answersMarkdown = Get-Content -Raw -Encoding utf8 $answersMarkdownPath
 $answersSearchText = Convert-ToSearchText $answersMarkdown
 foreach ($requiredAnswerPhrase in @(
-    'meu app nao contem anuncios',
+    'sim, meu app contem anuncios',
     'todas as funcionalidades estao disponiveis sem acesso especial',
+    'google mobile ads',
+    'localizacao aproximada',
+    'dispositivo ou outros ids',
     'meu app nao oferece recursos financeiros',
     'meu app nao oferece recursos de saude',
     'nao e um app governamental',
@@ -465,6 +479,29 @@ foreach ($requiredAnswerPhrase in @(
     $answersSearchText.Contains($requiredAnswerPhrase)
   ) "Matriz da Console nao contem a orientacao obrigatoria: $requiredAnswerPhrase"
 }
+
+$adMobSetup = Get-Content -Raw -Encoding utf8 $adMobSetupPath
+$adMobSetupSearchText = Convert-ToSearchText $adMobSetup
+foreach ($requiredAdMobSetupValue in @(
+    'worde.com',
+    'worde_admob_app_id',
+    'worde_admob_interstitial_id',
+    'ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy',
+    'ca-app-pub-xxxxxxxxxxxxxxxx/yyyyyyyyyy',
+    '1 impressao a cada 3 minutos',
+    'app-ads.template.txt'
+  )) {
+  Assert-Condition ($adMobSetupSearchText.Contains($requiredAdMobSetupValue)) "ADMOB_SETUP.md nao contem: $requiredAdMobSetupValue"
+}
+$appAdsTemplateLines = @(
+  Get-Content -Encoding utf8 $appAdsTemplatePath |
+    ForEach-Object { $_.Trim() } |
+    Where-Object { $_ -and -not $_.StartsWith('#') }
+)
+Assert-Condition ($appAdsTemplateLines.Count -eq 1) 'app-ads.template.txt deve conter exatamente uma linha de inventario alem do comentario.'
+Assert-Condition (
+  $appAdsTemplateLines[0] -ceq 'google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0'
+) 'app-ads.template.txt nao contem o placeholder seguro e aprovado.'
 
 $assetUploadMap = Get-Content -Raw -Encoding utf8 $assetUploadMapPath
 foreach ($requiredAssetName in @(
@@ -554,7 +591,7 @@ Assert-NonEmptyText $listing.fullDescription 'listing.fullDescription'
 Assert-Condition ($listing.locale -ceq 'pt-BR') 'O locale da ficha deve ser pt-BR.'
 $expectedAppName = 'Worde: Aprenda Palavras'
 Assert-Condition ($listing.appName -ceq $expectedAppName) 'O titulo da ficha deve ser exatamente Worde: Aprenda Palavras.'
-$expectedShortDescription = 'Aprenda ingl' + [char]0x00EA + 's jogando 1.000 desafios de palavras, com dicas e offline.'
+$expectedShortDescription = 'Aprenda ingl' + [char]0x00EA + 's em 1.000 desafios, com dicas bil' + [char]0x00ED + 'ngues e jogo offline.'
 Assert-Condition (
   $listing.shortDescription -ceq $expectedShortDescription
 ) 'A descricao curta nao corresponde ao texto aprovado.'
@@ -572,7 +609,9 @@ $requiredListingPhrases = @(
   'cada tamanho guarda seu proprio progresso',
   'teclado qwerty adaptativo de tres linhas',
   'o som pode ser silenciado',
-  'preferencia de som ficam somente no aparelho'
+  'preferencia de som ficam no aparelho',
+  'anuncios intersticiais do google admob',
+  'exigem conexao'
 )
 foreach ($requiredPhrase in $requiredListingPhrases) {
   Assert-Condition (
@@ -610,8 +649,19 @@ foreach ($document in @($privacyMarkdown, $privacyTemplate, $privacyMarkdownTemp
     $documentSearchText.Contains('preferencia de som de acerto')
   ) 'Politica e Data Safety devem documentar a preferencia local de som.'
   Assert-Condition (
-    $documentSearchText.Contains('nao usa o microfone')
+    $documentSearchText.Contains('nao usa o microfone') -or
+    $documentSearchText.Contains('nao usa microfone')
   ) 'Politica e Data Safety devem declarar a ausencia de uso do microfone.'
+  foreach ($requiredAdsDisclosure in @(
+      'google mobile ads',
+      'localizacao aproximada',
+      'diagnostico',
+      'identificador de publicidade'
+    )) {
+    Assert-Condition (
+      $documentSearchText.Contains($requiredAdsDisclosure)
+    ) "Politica e Data Safety nao documentam o dado de anuncios: $requiredAdsDisclosure"
+  }
 }
 
 $screenshotCopyPath = Join-Path $localeRoot 'screenshot_copy.md'

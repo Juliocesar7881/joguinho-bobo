@@ -13,7 +13,7 @@ os nomes canônicos usados pelo teste automático de captura.
 3. `03-niveis-4-letras.png` — Grade da categoria de 4 letras com o próximo desafio disponível.
 4. `04-jogo-dicas-bilingues.png` — Dicas em português e inglês, tabuleiro e teclado QWERTY adaptativo de três linhas.
 5. `05-vitoria.png` — Diálogo de vitória após acertar a palavra, com ações para continuar ou jogar novamente.
-6. `06-privacidade.png` — Tela Sobre com a política de funcionamento offline e privacidade.
+6. `06-privacidade.png` — Tela Sobre com política de dados locais, anúncios, consentimento e licenças.
 
 ## Tablet
 
