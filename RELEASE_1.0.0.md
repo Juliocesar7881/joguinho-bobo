@@ -38,7 +38,7 @@ dos binários também precisam ser regenerados após o build final.
 
 | Artefato | Tamanho | SHA-256 |
 |---|---:|---|
-| `build/app/outputs/flutter-apk/Worde-1.0.0-test-ads.apk` | 181.506.305 bytes | `3A3BF648F492B7804662E22A31011FE0C0014110F958FD7AF79D4EF921229B36` |
+| `build/app/outputs/flutter-apk/Worde-1.0.0-test-ads.apk` | 181.506.305 bytes | `B07DD30609656E3C4C62337031D34820829615F2094EA768CC1ECB5ED986C7B9` |
 
 Esse APK universal contém `armeabi-v7a`, `arm64-v8a` e `x86_64`, usa somente os
 IDs oficiais de teste do Google, possui um signatário debug e serve para
@@ -110,6 +110,9 @@ release com IDs AdMob reais.
 - nova identidade Worde baseada no ícone fornecido pelo titular, com os cinco
   blocos `worde`, lupa de aprendizado, fundo azul e camada monocromática para
   launchers compatíveis;
+- foreground adaptativo limitado a 64,45% da camada, mantendo a arte principal
+  dentro da zona segura de máscaras circulares e squircle sem alterar o ícone
+  512×512 da ficha da loja;
 - recuperação segura de falha de persistência e serialização de gravações
   concorrentes, sem ressuscitar uma mutação que falhou.
 

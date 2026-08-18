@@ -39,6 +39,11 @@ $source = [Drawing.Bitmap]::new((Resolve-Path -LiteralPath $SourcePath).Path)
 try {
   if ($source.Width -ne $source.Height) { throw 'A fonte do icone deve ser quadrada.' }
 
+  # 680 px mantém o alpha útil em aproximadamente 64,4% da camada de
+  # 1024 px, dentro da zona segura de 66/108 dos ícones adaptativos Android.
+  $adaptiveContentSize = 680
+  $adaptiveContentOffset = 172
+
   $master = New-TransparentBitmap 1024 1024
   try {
     $graphics = [Drawing.Graphics]::FromImage($master)
@@ -60,7 +65,13 @@ try {
         Set-HighQualityGraphics $graphics
         $graphics.Clear([Drawing.Color]::Transparent)
         # Mantém letras e lupa dentro da zona segura de máscaras circulares.
-        $graphics.DrawImage($master, 132, 132, 760, 760)
+        $graphics.DrawImage(
+          $master,
+          $adaptiveContentOffset,
+          $adaptiveContentOffset,
+          $adaptiveContentSize,
+          $adaptiveContentSize
+        )
       } finally { $graphics.Dispose() }
       $adaptive.Save((Join-Path $PSScriptRoot 'worde-adaptive-foreground.png'), [Drawing.Imaging.ImageFormat]::Png)
     } finally { $adaptive.Dispose() }
@@ -80,16 +91,22 @@ try {
     # lupa e detalhes claros/amarelos e removemos o fundo azul.
     $monochrome = New-TransparentBitmap 1024 1024
     try {
-      $scaled = New-TransparentBitmap 760 760
+      $scaled = New-TransparentBitmap $adaptiveContentSize $adaptiveContentSize
       try {
         $graphics = [Drawing.Graphics]::FromImage($scaled)
         try {
           Set-HighQualityGraphics $graphics
           $graphics.Clear([Drawing.Color]::Transparent)
-          $graphics.DrawImage($master, 0, 0, 760, 760)
+          $graphics.DrawImage(
+            $master,
+            0,
+            0,
+            $adaptiveContentSize,
+            $adaptiveContentSize
+          )
         } finally { $graphics.Dispose() }
-        for ($y = 0; $y -lt 760; $y++) {
-          for ($x = 0; $x -lt 760; $x++) {
+        for ($y = 0; $y -lt $adaptiveContentSize; $y++) {
+          for ($x = 0; $x -lt $adaptiveContentSize; $x++) {
             $pixel = $scaled.GetPixel($x, $y)
             if ($pixel.A -eq 0) { continue }
             $isBlueBackground = (
@@ -99,7 +116,11 @@ try {
               ($pixel.R + $pixel.G + $pixel.B) -gt 190
             )
             if (-not $isBlueBackground) {
-              $monochrome.SetPixel($x + 132, $y + 132, [Drawing.Color]::FromArgb($pixel.A, 255, 255, 255))
+              $monochrome.SetPixel(
+                $x + $adaptiveContentOffset,
+                $y + $adaptiveContentOffset,
+                [Drawing.Color]::FromArgb($pixel.A, 255, 255, 255)
+              )
             }
           }
         }
